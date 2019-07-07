@@ -25,6 +25,7 @@ set_camera_options(camera)
 
 
 print camera.iso
+print dir(camera)
 
 
 
