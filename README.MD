@@ -8,6 +8,6 @@ It will start on boot, take a photo every 1. minute and save it in folder.
 Scripts
 -------
 
-> timelapse.py
+> [timelapse.py](timelapse.py)
 
 The main script
