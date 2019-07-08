@@ -9,7 +9,7 @@ import yaml
 
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
-endcolor = "\033[30m"
+endcolor = "\033[0m"
 
 def redText(text):
     return red+text+endcolor
@@ -24,9 +24,9 @@ def successMsg(text):
     print(green+text+endcolor)
 
 def infoMsg(text):
-    print(text)
+    print(greenText("*** ")+text)
 
-infoMsg(redText("Raspberry")+greenText("Pi")+endcolor+"-timelapse is loading...")
+infoMsg(redText("Raspberry")+greenText("Pi")+"-timelapse is loading...")
 
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
@@ -37,7 +37,15 @@ except OSError as e:
     successMsg(str(e))
     loadedConf = False
 
-if loadedConf: 
+if config['isloaded']:
+    infoMsg("Configuration file " + greenText("loaded") + "!")
+else:
+    print("Configuration file not loaded!")
+
+
+
+
+if loadedConf:
     def set_camera_options(camera):
         # Set camera resolution.
    
@@ -48,10 +56,6 @@ if loadedConf:
             )
         camera.iso = 100
 
-        if config['isloaded']:
-            infoMsg("Configuration file "+greenText("loaded")+"!")
-        else:
-            print("Configuration file not loaded!")
 
 # Initalize Camera
 #camera = PiCamera()
