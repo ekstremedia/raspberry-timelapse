@@ -61,6 +61,13 @@ if loadedConf:
 
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
 
+    now = datetime.now()
+
+    today = os.path.join(filePath,str(now.year),str(now.month),str(now.day))
+    print(today)
+
+
+
     def set_camera_options(camera):
         # Set camera resolution.
    
