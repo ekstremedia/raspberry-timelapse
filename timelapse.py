@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
+
 from datetime import datetime, date, time
-from picamera import PiCamera
+#from picamera import PiCamera
 import os
 import time
 import sys
 import yaml
 
+red = "\033[1;31;38m"
+green = "\033[1;32;38m"
+endcolor = "\033[30m"
+
+def errorMsg(text):
+    print(red+text+endcolor)
+
+def successMsg(text):
+    print(green+text+endcolor)
+
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
     loadedConf = True
 except OSError as e:
-    print("Found no configuration file!")
+    errorMsg("Found no configuration file!")
+    successMsg(str(e))
     loadedConf = False
 
 if loadedConf: 
@@ -30,14 +42,14 @@ if loadedConf:
             print("Configuration file not loaded!")
 
 # Initalize Camera
-camera = PiCamera()
+#camera = PiCamera()
 
 # Set camera config if config is loaded
 
-if loadedConf:
-    set_camera_options(camera)
+#if loadedConf:
+#   set_camera_options(camera)
 
-print(camera.iso)
+#print(camera.iso)
 #rint dir(camera)
 
 
