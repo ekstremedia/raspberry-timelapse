@@ -47,7 +47,7 @@ if loadedConf:
                 config['resolution']['height']
             )
         camera.iso = 100
-    
+     
         if config['isloaded']:
             infoMsg("Configuration file "+greenText("loaded")+"!")
         else:
