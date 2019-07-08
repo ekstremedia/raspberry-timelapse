@@ -9,7 +9,7 @@ import yaml
 
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
-endcolor = "\033[30m"
+endcolor = "\033[30m" 
 
 def errorMsg(text):
     print(red+text+endcolor)
@@ -20,6 +20,7 @@ def successMsg(text):
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
     loadedConf = True
+
 except OSError as e:
     errorMsg("Found no configuration file!")
     successMsg(str(e))
