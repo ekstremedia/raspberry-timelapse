@@ -54,6 +54,11 @@ if loadedConf:
         filePath = config['filePath']
     except KeyError:
         filePath = currentDir+"/timelapse/"
+    try:
+        filePrefix = config['filePrefix']
+    except KeyError:
+        filePrefix = ""
+    infoMsg("Filename prefix: "+greenText(filePrefix))
 
     if not os.path.exists(filePath):
         os.makedirs(filePath)
@@ -61,13 +66,15 @@ if loadedConf:
 
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
 
-    now = datetime.now()
 
+    #Date and time settings
+    now = datetime.now()
     today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
+    time = str(now.hour)+"_"+str(now.minute)+"_"+str(now.second)
     if not os.path.exists(today):
         os.makedirs(today)
         infoMsg("Created folder: " + greenText(today))
-    print(today)
+    print(time)
 
 
 
