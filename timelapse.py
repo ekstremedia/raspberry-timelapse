@@ -55,6 +55,10 @@ if loadedConf:
     except KeyError:
         filePath = currentDir+"/timelapse/"
 
+    if not os.path.exists(filePath):
+        os.makedirs(filePath)
+        infoMsg("Created folder: " + greenText(filePath))
+
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
 
     def set_camera_options(camera):
