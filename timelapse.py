@@ -9,13 +9,24 @@ import yaml
 
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
-endcolor = "\033[30m" 
+endcolor = "\033[30m"
+
+def redText(text):
+    return (red+text)
+
+def greenText(text):
+    return green+text
 
 def errorMsg(text):
     print(red+text+endcolor)
 
 def successMsg(text):
     print(green+text+endcolor)
+
+def infoMsg(text):
+    print(text)
+
+infoMsg(redText("Raspberry")+greenText("Pi")+endcolor+"-timelapse is loading...")
 
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
@@ -38,7 +49,7 @@ if loadedConf:
         camera.iso = 100
     
         if config['isloaded']:
-            print("Configuration file loaded!")
+            infoMsg("Configuration file "+greenText("loaded")+"!")
         else:
             print("Configuration file not loaded!")
 
