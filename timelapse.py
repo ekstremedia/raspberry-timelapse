@@ -42,6 +42,7 @@ if config['isloaded']:
 else:
     print("Configuration file not loaded!")
 
+print(os.getcwd())
 
 
 
