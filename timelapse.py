@@ -12,10 +12,10 @@ green = "\033[1;32;38m"
 endcolor = "\033[30m"
 
 def redText(text):
-    return (red+text)
+    return red+text+endcolor
 
 def greenText(text):
-    return green+text
+    return green+text+endcolor
 
 def errorMsg(text):
     print(red+text+endcolor)
@@ -47,7 +47,7 @@ if loadedConf:
                 config['resolution']['height']
             )
         camera.iso = 100
-     
+
         if config['isloaded']:
             infoMsg("Configuration file "+greenText("loaded")+"!")
         else:
