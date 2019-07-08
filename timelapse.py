@@ -7,9 +7,13 @@ import time
 import sys
 import yaml
 
+# Define variables
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
 endcolor = "\033[0m"
+currentDir = os.getcwd()
+filePath = ""
+# Define functions
 
 def redText(text):
     return red+text+endcolor
@@ -26,12 +30,15 @@ def successMsg(text):
 def infoMsg(text):
     print(greenText("*** ")+text)
 
+# Welcome screen
 infoMsg(redText("Raspberry")+greenText("Pi")+"-timelapse is loading...")
 
+
+
+# Load configuration if present
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
     loadedConf = True
-
 except OSError as e:
     errorMsg("Found no configuration file!")
     successMsg(str(e))
@@ -40,13 +47,16 @@ except OSError as e:
 if config['isloaded']:
     infoMsg("Configuration file " + greenText("loaded") + "!")
 else:
-    print("Configuration file not loaded!")
-
-print(os.getcwd())
-
-
+    print("Configuration file "+redText("not")+" loaded, loading default values.")
 
 if loadedConf:
+    try:
+        filePath = config['filePath']
+    except KeyError:
+        filePath = currentDir+"/timelapse/"
+
+    infoMsg("Set timelapse-folder to: "+greenText(filePath))
+
     def set_camera_options(camera):
         # Set camera resolution.
    
@@ -56,6 +66,7 @@ if loadedConf:
                 config['resolution']['height']
             )
         camera.iso = 100
+
 
 
 # Initalize Camera
