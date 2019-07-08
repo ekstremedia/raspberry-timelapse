@@ -60,6 +60,7 @@ if loadedConf:
         filePrefix = ""
     infoMsg("Filename prefix: "+greenText(filePrefix))
 
+    # Set folder for timelapse photos
     if not os.path.exists(filePath):
         os.makedirs(filePath)
         infoMsg("Created folder: " + greenText(filePath))
@@ -70,7 +71,7 @@ if loadedConf:
     #Date and time settings
     now = datetime.now()
     today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
-    time = str(now.hour)+"_"+str(now.minute)+"_"+str(now.second)
+    time = str('%02d'%now.hour)+"_"+str('%02d'%now.minute)+"_"+str('%02d'%now.second)
     if not os.path.exists(today):
         os.makedirs(today)
         infoMsg("Created folder: " + greenText(today))
