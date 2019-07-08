@@ -63,7 +63,10 @@ if loadedConf:
 
     now = datetime.now()
 
-    today = os.path.join(filePath,str(now.year),str(now.month),str(now.day))
+    today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
+    if not os.path.exists(today):
+        os.makedirs(today)
+        infoMsg("Created folder: " + greenText(today))
     print(today)
 
 
