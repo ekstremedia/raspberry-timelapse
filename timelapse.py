@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
+from time import sleep
 from datetime import datetime, date, time
 #from picamera import PiCamera
 import os
-import time
+#import time
 import sys
 import yaml
 
@@ -73,19 +74,19 @@ if loadedConf:
         infoMsg("Created folder: " + greenText(filePath))
 
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
-    infoMsg("Interval set to every: "+greenText(interval))+" second"
+    infoMsg("Interval set to every: "+greenText(str(interval))+" second.")
 
-
-    #Date and time settings
-    now = datetime.now()
-    today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
-    time = str('%02d'%now.hour)+"_"+str('%02d'%now.minute)+"_"+str('%02d'%now.second)
-    if not os.path.exists(today):
-        os.makedirs(today)
-        infoMsg("Created folder: " + greenText(today))
-    fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
-    infoMsg(fileName)
-
+    while (not sleep(5)):
+        #Date and time settings
+        now = datetime.now()
+        today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
+        time = str('%02d'%now.hour)+"_"+str('%02d'%now.minute)+"_"+str('%02d'%now.second)
+        if not os.path.exists(today):
+            os.makedirs(today)
+            infoMsg("Created folder: " + greenText(today))
+        fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
+        infoMsg(fileName)
+      #  sleep(5)
 
 
     def set_camera_options(camera):
