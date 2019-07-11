@@ -75,8 +75,9 @@ if loadedConf:
 
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
     infoMsg("Interval set to every: "+greenText(str(interval))+" second.")
-
-    while (not sleep(5)):
+    infoMsg("")
+    infoMsg("Starting timelapse!")
+    while (not sleep(interval)):
         #Date and time settings
         now = datetime.now()
         today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
@@ -86,7 +87,6 @@ if loadedConf:
             infoMsg("Created folder: " + greenText(today))
         fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
         infoMsg(fileName)
-      #  sleep(5)
 
 
     def set_camera_options(camera):
