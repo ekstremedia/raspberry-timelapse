@@ -60,12 +60,20 @@ if loadedConf:
         filePrefix = ""
     infoMsg("Filename prefix: "+greenText(filePrefix))
 
+    try:
+        interval = config['interval']
+    except KeyError:
+        interval = 10
+
+
+
     # Set folder for timelapse photos
     if not os.path.exists(filePath):
         os.makedirs(filePath)
         infoMsg("Created folder: " + greenText(filePath))
 
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
+    infoMsg("Interval set to every: "+greenText(interval))+" second"
 
 
     #Date and time settings
