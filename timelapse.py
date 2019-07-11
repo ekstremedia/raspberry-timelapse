@@ -76,7 +76,7 @@ if loadedConf:
     infoMsg("Set timelapse-folder to: "+greenText(filePath))
     infoMsg("Interval set to every: "+greenText(str(interval))+" second.")
     infoMsg("")
-    infoMsg("Starting timelapse!")
+    infoMsg("Starting timelapse in "+greenText(str(interval))+ "seconds")
     while (not sleep(interval)):
         #Date and time settings
         now = datetime.now()
