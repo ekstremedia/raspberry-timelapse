@@ -76,7 +76,7 @@ if loadedConf:
         os.makedirs(today)
         infoMsg("Created folder: " + greenText(today))
     fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
-    print(fileName)
+    infoMsg(fileName)
 
 
 
