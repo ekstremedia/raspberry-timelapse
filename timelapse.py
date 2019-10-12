@@ -3,7 +3,7 @@ from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
 import os
-#import time
+# import time
 import threading
 import sys
 import yaml
