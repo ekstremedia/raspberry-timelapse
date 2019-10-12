@@ -15,12 +15,7 @@ endcolor = "\033[0m"
 currentDir = os.getcwd()
 filePath = ""
 total_images = 0
-global total_images
 
-
-def total_images():
-    total_images+1
-# Define functions
 
 def redText(text):
     return red+text+endcolor
@@ -81,9 +76,8 @@ if loadedConf:
         shutter_speed = config['shutter_speed']
     except KeyError:
         shutter_speed = 0
-
-
     # Set folder for timelapse photos
+
     def capture():
         if not os.path.exists(filePath):
             os.makedirs(filePath)
@@ -94,8 +88,8 @@ if loadedConf:
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " seconds")
         infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
             str(interval)) + " seconds")
-        while (not sleep(interval)):
-            #Date and time settings
+        while not sleep(interval):
+            # Date and time settings
             now = datetime.now()
             today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
             time = str('%02d'%now.hour)+"_"+str('%02d'%now.minute)+"_"+str('%02d'%now.second)
@@ -128,13 +122,12 @@ def set_camera_options(camera):
         )
     return camera
 
-# Initalize Camera
+
 def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
     camera.capture(fileName)
-    total_images()
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
 
