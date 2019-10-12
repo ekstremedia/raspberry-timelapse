@@ -15,6 +15,10 @@ endcolor = "\033[0m"
 currentDir = os.getcwd()
 filePath = ""
 total_images = 0
+
+def total_images():
+    global total_images
+    total_images+1
 # Define functions
 
 def redText(text):
@@ -136,8 +140,8 @@ def capture_image(fileName):
         set_camera_options(camera)
         # Capture a picture.
         camera.capture(fileName)
-        tot = total_images+1
-        infoMsg('Captured '+fileName+' (#'+tot+')')
+        total_images()
+        infoMsg('Captured '+fileName+' (#'+total_images+')')
         camera.close()
         sleep(8)
 
