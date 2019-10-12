@@ -5,21 +5,21 @@ isloaded: yes
 
 # Path to save images
 filePath: /home/pi/raspberry-timelapse/test/
-
+frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
 filePrefix: timelapse
 
 # Interval in seconds
 # Take a picture every <interval> second
-interval: 4
+interval: 15
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
-iso: 400
+iso: 800
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
-shutter_speed: 1000000
+shutter_speed: 2000000 
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 #white_balance: { }
-white_balance: { red_gain: 0.9, blue_gain: 1 }
+white_balance: { red_gain: 1.4, blue_gain: 1 }
