@@ -151,7 +151,7 @@ def capture_image(fileName):
 
 # Initalize Camera
 def take():
-    infoMsg("Starting timelapse with shutter:  " + greenText(str(shutter_speed)))
+    infoMsg("Shutter:  " + greenText(str(shutter_speed))+ " ISO: "+iso + " every "+interval+" seconds")
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
