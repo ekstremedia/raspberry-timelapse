@@ -139,6 +139,7 @@ def capture_image(fileName):
         camera.capture(fileName)
         infoMsg('Captured '+fileName)
         camera.close()
+        sleep(8)
 
     except SystemExit:
         infoMsg('\nTime-lapse capture cancelled.\n')
