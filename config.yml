@@ -12,7 +12,7 @@ filePrefix: timelapse
 
 # Interval in seconds
 # Take a picture every <interval> second
-interval: 10
+interval: 4
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
 iso: 200

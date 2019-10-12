@@ -83,6 +83,7 @@ if loadedConf:
         infoMsg("")
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " seconds")
         while (not sleep(interval)):
+            infoMsg("Starting...")
             #Date and time settings
             now = datetime.now()
             today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
