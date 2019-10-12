@@ -139,15 +139,8 @@ def capture_image(fileName):
         infoMsg('Captured '+fileName)
         camera.close()
 
-        if (image_number < (config['total_images'] - 1)):
-            image_number += 1
-        else:
-            print '\nTime-lapse capture complete!\n'
-            # TODO: This doesn't pop user into the except block below :(.
-            sys.exit()
-
-    except KeyboardInterrupt, SystemExit:
-        print '\nTime-lapse capture cancelled.\n'
+    except SystemExit:
+        infoMsg('\nTime-lapse capture cancelled.\n')
 
 # Initalize Camera
 #camera = PiCamera()
