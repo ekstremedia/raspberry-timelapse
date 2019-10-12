@@ -87,8 +87,9 @@ if loadedConf:
         infoMsg("Interval set to every: "+greenText(str(interval))+" second.")
         infoMsg("")
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " seconds")
+        infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
+            str(interval)) + " seconds")
         while (not sleep(interval)):
-            infoMsg("Starting...")
             #Date and time settings
             now = datetime.now()
             today = os.path.join(filePath,str(now.year),str('%02d'%now.month),str('%02d'%now.day))
@@ -98,8 +99,6 @@ if loadedConf:
                 infoMsg("Created folder: " + greenText(today))
             fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
             take(fileName)
-
-
 
 def set_camera_options(camera):
     # Set camera resolution.
@@ -146,11 +145,11 @@ def capture_image(fileName):
 
 # Initalize Camera
 def take(fileName):
-    infoMsg("Shutter:  " + greenText(str(shutter_speed))+" ISO: "+greenText(str(iso))+" every "+greenText(str(interval))+" seconds")
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
     camera.capture(fileName)
+    infoMsg('Captured ' + fileName)
     camera.close()
 
 
