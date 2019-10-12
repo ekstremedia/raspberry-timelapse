@@ -111,7 +111,8 @@ def set_camera_options(camera):
     if config['shutter_speed']:
         camera.shutter_speed = config['shutter_speed']
         # Sleep to allow the shutter speed to take effect correctly.
-        sleep(2)
+
+    sleep(2)
 
     if config['white_balance']:
         camera.awb_mode = 'off'
