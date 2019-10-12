@@ -151,7 +151,7 @@ def take(fileName):
     # Capture a picture.
     camera.capture(fileName)
     tot = total_images + 1
-    infoMsg('Captured ' + fileName + ' (#' + tot + ')')
+    infoMsg('Captured ' + fileName + ' (#' + str(tot) + ')')
     camera.close()
 
 
