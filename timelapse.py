@@ -93,7 +93,7 @@ if loadedConf:
                 infoMsg("Created folder: " + greenText(today))
             fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
             camera = PiCamera()
-            set_camera_options(camera)
+            #set_camera_options(camera)
             # Capture a picture.
             camera.capture(fileName.format(image_number))
             infoMsg('Captured '+fileName)
