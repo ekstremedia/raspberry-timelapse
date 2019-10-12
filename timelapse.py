@@ -154,8 +154,7 @@ def take(fileName):
     camera.close()
 
 
-
-
+capture()
 
 # Set camera config if config is loaded
 
