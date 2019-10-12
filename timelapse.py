@@ -2,6 +2,7 @@
 from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
+from fractions import Fraction
 import os
 # import time
 import threading
@@ -120,6 +121,11 @@ def set_camera_options(camera):
     if config['shutter_speed']:
         camera.shutter_speed = config['shutter_speed']
         # Sleep to allow the shutter speed to take effect correctly.
+
+    #  sleep(2)
+
+    camera.framerate = Fraction(1, 6)
+    camera.shutter_speed = 6000000
 
     sleep(2)
 
