@@ -132,6 +132,8 @@ def take(fileName):
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
+
+    infoMsg('camera.awb_mode ' + ' (#' + camera.awb_mode + ')')
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
 
