@@ -148,7 +148,7 @@ def take():
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
-    camera.capture(dir + '/image{0:05d}.jpg')
+    camera.capture('/test.jpg')
     camera.close()
 
 
