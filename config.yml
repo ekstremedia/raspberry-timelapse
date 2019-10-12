@@ -21,4 +21,4 @@ iso: 400
 shutter_speed: 600000
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
-white_balance: { }
+#white_balance: { }

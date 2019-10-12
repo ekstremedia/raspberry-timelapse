@@ -115,11 +115,11 @@ def set_camera_options(camera):
         camera.exposure_mode = 'off'
 
     if config['white_balance']:
-        camera.awb_mode = 'cloudy'
         camera.awb_gains = (
             config['white_balance']['red_gain'],
             config['white_balance']['blue_gain']
         )
+    camera.awb_mode = 'cloudy'
     return camera
 
 
