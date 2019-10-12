@@ -75,7 +75,7 @@ if loadedConf:
     try:
         shutter_speed = config['shutter_speed']
     except KeyError:
-        shutter_speed = 0
+        shutter_speed = 1000000
     # Set folder for timelapse photos
 
     def capture():
@@ -111,7 +111,7 @@ def set_camera_options(camera):
     if config['shutter_speed']:
         camera.shutter_speed = config['shutter_speed']
         # Sleep to allow the shutter speed to take effect correctly.
-        sleep(1)
+        sleep(2)
 
     if config['white_balance']:
         camera.awb_mode = 'off'
