@@ -14,6 +14,7 @@ green = "\033[1;32;38m"
 endcolor = "\033[0m"
 currentDir = os.getcwd()
 filePath = ""
+total_images = 0
 # Define functions
 
 def redText(text):
@@ -84,7 +85,6 @@ if loadedConf:
             infoMsg("Created folder: " + greenText(filePath))
 
         infoMsg("Set timelapse-folder to: "+greenText(filePath))
-        infoMsg("Interval set to every: "+greenText(str(interval))+" second.")
         infoMsg("")
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " seconds")
         infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
@@ -136,7 +136,8 @@ def capture_image(fileName):
         set_camera_options(camera)
         # Capture a picture.
         camera.capture(fileName)
-        infoMsg('Captured '+fileName)
+        tot = total_images+1
+        infoMsg('Captured '+fileName+' (#'+tot+')')
         camera.close()
         sleep(8)
 
