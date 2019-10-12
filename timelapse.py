@@ -120,9 +120,6 @@ def set_camera_options(camera):
             config['white_balance']['blue_gain']
         )
     camera.exposure_mode = 'off'
-    g = 1
-    camera.awb_mode = 'off'
-    camera.awb_gains = g
     return camera
 
 
@@ -133,7 +130,6 @@ def take(fileName):
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
-
     infoMsg('camera.awb_mode ' + ' (#' + camera.awb_mode + ')')
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
@@ -143,11 +139,10 @@ capture()
 
 # Set camera config if config is loaded
 
-#if loadedConf:
+# if loadedConf:
 #   set_camera_options(camera)
 
-#print(camera.iso)
-#rint dir(camera)
+# print(camera.iso)
 
 
 
