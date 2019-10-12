@@ -71,6 +71,11 @@ if loadedConf:
     except KeyError:
         interval = 10
 
+    try:
+        shutter_speed = config['shutter_speed']
+    except KeyError:
+        shutter_speed = 0
+
 
     # Set folder for timelapse photos
     def capture():
@@ -146,6 +151,7 @@ def capture_image(fileName):
 
 # Initalize Camera
 def take():
+    infoMsg("Starting timelapse with shutter:  " + greenText(str(shutter_speed)))
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
