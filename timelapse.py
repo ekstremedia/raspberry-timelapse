@@ -127,34 +127,13 @@ def set_camera_options(camera):
         )
     return camera
 
-
-def capture_image(fileName):
-    try:
-        global image_number
-
-        # Set a timer to take another picture at the proper interval after this
-        # picture is taken.
-        thread = threading.Timer(config['interval'], capture_image).start()
-        # Start up the camera.
-        camera = PiCamera()
-        set_camera_options(camera)
-        # Capture a picture.
-        camera.capture(fileName)
-        total_images()
-        infoMsg('Captured '+fileName+' (#'+str(total_images)+')')
-        camera.close()
-        sleep(8)
-
-    except SystemExit:
-        infoMsg('\nTime-lapse capture cancelled.\n')
-
 # Initalize Camera
 def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
     camera.capture(fileName)
-    total_images + 1
+    total_images()
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
 
