@@ -136,7 +136,7 @@ def capture_image(fileName):
         camera = PiCamera()
         set_camera_options(camera)
         # Capture a picture.
-        camera.capture(fileName.format(image_number))
+        camera.capture(fileName)
         infoMsg('Captured '+fileName)
         camera.close()
 
