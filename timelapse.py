@@ -144,8 +144,17 @@ def capture_image(fileName):
         infoMsg('\nTime-lapse capture cancelled.\n')
 
 # Initalize Camera
-camera = PiCamera()
-capture()
+def take():
+    camera = PiCamera()
+    set_camera_options(camera)
+    # Capture a picture.
+    camera.capture(dir + '/image{0:05d}.jpg'.format(image_number))
+    camera.close()
+
+    
+take()
+
+
 # Set camera config if config is loaded
 
 #if loadedConf:
