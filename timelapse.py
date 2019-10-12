@@ -15,9 +15,10 @@ endcolor = "\033[0m"
 currentDir = os.getcwd()
 filePath = ""
 total_images = 0
+global total_images
+
 
 def total_images():
-    global total_images
     total_images+1
 # Define functions
 
