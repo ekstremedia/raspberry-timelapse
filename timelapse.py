@@ -151,7 +151,7 @@ def capture_image(fileName):
 
 # Initalize Camera
 def take():
-    infoMsg("Shutter:  " + greenText(str(shutter_speed))+ " ISO: "+iso + " every "+interval+" seconds")
+    infoMsg("Shutter:  " + greenText(str(shutter_speed))+" ISO: "+greenText(str(iso))+" every "+greenText(str(interval))+" seconds")
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
