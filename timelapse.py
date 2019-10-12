@@ -141,7 +141,7 @@ def capture_image(fileName):
         # Capture a picture.
         camera.capture(fileName)
         total_images()
-        infoMsg('Captured '+fileName+' (#'+total_images+')')
+        infoMsg('Captured '+fileName+' (#'+str(total_images)+')')
         camera.close()
         sleep(8)
 
