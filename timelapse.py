@@ -97,12 +97,7 @@ if loadedConf:
                 os.makedirs(today)
                 infoMsg("Created folder: " + greenText(today))
             fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
-            camera = PiCamera()
-            #set_camera_options(camera)
-            # Capture a picture.
-            camera.capture(fileName.format(image_number))
-            infoMsg('Captured '+fileName)
-            camera.close()
+            take(fileName)
 
 
 
@@ -150,16 +145,16 @@ def capture_image(fileName):
         infoMsg('\nTime-lapse capture cancelled.\n')
 
 # Initalize Camera
-def take():
+def take(fileName):
     infoMsg("Shutter:  " + greenText(str(shutter_speed))+" ISO: "+greenText(str(iso))+" every "+greenText(str(interval))+" seconds")
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
-    camera.capture('test.jpg')
+    camera.capture(fileName)
     camera.close()
 
 
-take()
+
 
 
 # Set camera config if config is loaded
