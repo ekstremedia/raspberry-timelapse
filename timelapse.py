@@ -128,6 +128,8 @@ def take(fileName):
     set_camera_options(camera)
     # Capture a picture.
     camera.capture(fileName)
+    global total_images
+    total_images = total_images+1
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
 
