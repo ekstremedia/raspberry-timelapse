@@ -113,11 +113,12 @@ def set_camera_options(camera):
         # Sleep to allow the shutter speed to take effect correctly.
         sleep(1)
 
-#    if config['white_balance']:
-#        camera.awb_gains = (
-#            config['white_balance']['red_gain'],
-#            config['white_balance']['blue_gain']
-#        )
+    if config['white_balance']:
+        camera.awb_mode = 'off'
+        camera.awb_gains = (
+            config['white_balance']['red_gain'],
+            config['white_balance']['blue_gain']
+        )
     camera.exposure_mode = 'off'
     g = 1
     camera.awb_mode = 'off'
