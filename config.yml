@@ -14,3 +14,11 @@ filePrefix: timelapse
 # Take a picture every <interval> second
 interval: 10
 
+# ISO value. 0 = auto, 60-800 for manual ISO.
+iso: 200
+
+# Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
+shutter_speed: 0
+
+# White balance. Set to empty object (`{ }`) to use auto white balance.
+white_balance: { }
