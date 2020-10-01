@@ -1,5 +1,6 @@
 test/
+2020/
 .idea/
 stuff.txt
 ffmpeg-timelapse.sh
-
+*.jpg

@@ -4,7 +4,7 @@ resolution: { width: 3280, height: 2464 }
 isloaded: yes
 
 # Path to save images
-filePath: /home/pi/raspberry-timelapse/test/
+filePath: /var/www/html/bilder/
 frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
@@ -18,8 +18,8 @@ interval: 15
 iso: 800
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
-shutter_speed: 2000000 
+shutter_speed: 0 
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 #white_balance: { }
-white_balance: { red_gain: 1.4, blue_gain: 1 }
+#white_balance: { red_gain: 1.4, blue_gain: 1 }
