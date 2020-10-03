@@ -3,6 +3,7 @@ from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
 from fractions import Fraction
+from shutil import copyfile
 import os
 # import time
 import threading
@@ -47,7 +48,7 @@ except OSError as e:
     successMsg(str(e))
     loadedConf = False
 
-if config['isloaded']:
+if loadedConf:
     infoMsg("Configuration file " + greenText("loaded") + "!")
 else:
     print("Configuration file "+redText("not")+" loaded, loading default values.")
@@ -82,7 +83,20 @@ if loadedConf:
         shutter_speed = config['shutter_speed']
     except KeyError:
         shutter_speed = 0
-    # Set folder for timelapse photos
+
+    try:
+        copy_last = config['copy_last']
+    except KeyError:
+        copy_last = False
+
+    try:
+        status_filename = config['status_filename']
+    except KeyError:
+        status_filename = False
+
+
+    if (copy_last && status_filename)
+        print("Copy image to status image " + greenText("on: ") + greenText(str(status_filename)))
 
     def capture():
         if not os.path.exists(filePath):
@@ -159,6 +173,10 @@ def take(fileName):
     infoMsg('camera.awb_mode ' + ' (#' + camera.awb_mode + ')')
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
+    global copy_last
+    global status_filename
+    if (copy_last)
+        copyfile(fileName, status_filename)
 
 
 capture() 

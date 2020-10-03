@@ -1,7 +1,8 @@
+# Configuration
+isloaded: yes
+
 # Image resolution
 resolution: { width: 3280, height: 2464 }
-
-isloaded: yes
 
 # Path to save images
 filePath: /var/www/html/bilder/
@@ -23,3 +24,7 @@ iso: 800
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 white_balance: 'off'
 white_balance_gain: { red_gain: 1.6, blue_gain: 1.7 }
+
+# Copy last taken image to status image
+copy_last: true
+status_filename: /var/www/html/status.jpg
