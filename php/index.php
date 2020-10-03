@@ -11,6 +11,9 @@
         <img src="../status.jpg" id="camera" class="responsive">
 </body>
 <style>
+body {
+    text-align: center;
+}
 .responsive {
   width: 90%;
   height: auto;
