@@ -172,8 +172,8 @@ def set_camera_options(camera):
             config['white_balance_gain']['blue_gain']
         )
 
-    if config['exposure_mode']:
-        camera.exposure_mode = config['exposure_mode']
+    # if config['exposure_mode']:
+    #     camera.exposure_mode = config['exposure_mode']
     
     # infoMsg("Preparing camera...")
     sleep(5)
