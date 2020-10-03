@@ -13,6 +13,8 @@
 <style>
 body {
     text-align: center;
+    color: hotpink;
+    background-color: #000;
 }
 .responsive {
   width: 90%;
