@@ -166,7 +166,7 @@ def set_camera_options(camera):
     if config['white_balance_gain']:
         camera.awb_gains = config['white_balance_gain']['red_gain'],config['white_balance_gain']['blue_gain']
 
-    camera.exposure_mode = 'off'
+    #camera.exposure_mode = 'off'
     return camera
 
 
