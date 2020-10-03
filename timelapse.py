@@ -92,6 +92,10 @@ if loadedConf:
     except KeyError:
         status_filename = False
 
+    try:
+        metering = config['metering']
+    except KeyError:
+        metering = None
 
     if copy_last:
         infoMsg("Copy image to status image " + greenText("on: ") + "=> " + greenText(str(status_filename)))
@@ -107,6 +111,8 @@ if loadedConf:
         infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
             str(interval)) + " seconds")
         infoMsg("White balance: " + greenText(str(awb)))
+        if metering: 
+            infoMsg("Metering: " + greenText(str(metering)))
         now = datetime.now()
         today = os.path.join(filePath, str(now.year), str('%02d' % now.month), str('%02d' % now.day))
         time = str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
@@ -129,6 +135,9 @@ if loadedConf:
 
 def set_camera_options(camera):
     # Set camera resolution.
+
+    if config['metering']
+        camera.meter_mode = config['metering']
 
     if config['resolution']:
         camera.resolution = (
