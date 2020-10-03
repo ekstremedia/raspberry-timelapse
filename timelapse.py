@@ -154,10 +154,10 @@ def set_camera_options(camera):
         camera.iso = iso
 
     camera.framerate = Fraction(1, 6)
-    # if config['shutter_speed']:
-    #     camera.shutter_speed = config['shutter_speed']
-    # else:
-    #     camera.shutter_speed = 0
+    if config['shutter_speed']:
+        camera.shutter_speed = config['shutter_speed']
+    else:
+        camera.shutter_speed = 0
 
     # camera.shutter_speed = 0
 

@@ -14,13 +14,13 @@ filePrefix: sortland_cam_01
 
 # Interval in seconds
 # Take a picture every <interval> second
-interval: 30
+interval: 15
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
 iso: 800
 
 # Metering mode to determine exposure: average, spot, backlit, matrix
-metering: 'backlit' 
+metering: 'average' 
 
 # Exposure mode
 # exposure_mode: 'night'
