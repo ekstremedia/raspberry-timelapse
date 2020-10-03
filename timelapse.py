@@ -160,7 +160,7 @@ def set_camera_options(camera):
 
     #  sleep(2)
 
-    camera.framerate = Fraction(1, 6)
+    #camera.framerate = Fraction(1, 6)
     camera.shutter_speed = 6000000
 
     if config['white_balance']:
@@ -185,6 +185,7 @@ def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
+    infoMsg("Capturing...")
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
