@@ -34,7 +34,7 @@ def successMsg(text):
 def infoMsg(text):
     now = datetime.now()
     timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    print(greenText("*** ["+timePrint+']')+text)
+    print(greenText("*** ["+timePrint+'] ')+text)
 
 # Welcome screen
 infoMsg(redText("Raspberry")+greenText("Pi")+"-timelapse is loading...")
