@@ -6,7 +6,8 @@
     <title>Sortland Camera 01</title>
 </head>
 <body>
-        Sortland camera #01
+        Sortland camera #01  - Reloading every 15 sec
+        <br />
         <img src="../status.jpg" id="camera" class="responsive">
 </body>
 <style>
