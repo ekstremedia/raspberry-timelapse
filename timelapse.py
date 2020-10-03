@@ -176,7 +176,7 @@ def set_camera_options(camera):
         camera.exposure_mode = config['exposure_mode']
     
     infoMsg("Preparing camera...")
-    sleep(30)
+    sleep(5)
     infoMsg("Camera ready, starting!")
 
     return camera
