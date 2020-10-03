@@ -1,2 +1,2 @@
-cp php/index.php /var/www/html/index.php
+cp php/index.html /var/www/html/index.html
 
