@@ -32,7 +32,9 @@ def successMsg(text):
     print(green+text+endcolor)
 
 def infoMsg(text):
-    print(greenText("*** ")+text)
+    now = datetime.now()
+    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    print(greenText("*** ["+timePrint']' )+text)
 
 # Welcome screen
 infoMsg(redText("Raspberry")+greenText("Pi")+"-timelapse is loading...")
@@ -187,15 +189,11 @@ def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
-    now = datetime.now()
-    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    infoMsg(timePrint+" Capturing...")
+    infoMsg("Capturing...")
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
-    now = datetime.now()
-    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    infoMsg(timePrint + ' Captured ' + fileName + ' (#' + str(total_images) + ')')
+    infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
     global copy_last
     global status_filename
