@@ -123,6 +123,7 @@ if loadedConf:
         now = datetime.now()
         today = os.path.join(filePath, str(now.year), str('%02d' % now.month), str('%02d' % now.day))
         time = str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
+        timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
         if not os.path.exists(today):
             os.makedirs(today)
             infoMsg("Created folder: " + greenText(today))
@@ -186,11 +187,15 @@ def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
     # Capture a picture.
-    infoMsg("Capturing...")
+    now = datetime.now()
+    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    infoMsg(timePrint+" Capturing...")
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
-    infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
+    now = datetime.now()
+    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    infoMsg(timePrint + ' Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
     global copy_last
     global status_filename
