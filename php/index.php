@@ -7,8 +7,14 @@
 </head>
 <body>
         Sortland camera #01
-        <img src="../status.jpg" id="camera" width="2000">
+        <img src="../status.jpg" id="camera" class="responsive">
 </body>
+<style>
+.responsive {
+  width: 90%;
+  height: auto;
+}
+</style>
 <script>
 setInterval(function() {
     var myImageElement = document.getElementById('camera');
