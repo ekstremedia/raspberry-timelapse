@@ -154,12 +154,12 @@ def set_camera_options(camera):
         camera.iso = iso
 
     camera.framerate = Fraction(1, 6)
-    if config['shutter_speed']:
-        camera.shutter_speed = config['shutter_speed']
-    else:
-        camera.shutter_speed = 0
+    # if config['shutter_speed']:
+    #     camera.shutter_speed = config['shutter_speed']
+    # else:
+    #     camera.shutter_speed = 0
 
-    # camera.shutter_speed = 6000000
+    # camera.shutter_speed = 0
 
     if config['white_balance']:
         camera.awb_mode = config['white_balance']
