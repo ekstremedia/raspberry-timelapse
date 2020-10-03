@@ -113,7 +113,7 @@ if loadedConf:
         infoMsg("Set timelapse-folder to: "+greenText(filePath))
         infoMsg("")
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " ... :) ")
-        infoMsg("Shutter: " + greenText(str(shutter_speed)) + "microseconds, ISO: " + greenText(str(iso)) + ", taking photo every " + greenText(
+        infoMsg("Shutter: " + greenText(str(shutter_speed)) + " microseconds, ISO: " + greenText(str(iso)) + ", taking photo every " + greenText(
             str(interval)) + " seconds")
         infoMsg("White balance: " + greenText(str(awb)))
         if metering: 
@@ -159,7 +159,7 @@ def set_camera_options(camera):
     else:
         camera.shutter_speed = 0
 
-    # camera.shutter_speed = 600000000000
+    camera.shutter_speed = 6000000
 
     if config['white_balance']:
         camera.awb_mode = config['white_balance']
