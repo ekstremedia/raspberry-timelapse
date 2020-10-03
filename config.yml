@@ -14,7 +14,7 @@ filePrefix: sortland_cam_01
 
 # Interval in seconds
 # Take a picture every <interval> second
-interval: 15
+interval: 60
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
 iso: 800
@@ -27,7 +27,7 @@ metering: 'backlit'
 exposure_mode: 'night'
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
-shutter_speed: 600000000
+shutter_speed: 6000000 
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 white_balance: "off"
