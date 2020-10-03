@@ -94,7 +94,7 @@ if loadedConf:
 
 
     if copy_last:
-        infoMsg("Copy image to status image " + greenText("on: ") + " => " + greenText(str(status_filename)))
+        infoMsg("Copy image to status image " + greenText("on: ") + "=> " + greenText(str(status_filename)))
 
     def capture():
         if not os.path.exists(filePath):
