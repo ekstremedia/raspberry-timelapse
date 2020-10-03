@@ -69,6 +69,11 @@ if loadedConf:
         iso = 200
 
     try:
+        awb = config['white_balance']
+    except KeyError:
+        awb = 'cloudy'
+
+    try:
         interval = config['interval']
     except KeyError:
         interval = 10
@@ -89,6 +94,7 @@ if loadedConf:
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " ... :) ")
         infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
             str(interval)) + " seconds")
+        infoMsg("White balance: " + greenText(awb))
         now = datetime.now()
         today = os.path.join(filePath, str(now.year), str('%02d' % now.month), str('%02d' % now.day))
         time = str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
@@ -129,12 +135,14 @@ def set_camera_options(camera):
 
     sleep(2)
 
-#    if config['white_balance']:
-    camera.awb_mode = 'cloudy'
-#        camera.awb_gains = (
-#            config['white_balance']['red_gain'],
-#            config['white_balance']['blue_gain']
-#        )
+    if config['white_balance']:
+        camera.awb_mode = config['white_balance']
+    else
+        camera.awb_mode = 'cloudy'
+
+    if config['white_balance_gain']:
+        camera.awb_gains = config['white_balance_gain']['red_gain'],config['white_balance_gain']['blue_gain']
+
     camera.exposure_mode = 'off'
     return camera
 

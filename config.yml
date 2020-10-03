@@ -18,8 +18,8 @@ interval: 15
 iso: 800
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
-shutter_speed: 0 
+#shutter_speed: 0
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
-#white_balance: { }
-#white_balance: { red_gain: 1.4, blue_gain: 1 }
+white_balance: off
+white_balance_gain: { red_gain: 1.4, blue_gain: 1 }
