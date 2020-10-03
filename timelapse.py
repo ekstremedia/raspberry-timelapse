@@ -97,6 +97,11 @@ if loadedConf:
     except KeyError:
         metering = None
 
+    try:
+        exposure_mode = config['exposure_mode']
+    except KeyError:
+        exposure_mode = None
+
     if copy_last:
         infoMsg("Copy image to status image " + greenText("on: ") + "=> " + greenText(str(status_filename)))
 
@@ -113,6 +118,8 @@ if loadedConf:
         infoMsg("White balance: " + greenText(str(awb)))
         if metering: 
             infoMsg("Metering: " + greenText(str(metering)))
+        if exposure_mode: 
+            infoMsg("Exposure mode: " + greenText(str(exposure_mode)))
         now = datetime.now()
         today = os.path.join(filePath, str(now.year), str('%02d' % now.month), str('%02d' % now.day))
         time = str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
@@ -166,7 +173,9 @@ def set_camera_options(camera):
     if config['white_balance_gain']:
         camera.awb_gains = config['white_balance_gain']['red_gain'],config['white_balance_gain']['blue_gain']
 
-    #camera.exposure_mode = 'off'
+    if config['exposure_mode']:
+        camera.exposure_mode = config['exposure_mode']
+
     return camera
 
 
