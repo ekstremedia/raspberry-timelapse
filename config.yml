@@ -21,5 +21,5 @@ iso: 800
 #shutter_speed: 0
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
-white_balance: off
-white_balance_gain: { red_gain: 1.4, blue_gain: 1 }
+white_balance: 'off'
+white_balance_gain: { red_gain: 1.6, blue_gain: 1.7 }

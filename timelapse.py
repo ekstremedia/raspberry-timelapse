@@ -94,7 +94,7 @@ if loadedConf:
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " ... :) ")
         infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
             str(interval)) + " seconds")
-        infoMsg("White balance: " + greenText(awb))
+        infoMsg("White balance: " + greenText(str(awb)))
         now = datetime.now()
         today = os.path.join(filePath, str(now.year), str('%02d' % now.month), str('%02d' % now.day))
         time = str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
@@ -124,20 +124,22 @@ def set_camera_options(camera):
             config['resolution']['height']
         )
         camera.iso = iso
-    if config['shutter_speed']:
+    try:
         camera.shutter_speed = config['shutter_speed']
-        # Sleep to allow the shutter speed to take effect correctly.
+            # Sleep to allow the shutter speed to take effect correctly.
+    except KeyError:
+        camera.shutter_speed = 0
 
     #  sleep(2)
 
     camera.framerate = Fraction(1, 6)
-    camera.shutter_speed = 6000000
+    #camera.shutter_speed = 6000000
 
     sleep(2)
 
     if config['white_balance']:
         camera.awb_mode = config['white_balance']
-    else
+    else:
         camera.awb_mode = 'cloudy'
 
     if config['white_balance_gain']:
