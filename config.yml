@@ -14,7 +14,7 @@ filePrefix: sortland_cam_01
 
 # Interval in seconds
 # Take a picture every <interval> second
-interval: 60
+interval: 30
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
 iso: 800
