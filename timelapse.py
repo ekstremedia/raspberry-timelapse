@@ -153,10 +153,10 @@ def set_camera_options(camera):
 
     #  sleep(2)
 
-    camera.framerate = Fraction(1, 6)
+    #camera.framerate = Fraction(1, 6)
     #camera.shutter_speed = 6000000
 
-    sleep(2)
+    sleep(5)
 
     if config['white_balance']:
         camera.awb_mode = config['white_balance']
