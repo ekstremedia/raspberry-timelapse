@@ -95,7 +95,7 @@ if loadedConf:
         status_filename = False
 
 
-    if (copy_last && status_filename)
+    if copy_last:
         print("Copy image to status image " + greenText("on: ") + greenText(str(status_filename)))
 
     def capture():
@@ -175,7 +175,7 @@ def take(fileName):
     camera.close()
     global copy_last
     global status_filename
-    if (copy_last)
+    if (copy_last):
         copyfile(fileName, status_filename)
 
 
