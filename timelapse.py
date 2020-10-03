@@ -113,7 +113,7 @@ if loadedConf:
         infoMsg("Set timelapse-folder to: "+greenText(filePath))
         infoMsg("")
         infoMsg("Starting timelapse in "+greenText(str(interval))+ " ... :) ")
-        infoMsg("Shutter:  " + greenText(str(shutter_speed)) + " ISO: " + greenText(str(iso)) + " every " + greenText(
+        infoMsg("Shutter: " + greenText(str(shutter_speed)) + "microseconds, ISO: " + greenText(str(iso)) + ", taking photo every " + greenText(
             str(interval)) + " seconds")
         infoMsg("White balance: " + greenText(str(awb)))
         if metering: 
@@ -143,8 +143,8 @@ if loadedConf:
 def set_camera_options(camera):
     # Set camera resolution.
 
-    if config['metering']:
-        camera.meter_mode = config['metering']
+    # if config['metering']:
+    #     camera.meter_mode = config['metering']
 
     if config['resolution']:
         camera.resolution = (
