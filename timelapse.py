@@ -193,7 +193,7 @@ def take(fileName):
     now = datetime.now()
     timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
     camera.annotate_text = "SortlandCam #1 - " + timePrint
-    camera.annotate_text_size = 120
+    camera.annotate_text_size = 20
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
