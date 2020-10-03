@@ -37,8 +37,6 @@ def infoMsg(text):
 # Welcome screen
 infoMsg(redText("Raspberry")+greenText("Pi")+"-timelapse is loading...")
 
-
-
 # Load configuration if present
 try:
     config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
@@ -96,7 +94,7 @@ if loadedConf:
 
 
     if copy_last:
-        print("Copy image to status image " + greenText("on: ") + greenText(str(status_filename)))
+        infoMsg("Copy image to status image " + greenText("on: ") + " => " + greenText(str(status_filename)))
 
     def capture():
         if not os.path.exists(filePath):
@@ -170,7 +168,6 @@ def take(fileName):
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
-    infoMsg('camera.awb_mode ' + ' (#' + camera.awb_mode + ')')
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
     camera.close()
     global copy_last
