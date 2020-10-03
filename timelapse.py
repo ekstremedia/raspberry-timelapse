@@ -161,7 +161,7 @@ def set_camera_options(camera):
     #  sleep(2)
 
     #camera.framerate = Fraction(1, 6)
-    if config['shutter_speed']
+    if config['shutter_speed']:
         camera.shutter_speed = config['shutter_speed']
     else:
         camera.shutter_speed = 0
