@@ -160,8 +160,8 @@ def set_camera_options(camera):
 
     #  sleep(2)
 
-    #camera.framerate = Fraction(1, 6)
-    camera.shutter_speed = 10000000
+    camera.framerate = Fraction(1, 6)
+    camera.shutter_speed = 60000000
 
     if config['white_balance']:
         camera.awb_mode = config['white_balance']
@@ -174,9 +174,9 @@ def set_camera_options(camera):
     if config['exposure_mode']:
         camera.exposure_mode = config['exposure_mode']
     
-    infoMsg("Preparing camera...")
+    # infoMsg("Preparing camera...")
     sleep(5)
-    infoMsg("Camera ready, starting!")
+    # infoMsg("Camera ready, starting!")
 
     return camera
 
