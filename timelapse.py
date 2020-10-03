@@ -160,7 +160,7 @@ def set_camera_options(camera):
 
     #  sleep(2)
 
-    #camera.framerate = Fraction(1, 6)
+    camera.framerate = Fraction(1, 6)
     #camera.shutter_speed = 6000000
 
 
@@ -174,7 +174,10 @@ def set_camera_options(camera):
 
     if config['exposure_mode']:
         camera.exposure_mode = config['exposure_mode']
+    
+    infoMsg("Preparing camera..."))
     sleep(30)
+    infoMsg("Camera ready, starting!")
 
     return camera
 
