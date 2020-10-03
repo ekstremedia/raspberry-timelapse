@@ -184,15 +184,14 @@ def set_camera_options(camera):
 
     return camera
 
-
 def take(fileName):
     camera = PiCamera()
     set_camera_options(camera)
-    # Capture a picture.
+    # Capture a picture. 
     infoMsg("Capturing...")
     now = datetime.now()
     timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    camera.annotate_text = "SortlandCam #1 - " + timePrint
+    camera.annotate_text = "SortlandCam #01 - " + timePrint
     camera.annotate_text_size = 20
     camera.capture(fileName)
     global total_images
