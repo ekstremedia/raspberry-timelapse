@@ -152,13 +152,6 @@ def set_camera_options(camera):
             config['resolution']['height']
         )
         camera.iso = iso
-    try:
-        camera.shutter_speed = config['shutter_speed']
-            # Sleep to allow the shutter speed to take effect correctly.
-    except KeyError:
-        camera.shutter_speed = 0
-
-    #  sleep(2)
 
     #camera.framerate = Fraction(1, 6)
     if config['shutter_speed']:
