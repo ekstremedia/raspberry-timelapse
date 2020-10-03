@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    Sortland camera #01 - Reloading every 20 sec
+    Sortland camera #01 - Reloading every 40 sec
     <br /> <br />
     <div id="imgdiv">
         <img src="../status.jpg" id="camera" class="responsive">
@@ -35,7 +35,7 @@
     setInterval(function() {
         var myImageElement = document.getElementById('camera');
         myImageElement.src = '../status.jpg?rand=' + Math.random();
-    }, 20000);
+    }, 40000);
 </script>
 
 </html>
