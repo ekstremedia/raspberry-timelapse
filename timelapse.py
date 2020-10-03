@@ -136,7 +136,7 @@ if loadedConf:
 def set_camera_options(camera):
     # Set camera resolution.
 
-    if config['metering']
+    if config['metering']:
         camera.meter_mode = config['metering']
 
     if config['resolution']:
