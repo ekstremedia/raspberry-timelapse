@@ -153,24 +153,24 @@ def set_camera_options(camera):
         )
         camera.iso = iso
 
-    #camera.framerate = Fraction(1, 6)
-    # if config['shutter_speed']:
-    #     camera.shutter_speed = config['shutter_speed']
-    # else:
-    #     camera.shutter_speed = 0
+    camera.framerate = Fraction(1, 6)
+    if config['shutter_speed']:
+        camera.shutter_speed = config['shutter_speed']
+    else:
+        camera.shutter_speed = 0
 
-    camera.shutter_speed = 6000000
+    # camera.shutter_speed = 6000000
 
-    # if config['white_balance']:
-    #     camera.awb_mode = config['white_balance']
-    # else:
-    #     camera.awb_mode = 'cloudy'
+    if config['white_balance']:
+        camera.awb_mode = config['white_balance']
+    else:
+        camera.awb_mode = 'cloudy'
 
-    # if config['white_balance_gain']:
-    #     camera.awb_gains = (
-    #         config['white_balance_gain']['red_gain'],
-    #         config['white_balance_gain']['blue_gain']
-    #     )
+    if config['white_balance_gain']:
+        camera.awb_gains = (
+            config['white_balance_gain']['red_gain'],
+            config['white_balance_gain']['blue_gain']
+        )
 
     # if config['exposure_mode']:
     #     camera.exposure_mode = config['exposure_mode']
@@ -197,18 +197,7 @@ def take(fileName):
     if (copy_last):
         copyfile(fileName, status_filename)
 
-
 capture() 
-
-# Set camera config if config is loaded
-
-# if loadedConf:
-#   set_camera_options(camera)
-
-# print(camera.iso)
-
-
-
 
 
 
