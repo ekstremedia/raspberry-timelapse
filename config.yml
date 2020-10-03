@@ -20,7 +20,7 @@ interval: 15
 iso: 800
 
 # Metering mode to determine exposure: average, spot, backlit, matrix
-metering: 'average' 
+metering: 'backlit' 
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
 #shutter_speed: 0
