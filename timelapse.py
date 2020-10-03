@@ -81,7 +81,7 @@ if loadedConf:
     try:
         shutter_speed = config['shutter_speed']
     except KeyError:
-        shutter_speed = 1000000
+        shutter_speed = 0
     # Set folder for timelapse photos
 
     def capture():
