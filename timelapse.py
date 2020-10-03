@@ -174,7 +174,7 @@ def set_camera_options(camera):
 
     if config['exposure_mode']:
         camera.exposure_mode = config['exposure_mode']
-    sleep(5)
+    sleep(30)
 
     return camera
 
