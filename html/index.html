@@ -10,13 +10,19 @@
 <body>
     Sortland camera #01 - Reloading every 20 sec
     <br /> <br />
-    <img src="../status.jpg" id="camera" class="responsive">
+    <div id="imgdiv">
+        <img src="../status.jpg" id="camera" class="responsive">
+    </div>
 </body>
 <style>
     body {
         text-align: center;
         color: hotpink;
         background-color: #000;
+    }
+    #imgdiv {
+        width: 1200px;
+        margin: auto;
     }
     .responsive {
         border-radius: 5px;
