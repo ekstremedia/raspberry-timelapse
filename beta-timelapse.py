@@ -28,3 +28,4 @@ infoMsg(Fore.RED+"Raspberry"+Fore.RESET+Fore.GREEN +
 infoMsg("Made by Terje Nesthus ("+Fore.BLUE+"terje"+Fore.RESET +
         Fore.LIGHTBLUE_EX+"@"+Fore.RESET+Fore.BLUE+"nesthus.no"+Fore.RESET+")")
 infoMsg("test")
+ 
