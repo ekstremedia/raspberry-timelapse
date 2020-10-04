@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from time import sleep
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
