@@ -2,6 +2,7 @@
 from time import sleep
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
+import emoji
 init()
 
 # Define variables
@@ -23,7 +24,7 @@ def infoMsg(text):
 
 
 infoMsg(Fore.RED+"Raspberry"+Fore.RESET+Fore.GREEN +
-        "PI"+Fore.RESET+"-timelapse 📸 is loading...")
+        "PI"+Fore.RESET+"-timelapse "+emoji.emojize(":camera:")+" is loading...")
 infoMsg("Made by Terje Nesthus ("+Fore.BLUE+"terje"+Fore.RESET +
         Fore.LIGHTBLUE_EX+"@"+Fore.RESET+Fore.BLUE+"nesthus.no"+Fore.RESET+")")
 infoMsg("test")
