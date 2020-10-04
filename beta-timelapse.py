@@ -2,17 +2,9 @@
 from time import sleep
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
+#from picamera import PiCamera
 import emoji
 init()
-
-# Define variables
-red = "\033[1;31;38m"
-green = "\033[1;32;38m"
-endcolor = "\033[0m"
-
-
-def successMsg(text):
-    print(green+text+endcolor)
 
 
 def infoMsg(text):
@@ -25,7 +17,5 @@ def infoMsg(text):
 
 infoMsg(Fore.RED+"Raspberry"+Fore.RESET+Fore.GREEN +
         "PI"+Fore.RESET+"-timelapse "+emoji.emojize(":camera:")+" is loading...")
-infoMsg("Made by Terje Nesthus ("+Fore.BLUE+"terje"+Fore.RESET +
-        Fore.LIGHTBLUE_EX+"@"+Fore.RESET+Fore.BLUE+"nesthus.no"+Fore.RESET+")")
-infoMsg("test")
- 
+infoMsg("Made by Terje Nesthus ("+Fore.LIGHTBLUE_EX+"terje"+Fore.RESET +
+        Fore.BLUE+"@"+Fore.RESET+Fore.LIGHTBLUE_EX+"nesthus.no"+Fore.RESET+")")
