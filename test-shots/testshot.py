@@ -175,7 +175,8 @@ def take(fileName):
 
     if not os.path.exists(filePath):
         os.makedirs(filePath)
-        infoMsg("Created folder: " + greenText(filePath))    camera = PiCamera()
+        infoMsg("Created folder: " + greenText(filePath))
+    camera = PiCamera()
     set_camera_options(camera)
     infoMsg("Capturing...")
     camera.annotate_text = tmpFileName
