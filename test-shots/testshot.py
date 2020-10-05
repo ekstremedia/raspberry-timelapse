@@ -3,6 +3,7 @@ from time import sleep
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
 # from picamera import PiCamera
+from fractions import Fraction
 import emoji
 import yaml
 import os
