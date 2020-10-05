@@ -6,7 +6,7 @@ isloaded: yes
 resolution: { width: 1198, height: 900 }
 
 # Path to save images
-filePath: beta/
+filePath: bilder/
 frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
@@ -29,6 +29,9 @@ exposure_mode: "night"
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
 # shutter_speed: 6000000
 shutter_speed: 6000000
+
+# Framerate
+framerate: Fraction(1, 6)
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 white_balance: "off"

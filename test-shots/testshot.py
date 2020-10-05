@@ -124,10 +124,60 @@ if loadedConf:
         status_filename = False
     infoMsg("Copy to: "+greenText(status_filename))
 
-
 tmpFileName = filePath+filePrefix+"_"+dateTimeNowFn() + "_iso-"+str(iso)+"_shutter-"+str(shutter_speed)+"_meter-" + \
     str(metering)+"_exposuremode-"+str(exposure_mode) + \
     "_int-"+str(interval)+"_awb-"+str(awb)+"_awbg-" + \
-    str(awbg['red_gain'])+"_"+str(awbg['blue_gain'])
+    str(awbg['red_gain'])+"_"+str(awbg['blue_gain'])+".jpg"
 
 infoMsg(tmpFileName)
+
+
+def set_camera_options(camera):
+    if config['metering']:
+        camera.meter_mode = config['metering']
+
+    if config['resolution']:
+        camera.resolution = (
+            config['resolution']['width'],
+            config['resolution']['height']
+        )
+
+    if config['framerate']:
+        camera.framerate = config['framerate']
+
+    if config['iso']:
+        camera.iso = config['iso']
+
+    if config['shutter_speed']:
+        camera.shutter_speed = config['shutter_speed']
+
+    if config['white_balance']:
+        camera.awb_mode = config['white_balance']
+
+    if config['white_balance_gain']:
+        camera.awb_gains = (
+            config['white_balance_gain']['red_gain'],
+            config['white_balance_gain']['blue_gain']
+        )
+
+    if config['exposure_mode']:
+        camera.exposure_mode = config['exposure_mode']
+
+    sleep(5)
+    # infoMsg("Camera ready, starting!")
+
+    return camera
+
+
+def take(fileName):
+    camera = PiCamera()
+    set_camera_options(camera)
+    infoMsg("Capturing...")
+    camera.annotate_text = tmpFileName
+    camera.annotate_text_size = 12
+    camera.capture(tmpFileName)
+    infoMsg('Captured ' + tmpFileName)
+    camera.close()
+
+
+take(tmpFileName)
