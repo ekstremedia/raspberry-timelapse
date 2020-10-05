@@ -9,7 +9,7 @@ import os
 import sys
 from picamera import PiCamera
 
-config_file = "testshot.yml"
+config_file = "config_testshot.yml"
 
 init()
 
