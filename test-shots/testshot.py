@@ -182,9 +182,9 @@ def take(fileName):
     infoMsg("Capturing...")
     camera.annotate_text = tmpFileName
     camera.annotate_text_size = 12
-    start_time = time.time()
+    start_time = time.clock()
     camera.capture(tmpFileName)
-    infoMsg("--- %s seconds ---" % (time.time() - start_time))
+    infoMsg(time.clock() - start_time, "seconds")
     infoMsg('Captured ' + tmpFileName)
     camera.close()
 
