@@ -7,6 +7,7 @@ import emoji
 import yaml
 import os
 import sys
+from picamera import PiCamera
 
 config_file = "testshot.yml"
 
