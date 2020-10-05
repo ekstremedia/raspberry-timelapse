@@ -2,11 +2,13 @@
 from time import sleep
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
-#from picamera import PiCamera
+# from picamera import PiCamera
 import emoji
 import yaml
 import os
 import sys
+
+config_file = "testshot.yml"
 
 init()
 
@@ -16,16 +18,31 @@ currentDir = os.getcwd()
 def timeNow():
     now = datetime.now()
     return str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-print(timeNow())
+
+
+def timeNowFn():
+    now = datetime.now()
+    return str('%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
+
+
+def dateTimeNowFn():
+    now = datetime.now()
+    date = f"{'%02d' % now.day }.{'%02d' % now.month}.{'%02d' % now.year}"
+    return date+str('-%02d' % now.hour) + "_" + str('%02d' % now.minute) + "_" + str('%02d' % now.second)
+
+
 def infoMsg(text):
     print(Fore.BLUE+"ℹ"+Fore.RESET + Fore.GREEN +
           (" ["+timeNow()+'] ')+Fore.RESET+text)
 
+
 def greenText(text):
-     return Fore.GREEN+str(text)+Fore.RESET
+    return Fore.GREEN+str(text)+Fore.RESET
+
 
 def redText(text):
-     return Fore.RED+text+Fore.RESET
+    return Fore.RED+text+Fore.RESET
+
 
 infoMsg(Fore.RED+"Raspberry"+Fore.RESET+Fore.GREEN +
         "PI"+Fore.RESET+"-timelapse "+emoji.emojize(":camera:")+" is loading...")
@@ -34,10 +51,11 @@ infoMsg("Made by Terje Nesthus ("+Fore.LIGHTBLUE_EX+"terje"+Fore.RESET +
 
 # Load configuration
 try:
-    config = yaml.safe_load(open(os.path.join(sys.path[0], "beta_config.yml")))
+    config = yaml.safe_load(open(os.path.join(sys.path[0], config_file)))
     loadedConf = True
+    infoMsg("Loading config file "+Fore.GREEN+config_file+Fore.RESET+".")
 except OSError as e:
-    infoMsg("Found no configuration file!")
+    infoMsg(Fore.RED+"Found no configuration file!"+Fore.RESET)
     infoMsg(str(e))
     loadedConf = False
 
@@ -63,6 +81,12 @@ if loadedConf:
     except KeyError:
         awb = 'cloudy'
     infoMsg("White balance: "+greenText(awb))
+
+    try:
+        awbg = config['white_balance_gain']
+    except KeyError:
+        awbg = ''
+    infoMsg("White balance gain: "+greenText(awbg))
 
     try:
         interval = config['interval']
@@ -100,3 +124,10 @@ if loadedConf:
         status_filename = False
     infoMsg("Copy to: "+greenText(status_filename))
 
+
+tmpFileName = filePath+filePrefix+"_"+dateTimeNowFn() + "_iso-"+str(iso)+"_shutter-"+str(shutter_speed)+"_meter-" + \
+    str(metering)+"_exposuremode-"+str(exposure_mode) + \
+    "_int-"+str(interval)+"_awb-"+str(awb)+"_awbg-" + \
+    str(awbg['red_gain'])+"_"+str(awbg['blue_gain'])
+
+infoMsg(tmpFileName)

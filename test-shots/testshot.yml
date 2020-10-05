@@ -6,11 +6,11 @@ isloaded: yes
 resolution: { width: 1198, height: 900 }
 
 # Path to save images
-filePath: /var/www/html/bilder/
+filePath: beta/
 frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
-filePrefix: sortland_cam_01 
+filePrefix: test
 
 # Interval in seconds
 # Take a picture every <interval> second
