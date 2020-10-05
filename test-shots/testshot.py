@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from time import sleep
+import time
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
 # from picamera import PiCamera
@@ -181,7 +181,9 @@ def take(fileName):
     infoMsg("Capturing...")
     camera.annotate_text = tmpFileName
     camera.annotate_text_size = 12
+    start_time = time.time()
     camera.capture(tmpFileName)
+    infoMsg("--- %s seconds ---" % (time.time() - start_time))
     infoMsg('Captured ' + tmpFileName)
     camera.close()
 
