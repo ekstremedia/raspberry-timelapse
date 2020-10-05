@@ -144,7 +144,7 @@ def set_camera_options(camera):
         )
 
     if config['framerate']:
-        camera.framerate = config['framerate']
+        camera.framerate = Fraction(1, 6)
 
     if config['iso']:
         camera.iso = config['iso']
