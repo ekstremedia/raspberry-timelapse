@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-import time
-from time import sleep
+from time import sleep, time
 from datetime import datetime, date, time
 from colorama import init, Fore, Back, Style
 # from picamera import PiCamera
