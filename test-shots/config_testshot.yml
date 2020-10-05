@@ -6,7 +6,7 @@ isloaded: yes
 resolution: { width: 1198, height: 900 }
 
 # Path to save images
-filePath: bilder/
+filePath: /var/www/html/testshots/
 frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
