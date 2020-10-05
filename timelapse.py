@@ -157,7 +157,46 @@ if loadedConf:
             take(fileName)
 
 
-def set_camera_options(camera): .
+def set_camera_options(camera):
+    # Set camera resolution.
+
+    # if config['metering']:
+    #     camera.meter_mode = config['metering']
+
+    if config['resolution']:
+        camera.resolution = (
+            config['resolution']['width'],
+            config['resolution']['height']
+        )
+        camera.iso = iso
+
+    camera.framerate = Fraction(1, 6)
+    if config['shutter_speed']:
+        camera.shutter_speed = config['shutter_speed']
+    else:
+        camera.shutter_speed = 0
+
+    # camera.shutter_speed = 0
+
+    if config['white_balance']:
+        camera.awb_mode = config['white_balance']
+    else:
+        camera.awb_mode = 'cloudy'
+
+    if config['white_balance_gain']:
+        camera.awb_gains = (
+            config['white_balance_gain']['red_gain'],
+            config['white_balance_gain']['blue_gain']
+        )
+
+    # if config['exposure_mode']:
+    #     camera.exposure_mode = config['exposure_mode']
+
+    # infoMsg("Preparing camera...")
+    sleep(5)
+    # infoMsg("Camera ready, starting!")
+
+    return camera
 
 
 def take(fileName):
