@@ -144,8 +144,8 @@ def set_camera_options(camera):
             config['resolution']['height']
         )
 
-    if config['framerate']:
-        camera.framerate = Fraction(1, 6)
+#    if config['framerate']:
+    camera.framerate = Fraction(1, 6)
 
     if config['iso']:
         camera.iso = config['iso']

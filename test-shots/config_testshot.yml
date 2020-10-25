@@ -28,7 +28,7 @@ exposure_mode: "night"
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
 # shutter_speed: 6000000
-shutter_speed: 6000
+shutter_speed: 10000
 
 # Framerate
 #framerate: Fraction(1, 6)
