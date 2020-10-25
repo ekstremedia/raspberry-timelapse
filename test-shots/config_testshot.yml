@@ -17,7 +17,7 @@ filePrefix: test
 interval: 15
 
 # ISO value. 0 = auto, 60-800 for manual ISO.
-iso: 800
+iso: 100
 
 # Metering mode to determine exposure: average, spot, backlit, matrix
 metering: "average"
@@ -28,10 +28,10 @@ exposure_mode: "night"
 
 # Shutter speed. 0 = auto, else value in microseconds (seconds * 1000000).
 # shutter_speed: 6000000
-shutter_speed: 6000000
+shutter_speed: 6000
 
 # Framerate
-framerate: Fraction(1, 6)
+#framerate: Fraction(1, 6)
 
 # White balance. Set to empty object (`{ }`) to use auto white balance.
 white_balance: "off"
