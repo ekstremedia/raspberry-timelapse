@@ -62,6 +62,10 @@ else:
 
 if loadedConf:
     try:
+        annotation = config['annotation']
+    except KeyError:
+        annotation = ""
+    try:
         filePath = config['filePath']
     except KeyError:
         filePath = currentDir+"/timelapse/"
@@ -195,12 +199,6 @@ def set_camera_options(camera):
     # infoMsg("Preparing camera...")
     sleep(5)
     # infoMsg("Camera ready, starting!")
-
-    if config['annotation']:
-        annotation = config['annotation']
-    else:
-        annotation = ""
-
     return camera
 
 
@@ -210,7 +208,7 @@ def take(fileName):
     # Capture a picture.
     infoMsg("Capturing...")
     now = datetime.now()
-    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + str(now.year)
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + " " + str(now.year) + "  "
     timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
     camera.annotate_text = annotation + timeprint
     camera.annotate_text_size = 20
