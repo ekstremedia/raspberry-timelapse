@@ -210,11 +210,9 @@ def take(fileName):
     # Capture a picture.
     infoMsg("Capturing...")
     now = datetime.now()
-    today = str(now.year), str(
-        '%02d' % now.month), str('%02d' % now.day)
-    timePrint = today + str('%02d' % now.hour) + ":" + str('%02d' %                                                   now.minute) + ":" + str('%02d' % now.second)
-
-    camera.annotate_text = annotation + timePrint
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + str(now.year)
+    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    camera.annotate_text = annotation + timeprint
     camera.annotate_text_size = 20
     camera.capture(fileName)
     global total_images
