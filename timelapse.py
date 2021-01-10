@@ -17,7 +17,7 @@ endcolor = "\033[0m"
 currentDir = os.getcwd()
 filePath = ""
 total_images = 0
-
+annotation = ""
 
 def redText(text):
     return red+text+endcolor
@@ -196,6 +196,11 @@ def set_camera_options(camera):
     sleep(5)
     # infoMsg("Camera ready, starting!")
 
+    if config['annotation']:
+        annotation = config['annotation']
+    else:
+        annotation = ""
+
     return camera
 
 
@@ -207,7 +212,8 @@ def take(fileName):
     now = datetime.now()
     timePrint = str('%02d' % now.hour) + ":" + str('%02d' %
                                                    now.minute) + ":" + str('%02d' % now.second)
-    camera.annotate_text = "SortlandCam #01 - " + timePrint
+
+    camera.annotate_text = annotation + timePrint
     camera.annotate_text_size = 20
     camera.capture(fileName)
     global total_images
