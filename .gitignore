@@ -6,3 +6,4 @@ ffmpeg-timelapse.sh
 *.jpg
 autocommit.sh
 .vscode/
+venv/
