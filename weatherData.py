@@ -16,6 +16,15 @@ with open(filename, 'r') as json_file:
 print(data['body']['devices'][0]['modules'][0]['dashboard_data']['Temperature'])
 print(data['body']['devices'][0]['modules'][0]['dashboard_data']['Humidity'])
 print(data['body']['devices'][0]['modules'][0]['dashboard_data']['temp_trend'])
-print(data['body']['devices'][0]['modules'][0]['dashboard_data']['min_temp'])
-print(data['body']['devices'][0]['modules'][0]['dashboard_data']['max_temp'])
-print(data['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'])
+try:
+    print(data['body']['devices'][0]['modules'][0]['dashboard_data']['min_temp'])
+except KeyError:
+    print("No min temp yet")
+try:
+    print(data['body']['devices'][0]['modules'][0]['dashboard_data']['max_temp'])
+except KeyError:
+    print("No min temp yet")
+try:
+    print(data['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'])
+except KeyError:
+    print("No min temp yet")
