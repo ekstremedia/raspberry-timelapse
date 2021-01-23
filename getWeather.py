@@ -36,25 +36,35 @@ try:
   pressure = {'pressure': cont['body']['devices'][0]['dashboard_data']['Pressure']}
   pressure_trend = {'pressure_trend': cont['body']['devices'][0]['dashboard_data']['pressure_trend']}
   co2 = {'co2': cont['body']['devices'][0]['dashboard_data']['CO2']}
+  rain = {'temperature': cont['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'] }
 
+  print(temp)
   weatherList.update(temp)
   weatherList.update(humidity)
   weatherList.update(temp_trend)
   weatherList.update(pressure)
   weatherList.update(pressure_trend)
   weatherList.update(co2)
+  weatherList.update(rain)
+  print(weatherList)
 
+  logTemp = "Temp: " + str(weatherList.get('temperature')) + "c" 
+  logHumidity = " Humidity: " + str(weatherList.get('humidity')) + "%"
+  logTempTrend = " Temp trend: " + str(weatherList.get('temp_trend'))
+  logPressure = " Pressure: " + str(weatherList.get('pressure')) + "mb"
+  logPressureTrend = " Pressure trend: " + str(weatherList.get('pressure_trend'))
+  logRain = " Rain: " + str(weatherList.get('rain'))
 
+  print(weatherList.get('temperature'))
+  print(logTemp)
+  logOut = logTemp + logTempTrend + logHumidity + logPressure + logPressureTrend
 
-  logTemp = "Temp: "+str(weatherList['temp'])+"c"
-  logHumidity = "Humidity: "+str(weatherList['humidity'])
-
-  logOut = logTemp +" "+logHumidity
   with open(filename, 'w') as outfile:
     json.dump(cont, outfile)
     log(logOut)
 
-except:
+except:    
+  print("Error")
   log("Could not download file")
 
 
