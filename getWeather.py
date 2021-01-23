@@ -8,7 +8,6 @@ homedir = "/home/pi/raspberry-timelapse/"
 logdir = os.path.join(homedir, "logs");
 logfilename = "getWeather.log"
 logfile = os.path.join(logdir, logfilename);
-print(logfile)
 if not os.path.exists(logdir):
     os.makedirs(logdir)
     print("Made logs/ directory")
@@ -32,6 +31,6 @@ try:
   temp = cont['body']['devices'][0]['modules'][0]['dashboard_data']['Temperature']
   with open(filename, 'w') as outfile:
     json.dump(cont, outfile)
-    log("Write new data to "+filename + " - Temp: "+str(temp)+"c")
+    log("Temp: "+str(temp)+"c")
 except:
   log("Could not download file")
