@@ -3,8 +3,10 @@ import urllib.request
 import json
 import logging
 import os
+import sys
+
 from datetime import datetime, date, time
-homedir = "/home/pi/raspberry-timelapse/"
+homedir = sys.path[0]
 logdir = os.path.join(homedir, "logs")
 logfilename = "getWeather.log"
 logfile = os.path.join(logdir, logfilename)
