@@ -1,11 +1,12 @@
 #!/usr/bin/env python3.9
 import json
-#from os import path
 import os
 import subprocess
+
 homedir = "/home/pi/raspberry-timelapse/"
 filename = 'netatmo.json'
 netatmo = os.path.join(homedir, filename);
+
 if not os.path.exists(netatmo):
     #print("File doesnt exists, downloading")
     cmd = ['python3.9', 'getWeather.py']
