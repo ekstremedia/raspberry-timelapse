@@ -3,14 +3,21 @@ import urllib.request
 import json
 import logging
 import os
-logdir = "logs";
+from datetime import datetime, date, time
 
+logdir = "logs";
 if not os.path.exists(logdir):
     os.makedirs(logdir)
     print("Made logs/ directory")
 
 logging.basicConfig(filename="logs/getWeather.log", encoding="utf-8", level=logging.DEBUG)
-logging.info("Test")
+
+def log(text):
+    now = datetime.now()
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
+    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    dateStr = timeprint + ": "
+    logging.info(dateStr + text)
 
 filename = 'netatmo.json'
 try:
@@ -18,11 +25,10 @@ try:
   req = urllib.request.Request(url)
   r = urllib.request.urlopen(req).read()
   cont = json.loads(r.decode('utf-8'))
-  print('Status: ' + cont['status'])
-  print(cont['body']['devices'][0]['station_name'])
-  print(cont['body']['devices'][0]['modules'][0]['dashboard_data']['Temperature'])
+  #print(cont['body']['devices'][0]['station_name'])
+  temp = cont['body']['devices'][0]['modules'][0]['dashboard_data']['Temperature']
   with open(filename, 'w') as outfile:
     json.dump(cont, outfile)
-    print("Write new data to "+filename)
+    log("Write new data to "+filename + " - Temp: "+str(temp)+"c")
 except:
-  print("Could not download file")
+  log("Could not download file")
