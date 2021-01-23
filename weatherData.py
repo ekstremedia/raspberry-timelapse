@@ -1,15 +1,17 @@
 #!/usr/bin/env python3.9
 import json
-from os import path
+#from os import path
+import os
 import subprocess
-
+homedir = "/home/pi/raspberry-timelapse/"
 filename = 'netatmo.json'
-if not path.exists(filename):
+netatmo = os.path.join(homedir, filename);
+if not os.path.exists(netatmo):
     #print("File doesnt exists, downloading")
-    cmd = ['python', 'getWeather.py']
+    cmd = ['python3.9', 'getWeather.py']
     subprocess.Popen(cmd).wait()
 
-with open(filename, 'r') as json_file:
+with open(netatmo, 'r') as json_file:
     data = json.load(json_file)
 
 weatherList = {}
