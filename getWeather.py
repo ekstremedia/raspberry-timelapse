@@ -6,11 +6,14 @@ import os
 from datetime import datetime, date, time
 homedir = "/home/pi/raspberry-timelapse/"
 logdir = os.path.join(homedir, "logs");
+logfilename = "getWeather.log"
+logfile = os.path.join(logdir, logfilename);
+print(logfile)
 if not os.path.exists(logdir):
     os.makedirs(logdir)
     print("Made logs/ directory")
 
-logging.basicConfig(filename="logs/getWeather.log", encoding="utf-8", level=logging.DEBUG)
+logging.basicConfig(filename=logfile, encoding="utf-8", level=logging.DEBUG)
 
 def log(text):
     now = datetime.now()
@@ -19,7 +22,7 @@ def log(text):
     dateStr = timeprint + ": "
     logging.info(dateStr + text)
 
-filename = 'netatmo.json'
+filename = os.path.join(homedir, 'netatmo.json')
 url = 'https://ekstremedia.no/nesthus2020/public/data/netatmoStatus'
 try:
   req = urllib.request.Request(url)
