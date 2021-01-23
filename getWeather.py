@@ -1,10 +1,16 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.9
 import urllib.request
 import json
 import logging
+import os
+logdir = "logs";
+
+if not os.path.exists(logdir):
+    os.makedirs(logdir)
+    print("Made logs/ directory")
 
 logging.basicConfig(filename="logs/getWeather.log", encoding="utf-8", level=logging.DEBUG)
-logging.debug("Test")
+logging.info("Test")
 
 filename = 'netatmo.json'
 try:
