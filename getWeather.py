@@ -4,8 +4,8 @@ import json
 import logging
 import os
 from datetime import datetime, date, time
-
-logdir = "logs";
+homedir = "/home/pi/raspberry-timelapse/"
+logdir = os.path.join(homedir, "logs");
 if not os.path.exists(logdir):
     os.makedirs(logdir)
     print("Made logs/ directory")
@@ -20,8 +20,8 @@ def log(text):
     logging.info(dateStr + text)
 
 filename = 'netatmo.json'
+url = 'https://ekstremedia.no/nesthus2020/public/data/netatmoStatus'
 try:
-  url = 'https://ekstremedia.no/nesthus2020/public/data/netatmoStatus'
   req = urllib.request.Request(url)
   r = urllib.request.urlopen(req).read()
   cont = json.loads(r.decode('utf-8'))
