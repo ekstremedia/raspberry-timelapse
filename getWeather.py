@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 import urllib.request
 import json
+import logging
+
+logging.basicConfig(filename="logs/getWeather.log", encoding="utf-8", level=logging.DEBUG)
+logging.debug("Test")
+
 filename = 'netatmo.json'
 try:
   url = 'https://ekstremedia.no/nesthus2020/public/data/netatmoStatus'
