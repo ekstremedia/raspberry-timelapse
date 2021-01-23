@@ -36,9 +36,8 @@ try:
   pressure = {'pressure': cont['body']['devices'][0]['dashboard_data']['Pressure']}
   pressure_trend = {'pressure_trend': cont['body']['devices'][0]['dashboard_data']['pressure_trend']}
   co2 = {'co2': cont['body']['devices'][0]['dashboard_data']['CO2']}
-  rain = {'temperature': cont['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'] }
+  rain = {'rain': cont['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'] }
 
-  print(temp)
   weatherList.update(temp)
   weatherList.update(humidity)
   weatherList.update(temp_trend)
@@ -46,7 +45,6 @@ try:
   weatherList.update(pressure_trend)
   weatherList.update(co2)
   weatherList.update(rain)
-  print(weatherList)
 
   logTemp = "Temp: " + str(weatherList.get('temperature')) + "c" 
   logHumidity = " Humidity: " + str(weatherList.get('humidity')) + "%"
@@ -55,9 +53,8 @@ try:
   logPressureTrend = " Pressure trend: " + str(weatherList.get('pressure_trend'))
   logRain = " Rain: " + str(weatherList.get('rain'))
 
-  print(weatherList.get('temperature'))
-  print(logTemp)
-  logOut = logTemp + logTempTrend + logHumidity + logPressure + logPressureTrend
+  #print(logTemp)
+  logOut = logTemp + logTempTrend + logHumidity + logPressure + logPressureTrend + logRain
 
   with open(filename, 'w') as outfile:
     json.dump(cont, outfile)
