@@ -18,6 +18,7 @@ currentDir = os.getcwd()
 filePath = ""
 total_images = 0
 annotation = ""
+homedir = sys.path[0]
 
 def redText(text):
     return red+text+endcolor
@@ -219,6 +220,8 @@ def take(fileName):
     camera.close()
     global copy_last
     global status_filename
+    cmd = os.path.join(homedir, 'imgConvert.py')
+    os.system(cmd + " " + fileName)
     if (copy_last):
         copyfile(fileName, status_filename)
 

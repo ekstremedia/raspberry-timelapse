@@ -35,14 +35,14 @@ weatherList.update(co2)
 try:
     weatherList.update({'min_temp': data['body']['devices'][0]['modules'][0]['dashboard_data']['min_temp'] })
 except KeyError:
-    print("No min temp yet")
+    print("No min temp data yet")
 try:
     weatherList.update({'max_temp': data['body']['devices'][0]['modules'][0]['dashboard_data']['max_temp'] })
 except KeyError:
-    print("No min temp yet")
+    print("No max temp data yet")
 try:
     weatherList.update({'rain': data['body']['devices'][0]['modules'][1]['dashboard_data']['Rain'] })
 except KeyError:
-    print("No min temp yet")
+    print("No rain data yet")
 
 print(weatherList)
