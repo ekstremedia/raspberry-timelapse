@@ -1,0 +1,23 @@
+Metadata-Version: 1.0
+Name: suntime
+Version: 1.2.5
+Summary: Simple sunset and sunrise time calculation python library
+Home-page: https://github.com/SatAgro/suntime
+Author: Krzysztof Stopa
+Author-email: UNKNOWN
+License: LGPLv3
+Description: Raspberry Pi 3B+ timelapse python script for Camera Module V2
+        =============================================================
+        
+        This is my collection of python scripts for running a 24/7 timelapsing solution on a Raspberry Pi 3+. 
+        
+        It will start on boot, take a photo every 1. minute and save it in folder.
+        
+        Scripts
+        -------
+        
+        > [timelapse.py](timelapse.py)
+        
+        The main script
+        
+Platform: UNKNOWN
