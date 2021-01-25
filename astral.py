@@ -1,7 +1,4 @@
-from astral import LocationInfo
-city = LocationInfo("London", "England", "Europe/London", 51.5, -0.116)
-print((
-    f"Information for {city.name}/{city.region}\n"
-    f"Timezone: {city.timezone}\n"
-    f"Latitude: {city.latitude:.02f}; Longitude: {city.longitude:.02f}\n"
-))
+import datetime  
+import sunrise  
+s = sun(lat=49, long=3)
+print('sunrise at ',s.sunrise(when=datetime.datetime.now()))
