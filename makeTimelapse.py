@@ -74,5 +74,6 @@ log(output_filename)
 # --noauth_local_webserver
 yt_cmd = f"/home/pi/raspberry-timelapse/youtubeUpload.py --file='{output_filename}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
 log(yt_cmd)
-sp.call(yt_cmd, shell=True)
-log("DONE: "+yt_cmd)
+#sp.call(yt_cmd, shell=True)
+cmd_output = sp.getoutput(yt_cmd)
+log("Ran: "+cmd_output)
