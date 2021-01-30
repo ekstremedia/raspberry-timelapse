@@ -52,7 +52,7 @@ def log(text):
     timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
     dateStr = timeprint + ": "
     logging.info(dateStr + text)
-
+log("Started maketimelapse")
 log(f"Looking for: {target_folder+extension}")
 log(f"Outputting to: {output_filename}")
 over = f"find {target_folder+extension} -type f -size -100k | wc -l"
