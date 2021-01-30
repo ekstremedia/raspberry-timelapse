@@ -10,7 +10,7 @@ filePath: /var/www/html/bilder/
 frameRate: 0.5
 # Filename prefix
 # <prefix>_07-08-2019_23.40.01.jpg
-filePrefix: sigerfjord_cam_02
+filePrefix: sortland_cam_02
 
 # Interval in seconds
 # Take a picture every <interval> second
@@ -39,4 +39,4 @@ copy_last: true
 status_filename: /var/www/html/status.jpg
 
 # Annotation 
-annotation: "SigerfjordCam #02"
+annotation: "SortlandCam #01"

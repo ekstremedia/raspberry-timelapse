@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.9
+import yaml
 import locale
 import calendar
 from calendar import weekday, day_name
@@ -7,17 +8,7 @@ import os
 import subprocess as sp
 import logging
 from datetime import datetime, date, time
-import yaml
-from time import sleep
-from datetime import datetime, date, time
-from picamera import PiCamera
-from fractions import Fraction
-from shutil import copyfile
-import os
-# import time
-import threading
-import sys
-import yaml
+
 locale.setlocale(locale.LC_ALL, "nb_NO")
 
 config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
@@ -77,12 +68,12 @@ else:
 
 ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 {output_filename}"
 print(ffmpeg_cmd)
-#sp.call(ffmpeg_cmd, shell="True")
+sp.call(ffmpeg_cmd, shell="True")
 log(ffmpeg_cmd)
 print(output_filename)
 
 # --noauth_local_webserver
-yt_cmd = f"./youtubeUpload.py --file='{output_filename}' --title='{title}' --description='timelapse test' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
+yt_cmd = f"./youtubeUpload.py --file='{output_filename}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
 print(yt_cmd)
-#sp.call(yt_cmd, shell=True)
+sp.call(yt_cmd, shell=True)
 log(yt_cmd)
