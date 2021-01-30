@@ -4,10 +4,30 @@ import datetime
 import subprocess as sp
 import os
 from datetime import date
+import sys
+import logging
 
 Previous_Date = datetime.datetime.today() - datetime.timedelta(days=1)
 #Previous_Date = datetime.datetime(2021,4,25)
 #Previous_Date = date.fromisoformat('2019-12-04')
+
+
+# Initialize logging
+homedir = sys.path[0]
+logdir = os.path.join(homedir, "logs")
+logfilename = "makeTimelapse.log"
+logfile = os.path.join(logdir, logfilename)
+if not os.path.exists(logdir):
+    os.makedirs(logdir)
+    print("Made logs/ directory")
+logging.basicConfig(filename=logfile, encoding="utf-8", level=logging.DEBUG)
+def log(text):
+    now = datetime.datetime.now()
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
+    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    dateStr = timeprint + ": "
+    logging.info(dateStr + text)
+log("Started autotimelapse")
 
 print (Previous_Date)
 previous_datestr = Previous_Date.strftime ('%Y/%m/%d');
@@ -29,10 +49,7 @@ if not os.path.exists(video_folder):
     os.makedirs(video_folder)
 
 target = os.path.join(images_folder, previous_datestr)+"/"
-
-print(target)
-
+log(target)
 tl_cmd = f"/home/pi/raspberry-timelapse/makeTimelapse.py {target} {video_file} {previous_datestr_out}"
-print(tl_cmd)
-
+log(tl_cmd)
 sp.call(tl_cmd, shell=True)

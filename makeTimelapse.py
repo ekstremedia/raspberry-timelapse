@@ -8,7 +8,6 @@ import os
 import subprocess as sp
 import logging
 from datetime import datetime, date, time
-
 locale.setlocale(locale.LC_ALL, "nb_NO")
 
 config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
@@ -73,7 +72,7 @@ log(ffmpeg_cmd)
 print(output_filename)
 
 # --noauth_local_webserver
-yt_cmd = f"./youtubeUpload.py --file='{output_filename}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
+yt_cmd = f"/home/pi/raspberry-timelapse/youtubeUpload.py --file='{output_filename}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
 print(yt_cmd)
 sp.call(yt_cmd, shell=True)
 log(yt_cmd)
