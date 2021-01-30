@@ -53,26 +53,26 @@ def log(text):
     dateStr = timeprint + ": "
     logging.info(dateStr + text)
 
-print(f"Looking for: {target_folder+extension}")
-print(f"Outputting to: {output_filename}")
+log(f"Looking for: {target_folder+extension}")
+log(f"Outputting to: {output_filename}")
 over = f"find {target_folder+extension} -type f -size -100k | wc -l"
 overdelete = f"find {target_folder+extension} -type f -size -100k -delete"
 overexposed = sp.getoutput(over)
 if int(overexposed)>0:
-    print(f"Deleting {overexposed} overexposed images...")
+    log(f"Deleting {overexposed} overexposed images...")
     log(f"Deleting {overexposed} overexposed images in {target_folder}")
     delete = sp.getoutput(overdelete)
 else:
-    print("No overexposed images found")
+    log("No overexposed images found")
 
 ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 -y {output_filename}"
-print(ffmpeg_cmd)
+log(ffmpeg_cmd)
 sp.call(ffmpeg_cmd, shell="True")
 log(ffmpeg_cmd)
-print(output_filename)
+log(output_filename)
 
 # --noauth_local_webserver
 yt_cmd = f"/home/pi/raspberry-timelapse/youtubeUpload.py --file='{output_filename}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
-print(yt_cmd)
-sp.call(yt_cmd, shell=True)
 log(yt_cmd)
+sp.call(yt_cmd, shell=True)
+log("DONE: "+yt_cmd)
