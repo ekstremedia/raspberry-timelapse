@@ -66,7 +66,7 @@ if int(overexposed)>0:
 else:
     print("No overexposed images found")
 
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 {output_filename}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 -y {output_filename}"
 print(ffmpeg_cmd)
 sp.call(ffmpeg_cmd, shell="True")
 log(ffmpeg_cmd)
