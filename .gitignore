@@ -11,3 +11,4 @@ autocommit.sh
 venv/
 config.yml
 client_secrets.json
+youtubeUpload.py-oauth2.json
