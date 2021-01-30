@@ -19,6 +19,10 @@ else:
 
 ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 {output_filename}"
 print(ffmpeg_cmd)
-# sp.call(ffmpeg_cmd)
-#sp.call(['ffmpeg', '-r', '25', '-pattern glob' '-i', ])
-sp.call(ffmpeg_cmd, shell="True")
+#sp.call(ffmpeg_cmd, shell="True")
+print(output_filename)
+
+# --noauth_local_webserver
+yt_cmd = f"./youtubeUpload.py --file='{output_filename}' --title='test' --description='timelapse test' --keywords='timelapse, test' --category='22' --privacyStatus='public'"
+print(yt_cmd)
+sp.call(yt_cmd, shell=True)
