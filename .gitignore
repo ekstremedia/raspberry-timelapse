@@ -10,3 +10,4 @@ autocommit.sh
 .vscode/
 venv/
 config.yml
+client_secrets.json
