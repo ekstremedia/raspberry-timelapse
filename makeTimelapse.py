@@ -8,14 +8,37 @@ import os
 import subprocess as sp
 import logging
 from datetime import datetime, date, time
-locale.setlocale(locale.LC_ALL, "nb_NO")
 
+# Initialize logging
+homedir = sys.path[0]
+logdir = os.path.join(homedir, "logs")
+logfilename = "makeTimelapse.log"
+logfile = os.path.join(logdir, logfilename)
+if not os.path.exists(logdir):
+    os.makedirs(logdir)
+    print("Made logs/ directory")
+logging.basicConfig(filename=logfile, encoding="utf-8", level=logging.DEBUG)
+def log(text):
+    now = datetime.now()
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
+    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    dateStr = timeprint + ": "
+    logging.info(dateStr + text)
+
+locale.setlocale(locale.LC_ALL, "nb_NO")
 config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
+
+def printlog(text):
+    log(text)
+    print(text)
+
 try:
     camera_name = config['annotation']
 except KeyError:
     camera_name = ""
 
+if len(sys.argv) < 4:
+    printlog("Missing arguments, only had " + str(len(sys.argv)))
 
 # Initialize variables
 target_folder = sys.argv[1]
@@ -36,22 +59,8 @@ title = f"{camera_name} - {pretty_date.capitalize()}"
 print(pretty_date)
 
 extension = '*.jpg'
-homedir = sys.path[0]
 
-# Initialize logging
-logdir = os.path.join(homedir, "logs")
-logfilename = "makeTimelapse.log"
-logfile = os.path.join(logdir, logfilename)
-if not os.path.exists(logdir):
-    os.makedirs(logdir)
-    print("Made logs/ directory")
-logging.basicConfig(filename=logfile, encoding="utf-8", level=logging.DEBUG)
-def log(text):
-    now = datetime.now()
-    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
-    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    dateStr = timeprint + ": "
-    logging.info(dateStr + text)
+
 log("Started maketimelapse")
 log(f"Looking for: {target_folder+extension}")
 log(f"Outputting to: {output_filename}")
@@ -65,7 +74,7 @@ if int(overexposed)>0:
 else:
     log("No overexposed images found")
 
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 -y {output_filename}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target_folder+extension}' -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {output_filename}"
 log(ffmpeg_cmd)
 sp.call(ffmpeg_cmd, shell="True")
 log(ffmpeg_cmd)

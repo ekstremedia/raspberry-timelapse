@@ -52,4 +52,5 @@ target = os.path.join(images_folder, previous_datestr)+"/"
 log(target)
 tl_cmd = f"/home/pi/raspberry-timelapse/makeTimelapse.py {target} {video_file} {previous_datestr_out}"
 log(tl_cmd)
-sp.call(tl_cmd, shell=True)
+#sp.call(tl_cmd, shell=True)
+os.system(tl_cmd)
