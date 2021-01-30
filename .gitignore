@@ -9,3 +9,4 @@ ffmpeg-timelapse.sh
 autocommit.sh
 .vscode/
 venv/
+config.yml
