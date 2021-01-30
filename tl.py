@@ -7,6 +7,7 @@ import calendar
 from calendar import weekday, day_name
 import yaml
 import os
+from os import path
 import sys
 import subprocess as sp
 import ffmpeg
@@ -74,17 +75,12 @@ else:
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
-#ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
-#log(ffmpeg_cmd)
-#log(f"Running ffmpeg on {greenText(restfiles)} images...")
-#ffmpg_call = sp.getoutput(ffmpeg_cmd)
-#log(f"ffmpeg {greenText('complete')}")
-
-#(
-    #ffmpeg
-   # .input('/path/to/jpegs/*.jpg', pattern_type='glob', framerate=25)
-  #  .output('movie.mp4')
- #   .run()
-#)
-
-input = ffmpeg.input('in.mp4')
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 10 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
+log(ffmpeg_cmd)
+log(f"Running ffmpeg on {greenText(restfiles)} images...")
+ffmpg_call = sp.getoutput(ffmpeg_cmd)
+size = round(os.path.getsize(video_file)/(1024*1024),2)
+if path.exists(video_file) and size>0:
+    log(f"Successfully created {greenText(video_file)} {size} MB")
+else:
+    log(f"Error in creating video file: {video_file}: {size} MB")
