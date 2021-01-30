@@ -43,15 +43,14 @@ if len(sys.argv) < 4:
 # Initialize variables
 target_folder = sys.argv[1]
 output_filename = sys.argv[2]
+
 date = date.fromisoformat(sys.argv[3])
 month = date.strftime ('%-m')
 year = date.strftime ('%Y')
 day = date.strftime ('%-d')
 dayNumber = weekday(int(year), int(month), int(day))
-
 pretty_month = calendar.month_name[int(month)]
 pretty_day = calendar.day_name[int(dayNumber)]
-
 pretty_date = f"{pretty_day} {day}. {pretty_month} {year}"
 
 title = f"{camera_name} - {pretty_date.capitalize()}"
