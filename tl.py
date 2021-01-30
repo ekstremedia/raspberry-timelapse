@@ -87,4 +87,4 @@ restfiles = sp.getoutput(restfiles_cmd)
  #   .run()
 #)
 
-#input = ffmpeg.input('in.mp4')
+input = ffmpeg.input('in.mp4')
