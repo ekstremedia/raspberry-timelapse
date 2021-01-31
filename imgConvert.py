@@ -12,11 +12,9 @@ last_image_file =  os.path.join(homedir, "logs/last_image.log");
 with open(last_image_file) as f:
     filename = f.readline()
 
-log(f"imgCONVET filename: {filename}")
 fileout = filename
 netatmoFile = "netatmo.json"
 netatmo = os.path.join(homedir, netatmoFile)
-log(f"Netatmo: "+netatmo)
 if not os.path.exists(netatmo):
     print("File doesnt exists, downloading")
     cmd = ['python3.9', 'getWeather.py']

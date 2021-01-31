@@ -228,7 +228,6 @@ def take(fileName):
     cmd = os.path.join(homedir, 'imgConvert.py')
     log(f"imgconvert_cmd: {cmd}")
     cmd_output = sp.getoutput(cmd)
-    log("Ran: "+cmd_output)
     if (copy_last):
         copyfile(fileName, status_filename)
 

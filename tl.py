@@ -27,10 +27,11 @@ except KeyError:
 # Set date variables
 
 # Yesterdays date
-#previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
+previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
 
 # set a specific date instead
-previous_date = date.fromisoformat('2021-01-30') 
+#previous_date = date.fromisoformat('2021-01-30') 
+
 previous_datestr = previous_date.strftime ('%Y/%m/%d');
 #previous_datestr_out = previous_date.strftime ('%Y-%m-%d');
 previous_filename = previous_date.strftime ('%d_%m_%Y');
@@ -75,12 +76,20 @@ else:
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 16 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 15 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
 log(ffmpeg_cmd)
 log(f"Running ffmpeg on {greenText(restfiles)} images...")
 ffmpg_call = sp.getoutput(ffmpeg_cmd)
 size = round(os.path.getsize(video_file)/(1024*1024),2)
+
 if path.exists(video_file) and size>0:
     log(f"Successfully created {greenText(video_file)} {size} MB")
+    
 else:
     log(f"Error in creating video file: {video_file}: {size} MB")
+
+title = f"{camera_name} - {pretty_date.capitalize()}"
+yt_cmd = f"/home/pi/raspberry-timelapse/youtubeUpload.py --file='{video_file}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
+log(yt_cmd)
+#cmd_output = sp.getoutput(yt_cmd)
+#log("Ran: "+cmd_output)
