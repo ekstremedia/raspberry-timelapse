@@ -91,5 +91,5 @@ else:
 title = f"{camera_name} - {pretty_date.capitalize()}"
 yt_cmd = f"/home/pi/raspberry-timelapse/youtubeUpload.py --file='{video_file}' --title='{title}' --description='Automagisk laget på en Raspberry Pi 3b+' --keywords='timelapse, vesterålen, {pretty_date}' --category='22' --privacyStatus='public'"
 log(yt_cmd)
-#cmd_output = sp.getoutput(yt_cmd)
-#log("Ran: "+cmd_output)
+cmd_output = sp.getoutput(yt_cmd)
+log("Ran: "+cmd_output)
