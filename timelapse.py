@@ -1,3 +1,5 @@
+#!/usr/bin/env /usr/local/bin/python3.9
+
 from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
