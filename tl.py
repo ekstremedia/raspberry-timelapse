@@ -27,10 +27,10 @@ except KeyError:
 # Set date variables
 
 # Yesterdays date
-previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
+#previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
 
 # set a specific date instead
-#previous_date = date.fromisoformat('2021-01-30') 
+previous_date = date.fromisoformat('2021-01-27') 
 
 previous_datestr = previous_date.strftime ('%Y/%m/%d');
 #previous_datestr_out = previous_date.strftime ('%Y-%m-%d');
