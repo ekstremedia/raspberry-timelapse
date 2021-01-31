@@ -24,13 +24,18 @@ try:
 except KeyError:
     camera_name = "Timelapse"
 
+try:
+    filePrefix = config['filePrefix']
+except KeyError:
+    filePrefix = "timelapse"
+
 # Set date variables
 
 # Yesterdays date
 #previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
 
 # set a specific date instead
-previous_date = date.fromisoformat('2021-01-26') 
+previous_date = date.fromisoformat('2021-01-23') 
 
 previous_datestr = previous_date.strftime ('%Y/%m/%d');
 #previous_datestr_out = previous_date.strftime ('%Y-%m-%d');
@@ -51,7 +56,7 @@ log(f"Yesterdays date: {greenText(pretty_date)} ({previous_datestr})")
 # Set image and video variables
 images_folder = '/var/www/html/bilder'
 video_folder = os.path.join('/var/www/html/videoer', previous_year, previous_month)+"/"
-video_file = video_folder+previous_filename+".mp4" # TODO: add cameraname to filename
+video_file = video_folder+filePrefix+"_"+previous_filename+".mp4" # TODO: add cameraname to filename
 target = os.path.join(images_folder, previous_datestr)+"/"
 extension = '*.jpg'
 
