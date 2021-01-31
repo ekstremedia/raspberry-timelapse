@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3.9
 from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
@@ -9,6 +9,8 @@ import os
 import threading
 import sys
 import yaml
+from logger import *
+import locale
 
 # Define variables
 red = "\033[1;31;38m"
@@ -217,10 +219,13 @@ def take(fileName):
     global total_images
     total_images = total_images+1
     infoMsg('Captured ' + fileName + ' (#' + str(total_images) + ')')
+    loglastfile(fileName)
     camera.close()
     global copy_last
     global status_filename
     cmd = os.path.join(homedir, 'imgConvert.py')
+    imgconvert_cmd = cmd + " " + fileName
+    log(f"imgconvert_cmd: {imgconvert_cmd}")
     os.system(cmd + " " + fileName)
     if (copy_last):
         copyfile(fileName, status_filename)

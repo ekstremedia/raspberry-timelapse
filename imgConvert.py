@@ -4,13 +4,19 @@ import sys
 from shutil import copyfile
 import json
 import subprocess 
+from logger import *
 
 homedir = sys.path[0]
-filename = sys.argv[1]
+last_image_file =  os.path.join(homedir, "logs/last_image.log");
+
+with open(last_image_file) as f:
+    filename = f.readline()
+
+log(f"imgCONVET filename: {filename}")
 fileout = filename
 netatmoFile = "netatmo.json"
-netatmo = os.path.join(homedir, netatmoFile);
-
+netatmo = os.path.join(homedir, netatmoFile)
+log(f"Netatmo: "+netatmo)
 if not os.path.exists(netatmo):
     print("File doesnt exists, downloading")
     cmd = ['python3.9', 'getWeather.py']
@@ -44,6 +50,7 @@ logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
 
 cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
 os.system(cmd)
+log(cmd)
 cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+40 \'" + logTempTrend + "\' " + fileout
 os.system(cmd)
 cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+60 \'" + logPressure + "\' " + fileout

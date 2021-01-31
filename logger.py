@@ -8,7 +8,9 @@ from datetime import datetime, date, time
 homedir = sys.path[0]
 logdir = os.path.join(homedir, "logs")
 logfilename = "tl.log"
+last_image = "last_image.log"
 logfile = os.path.join(logdir, logfilename)
+last_image_file = os.path.join(logdir, last_image)
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
 endcolor = "\033[0m"
@@ -43,3 +45,8 @@ def log(text):
     logText = greenText("[") + timePrint + greenText("]") + " " + text
     logging.info(logText)
     print(logText)
+
+def loglastfile(filename):
+    f = open(last_image_file, "w+")
+    f.write(f"{filename}")
+    f.close()

@@ -75,7 +75,7 @@ else:
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 10 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 16 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
 log(ffmpeg_cmd)
 log(f"Running ffmpeg on {greenText(restfiles)} images...")
 ffmpg_call = sp.getoutput(ffmpeg_cmd)
