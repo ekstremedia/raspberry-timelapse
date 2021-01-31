@@ -30,7 +30,7 @@ except KeyError:
 #previous_date = datetime.datetime.today() - datetime.timedelta(days=1)
 
 # set a specific date instead
-previous_date = date.fromisoformat('2021-01-27') 
+previous_date = date.fromisoformat('2021-01-26') 
 
 previous_datestr = previous_date.strftime ('%Y/%m/%d');
 #previous_datestr_out = previous_date.strftime ('%Y-%m-%d');
@@ -51,7 +51,7 @@ log(f"Yesterdays date: {greenText(pretty_date)} ({previous_datestr})")
 # Set image and video variables
 images_folder = '/var/www/html/bilder'
 video_folder = os.path.join('/var/www/html/videoer', previous_year, previous_month)+"/"
-video_file = video_folder+previous_filename+".mp4"
+video_file = video_folder+previous_filename+".mp4" # TODO: add cameraname to filename
 target = os.path.join(images_folder, previous_datestr)+"/"
 extension = '*.jpg'
 
@@ -76,7 +76,7 @@ else:
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 15 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 20 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y {video_file}"
 log(ffmpeg_cmd)
 log(f"Running ffmpeg on {greenText(restfiles)} images...")
 ffmpg_call = sp.getoutput(ffmpeg_cmd)
