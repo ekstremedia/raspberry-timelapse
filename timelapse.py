@@ -1,4 +1,3 @@
-#!/usr/bin/env python3.9
 from time import sleep
 from datetime import datetime, date, time
 from picamera import PiCamera
@@ -11,6 +10,7 @@ import sys
 import yaml
 from logger import *
 import locale
+import subprocess as sp
 
 # Define variables
 red = "\033[1;31;38m"
@@ -224,9 +224,9 @@ def take(fileName):
     global copy_last
     global status_filename
     cmd = os.path.join(homedir, 'imgConvert.py')
-    imgconvert_cmd = cmd + " " + fileName
-    log(f"imgconvert_cmd: {imgconvert_cmd}")
-    os.system(cmd + " " + fileName)
+    log(f"imgconvert_cmd: {cmd}")
+    cmd_output = sp.getoutput(cmd)
+    log("Ran: "+cmd_output)
     if (copy_last):
         copyfile(fileName, status_filename)
 

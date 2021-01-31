@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env /usr/local/bin/python3.9
 import yaml
 import locale
 import calendar

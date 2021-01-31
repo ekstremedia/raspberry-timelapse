@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env /usr/local/bin/python3.9
 
 from logger import *
 import datetime
