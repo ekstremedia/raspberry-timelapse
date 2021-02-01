@@ -45,7 +45,9 @@ logPressureTrend = "Trykk-trend: " + str(weatherList.get('pressure_trend'))
 logHumidity = "Fuktighet: " + str(weatherList.get('humidity')) + " %" 
 logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
 logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
-if path.exists(filename):
+log("Checking...")
+if os.path.exists(filename):
+    log("Yes")
     cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
     os.system(cmd)
     log(cmd)
