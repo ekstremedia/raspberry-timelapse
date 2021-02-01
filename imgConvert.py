@@ -45,18 +45,20 @@ logPressureTrend = "Trykk-trend: " + str(weatherList.get('pressure_trend'))
 logHumidity = "Fuktighet: " + str(weatherList.get('humidity')) + " %" 
 logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
 logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
-
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
-os.system(cmd)
-log(cmd)
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+40 \'" + logTempTrend + "\' " + fileout
-os.system(cmd)
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+60 \'" + logPressure + "\' " + fileout
-os.system(cmd)
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+80 \'" + logPressureTrend + "\' " + fileout
-os.system(cmd)
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+100 \'" + logHumidity + "\' " + fileout
-os.system(cmd)
-cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
-os.system(cmd)
-#copyfile(fileout, '/var/www/html/status.jpg')
+if path.exists(filename):
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
+    os.system(cmd)
+    log(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+40 \'" + logTempTrend + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+60 \'" + logPressure + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+80 \'" + logPressureTrend + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+100 \'" + logHumidity + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
+    os.system(cmd)
+    log("imgConvert done")
+else:
+    log("imgConvert could not find file")

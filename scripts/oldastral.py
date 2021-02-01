@@ -4,7 +4,7 @@ Based on the code at: https://michelanders.blogspot.com/2010/12/calulating-sunri
 from math import cos, sin, acos, asin, tan
 from math import degrees as deg, radians as rad
 from datetime import datetime, time, timezone, timedelta
-
+import pytz
 
 class Sun:
     """
@@ -119,7 +119,7 @@ if __name__ == "__main__":
     # Berlin summer time
     #ytz = datetime.now(tz=timezone(timedelta(hours=2)))
     #mytz = datetime(2021,4,25)
-    mytz = datetime.now()
+    mytz = datetime.now(pytz.timezone('Europe/Oslo'))
     s = Sun(mytz, 68.6968771, 15.4158602)
     # s = Sun(mytz, 52.51, 13.406)
 
