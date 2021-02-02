@@ -1,3 +1,5 @@
+#!/usr/bin/env /usr/local/bin/python3.9
+
 """Calculate the sunrise, sunset and noon time for a given coordinate.
 Based on the code at: https://michelanders.blogspot.com/2010/12/calulating-sunrise-and-sunset-in-python.html
 """
@@ -5,6 +7,7 @@ from math import cos, sin, acos, asin, tan
 from math import degrees as deg, radians as rad
 from datetime import datetime, time, timezone, timedelta
 import pytz
+import json
 
 class Sun:
     """
@@ -118,12 +121,67 @@ class Sun:
 if __name__ == "__main__":
     # Berlin summer time
     #ytz = datetime.now(tz=timezone(timedelta(hours=2)))
-    #mytz = datetime(2021,4,25)
-    mytz = datetime.now(pytz.timezone('Europe/Oslo'))
-    s = Sun(mytz, 68.6968771, 15.4158602)
-    # s = Sun(mytz, 52.51, 13.406)
+    # mytz = datetime(2022,2,2,13,23,35, 0, pytz.timezone('Europe/Oslo'))
+    tz = pytz.timezone('Europe/Oslo')
+    mytz = datetime(2021,12,31)
+    mytz = tz.localize(mytz)
 
-    print(datetime.today())
-    print('sunrise:', s.sunrise())
-    print('solar noon:', s.solarnoon())
-    print('sunset:', s.sunset())
+    polar_summer = datetime(2021,5,24)
+    polar_summer = tz.localize(polar_summer)
+
+    polar_summer_over = datetime(2021,7,24)
+    polar_summer_over = tz.localize(polar_summer_over)
+
+    year = {}
+
+    for x in range(0, 365):
+        mytz = mytz + timedelta(days=1)
+        day = mytz.strftime ('%d');                               # 05
+        month = mytz.strftime ('%m');                             # 01
+        gotData = True
+        try: 
+            s = Sun(mytz, 68.6968771, 15.4158602)
+        except ValueError:
+            gotData = False
+
+        if (gotData):
+            sunrise = s.sunrise().strftime('%H:%M')
+            solar_noon = s.solarnoon().strftime('%H:%M')
+            sunset = s.sunset().strftime('%H:%M')            
+            json = {
+                "data": True,
+                "sunrise": sunrise,
+                "solar_noon": solar_noon,
+                "sunset": sunset                   
+            }
+        else:
+            json = {
+                "data": False,
+                "sun": 'never_sets'
+            }
+        dateStr = day+"-"+month
+        dateJson = {
+            dateStr: json
+        }
+            # print(dateJson)
+        year.update(dateJson)
+print(year)
+with open('solartimes.json', 'w+') as file:
+    print(year, file=file)
+        # if (mytz < polar_summer and mytz < polar_summer_over):
+        #     s = Sun(mytz, 68.6968771, 15.4158602)
+        #     sunrise = s.sunrise().strftime('%H:%M')
+        #     solar_noon = s.solarnoon().strftime('%H:%M')
+        #     sunset = s.sunset().strftime('%H:%M')
+        #     json = {
+        #         month: {
+        #             day: {
+        #                 'polarSummer': False,
+        #                 'sunrise': sunrise,
+        #                 'solar_noon': solar_noon,
+        #                 'sunset': sunset
+        #             }
+        #         }
+        #     }
+
+        #     print(json)
