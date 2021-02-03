@@ -168,20 +168,3 @@ if __name__ == "__main__":
 print(year)
 with open('solartimes.json', 'w+') as file:
     print(year, file=file)
-        # if (mytz < polar_summer and mytz < polar_summer_over):
-        #     s = Sun(mytz, 68.6968771, 15.4158602)
-        #     sunrise = s.sunrise().strftime('%H:%M')
-        #     solar_noon = s.solarnoon().strftime('%H:%M')
-        #     sunset = s.sunset().strftime('%H:%M')
-        #     json = {
-        #         month: {
-        #             day: {
-        #                 'polarSummer': False,
-        #                 'sunrise': sunrise,
-        #                 'solar_noon': solar_noon,
-        #                 'sunset': sunset
-        #             }
-        #         }
-        #     }
-
-        #     print(json)
