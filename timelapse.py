@@ -226,13 +226,13 @@ def take(fileName):
     global copy_last
     global status_filename
     cmd = os.path.join(homedir, 'imgConvert.py')
-    if os.path.exists(filename):
+    if os.path.exists(fileName):
         log(f"imgconvert_cmd: {cmd}")
         cmd_output = sp.getoutput(cmd)
     else:
         log("Could not find file before imgconvert_cmd, aborted")
 
-    if (copy_last and os.path.exists(filename)):
+    if (copy_last and os.path.exists(fileName)):
         copyfile(fileName, status_filename)
     else:
         log("Aborted copying of file")
