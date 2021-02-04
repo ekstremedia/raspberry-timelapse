@@ -9,8 +9,10 @@ homedir = sys.path[0]
 logdir = os.path.join(homedir, "logs")
 logfilename = "tl.log"
 last_image = "last_image.log"
+last_shutter = "last_shutter.log"
 logfile = os.path.join(logdir, logfilename)
 last_image_file = os.path.join(logdir, last_image)
+last_shutter_file = os.path.join(logdir, last_shutter)
 red = "\033[1;31;38m"
 green = "\033[1;32;38m"
 endcolor = "\033[0m"
@@ -49,4 +51,9 @@ def log(text):
 def loglastfile(filename):
     f = open(last_image_file, "w+")
     f.write(f"{filename}")
+    f.close()
+
+def logLastShutterSpeed(shutterspeed):
+    f = open(last_shutter_file, "w+")
+    f.write(f"{shutterspeed}")
     f.close()

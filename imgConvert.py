@@ -8,9 +8,13 @@ from logger import *
 
 homedir = sys.path[0]
 last_image_file =  os.path.join(homedir, "logs/last_image.log");
+last_shutterspeed =  os.path.join(homedir, "logs/last_shutter.log");
 
 with open(last_image_file) as f:
     filename = f.readline()
+
+with open(last_shutterspeed) as sh:
+    last_shutter = sh.readline()
 
 fileout = filename
 if os.path.exists(filename):
@@ -58,6 +62,8 @@ if os.path.exists(filename):
     cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+100 \'" + logHumidity + "\' " + fileout
     os.system(cmd)
     cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'exposure time: " + last_shutter + "\' " + fileout
     os.system(cmd)
     log("imgConvert done")
 else:

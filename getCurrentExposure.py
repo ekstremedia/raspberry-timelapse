@@ -19,5 +19,5 @@ current = str(mytz.replace(second=0, microsecond=0))[0:19]
 # print(current)
 
 out = int(mins.loc[mins["time"] == current, "exposure"])
-log(f"Got shutter speed: {out}")
+#log(f"Got shutter speed: {out}")
 print(out)
