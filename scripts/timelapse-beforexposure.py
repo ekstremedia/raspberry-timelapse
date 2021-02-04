@@ -23,7 +23,6 @@ filePath = ""
 total_images = 0
 annotation = ""
 homedir = sys.path[0]
-shutter_cmd = os.path.join(homedir, 'getCurrentExposure.py');
 
 def redText(text):
     return red+text+endcolor
@@ -96,11 +95,10 @@ if loadedConf:
     except KeyError:
         interval = 10
 
-    # try:
-    #     shutter_speed = config['shutter_speed']
-    # except KeyError:
-    #     shutter_speed = 0
-    shutter_speed = sp.getoutput(shutter_cmd)
+    try:
+        shutter_speed = config['shutter_speed']
+    except KeyError:
+        shutter_speed = 0
 
     try:
         copy_last = config['copy_last']
@@ -186,7 +184,6 @@ def set_camera_options(camera):
         camera.shutter_speed = config['shutter_speed']
     else:
         camera.shutter_speed = 0
-
 
     # camera.shutter_speed = 0
 
