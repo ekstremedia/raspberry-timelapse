@@ -188,7 +188,7 @@ def set_camera_options(camera):
     #     camera.shutter_speed = config['shutter_speed']
     # else:
     #     camera.shutter_speed = 0
-    shutter = sp.getoutput(shutter_cmd)
+    shutter = int(sp.getoutput(shutter_cmd))
     checkCountDown = localStorage.getItem('countDown')
     checkCountUp = localStorage.getItem('countUp')
     print(f"checkCountDown {checkCountDown}")
