@@ -8,13 +8,14 @@ from logger import *
 
 homedir = sys.path[0]
 last_image_file =  os.path.join(homedir, "logs/last_image.log");
-last_shutterspeed =  os.path.join(homedir, "logs/last_shutter.log");
-
+#last_shutterspeed =  os.path.join(homedir, "logs/last_shutter.log");
+shutter_cmd = os.path.join(homedir, 'Timer.py');
 with open(last_image_file) as f:
     filename = f.readline()
 
-with open(last_shutterspeed) as sh:
-    last_shutter = sh.readline()
+# with open(last_shutterspeed) as sh:
+#     last_shutter = sh.readline()
+last_shutter = sp.getoutput(shutter_cmd)
 
 fileout = filename
 if os.path.exists(filename):
