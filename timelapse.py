@@ -179,7 +179,7 @@ def set_camera_options(camera):
             config['resolution']['width'],
             config['resolution']['height']
         )
-        camera.iso = iso
+        # camera.iso = iso
 
     camera.framerate = Fraction(1, 6)
     # if config['shutter_speed']:
@@ -187,7 +187,32 @@ def set_camera_options(camera):
     # else:
     #     camera.shutter_speed = 0
     shutter = sp.getoutput(shutter_cmd)
+    checkCountDown = localStorage.getItem('countDown')
+    checkCountUp = localStorage.getItem('countUp')
+    if (checkCountDown == 'on' and checkCountUp == 'off'):
+        if (shutter < 2000000):
+            camera.iso = 100
+        if (shutter < 3000000):
+            camera.iso = 200
+        if (shutter < 4000000):
+            camera.iso = 400
+        if (shutter < 5000000):
+            camera.iso = 600
+        if (shutter < 4000):
+            camera.iso = 60
+    if (checkCountDown == 'off' and checkCountUp == 'on'):
+        if (shutter > 2000000):
+            camera.iso = 200
+        if (shutter > 3000000):
+            camera.iso = 400
+        if (shutter > 4000000):
+            camera.iso = 600
+        if (shutter > 5000000):
+            camera.iso = 800
+        if (shutter < 3000):
+            camera.iso = 60
     log(f"Got shutterspeed: {shutter}")
+    log(f"Set iso: {camera.iso}")
     logLastShutterSpeed(shutter)
     camera.shutter_speed = int(shutter)
     # camera.shutter_speed = 0
