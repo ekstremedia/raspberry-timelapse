@@ -202,6 +202,8 @@ def set_camera_options(camera):
             camera.iso = 400
         if (shutter < 5000000):
             camera.iso = 600
+        if (shutter > 5000000):
+            camera.iso = 800            
         if (shutter < 4000):
             camera.iso = 60
     if (checkCountDown == 'off' and checkCountUp == 'on'):
