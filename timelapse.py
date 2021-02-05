@@ -13,6 +13,7 @@ import yaml
 from logger import *
 import locale
 import subprocess as sp
+from localStoragePy import localStoragePy
 
 # Define variables
 red = "\033[1;31;38m"
@@ -24,6 +25,7 @@ total_images = 0
 annotation = ""
 homedir = sys.path[0]
 shutter_cmd = os.path.join(homedir, 'Timer.py');
+localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 
 def redText(text):
     return red+text+endcolor
