@@ -50,20 +50,20 @@ if os.path.exists(filename):
     logHumidity = "Fuktighet: " + str(weatherList.get('humidity')) + " %" 
     logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
     logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
     os.system(cmd)
     log(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+40 \'" + logTempTrend + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+40 \'" + logTempTrend + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+60 \'" + logPressure + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+60 \'" + logPressure + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+80 \'" + logPressureTrend + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+80 \'" + logPressureTrend + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+100 \'" + logHumidity + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+100 \'" + logHumidity + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'exposure time: " + last_shutter + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'exposure: " + last_shutter + "\' " + fileout
     os.system(cmd)
     log("imgConvert done")
 else:
