@@ -15,7 +15,7 @@ with open(last_image_file) as f:
 
 # with open(last_shutterspeed) as sh:
 #     last_shutter = sh.readline()
-last_shutter = sp.getoutput(shutter_cmd)
+last_shutter = subprocess.getoutput(shutter_cmd)
 
 fileout = filename
 if os.path.exists(filename):
