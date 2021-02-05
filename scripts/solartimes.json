@@ -1,1 +1,1707 @@
-{"01-01": {"data": false, "sun": "never_rises"}, "02-01": {"data": false, "sun": "never_rises"}, "03-01": {"data": false, "sun": "never_rises"}, "04-01": {"data": false, "sun": "never_rises"}, "05-01": {"data": false, "sun": "never_rises"}, "06-01": {"data": false, "sun": "never_rises"}, "07-01": {"data": false, "sun": "never_rises"}, "08-01": {"data": false, "sun": "never_rises"}, "09-01": {"data": false, "sun": "never_rises"}, "10-01": {"data": false, "sun": "never_rises"}, "11-01": {"data": true, "sunrise": "11:38", "solar_noon": "12:05", "sunset": "12:33"}, "12-01": {"data": true, "sunrise": "11:26", "solar_noon": "12:06", "sunset": "12:45"}, "13-01": {"data": true, "sunrise": "11:17", "solar_noon": "12:06", "sunset": "12:55"}, "14-01": {"data": true, "sunrise": "11:09", "solar_noon": "12:06", "sunset": "13:04"}, "15-01": {"data": true, "sunrise": "11:01", "solar_noon": "12:07", "sunset": "13:12"}, "16-01": {"data": true, "sunrise": "10:55", "solar_noon": "12:07", "sunset": "13:20"}, "17-01": {"data": true, "sunrise": "10:48", "solar_noon": "12:07", "sunset": "13:27"}, "18-01": {"data": true, "sunrise": "10:42", "solar_noon": "12:08", "sunset": "13:33"}, "19-01": {"data": true, "sunrise": "10:36", "solar_noon": "12:08", "sunset": "13:40"}, "20-01": {"data": true, "sunrise": "10:31", "solar_noon": "12:08", "sunset": "13:46"}, "21-01": {"data": true, "sunrise": "10:25", "solar_noon": "12:09", "sunset": "13:52"}, "22-01": {"data": true, "sunrise": "10:20", "solar_noon": "12:09", "sunset": "13:58"}, "23-01": {"data": true, "sunrise": "10:15", "solar_noon": "12:09", "sunset": "14:04"}, "24-01": {"data": true, "sunrise": "10:10", "solar_noon": "12:10", "sunset": "14:10"}, "25-01": {"data": true, "sunrise": "10:05", "solar_noon": "12:10", "sunset": "14:15"}, "26-01": {"data": true, "sunrise": "10:00", "solar_noon": "12:10", "sunset": "14:21"}, "27-01": {"data": true, "sunrise": "09:55", "solar_noon": "12:10", "sunset": "14:26"}, "28-01": {"data": true, "sunrise": "09:50", "solar_noon": "12:10", "sunset": "14:31"}, "29-01": {"data": true, "sunrise": "09:45", "solar_noon": "12:11", "sunset": "14:36"}, "30-01": {"data": true, "sunrise": "09:40", "solar_noon": "12:11", "sunset": "14:42"}, "31-01": {"data": true, "sunrise": "09:35", "solar_noon": "12:11", "sunset": "14:47"}, "01-02": {"data": true, "sunrise": "09:31", "solar_noon": "12:11", "sunset": "14:52"}, "02-02": {"data": true, "sunrise": "09:26", "solar_noon": "12:11", "sunset": "14:57"}, "03-02": {"data": true, "sunrise": "09:21", "solar_noon": "12:11", "sunset": "15:02"}, "04-02": {"data": true, "sunrise": "09:17", "solar_noon": "12:12", "sunset": "15:06"}, "05-02": {"data": true, "sunrise": "09:12", "solar_noon": "12:12", "sunset": "15:11"}, "06-02": {"data": true, "sunrise": "09:08", "solar_noon": "12:12", "sunset": "15:16"}, "07-02": {"data": true, "sunrise": "09:03", "solar_noon": "12:12", "sunset": "15:21"}, "08-02": {"data": true, "sunrise": "08:59", "solar_noon": "12:12", "sunset": "15:25"}, "09-02": {"data": true, "sunrise": "08:54", "solar_noon": "12:12", "sunset": "15:30"}, "10-02": {"data": true, "sunrise": "08:50", "solar_noon": "12:12", "sunset": "15:35"}, "11-02": {"data": true, "sunrise": "08:45", "solar_noon": "12:12", "sunset": "15:39"}, "12-02": {"data": true, "sunrise": "08:41", "solar_noon": "12:12", "sunset": "15:44"}, "13-02": {"data": true, "sunrise": "08:36", "solar_noon": "12:12", "sunset": "15:48"}, "14-02": {"data": true, "sunrise": "08:32", "solar_noon": "12:12", "sunset": "15:52"}, "15-02": {"data": true, "sunrise": "08:27", "solar_noon": "12:12", "sunset": "15:57"}, "16-02": {"data": true, "sunrise": "08:23", "solar_noon": "12:12", "sunset": "16:01"}, "17-02": {"data": true, "sunrise": "08:18", "solar_noon": "12:12", "sunset": "16:05"}, "18-02": {"data": true, "sunrise": "08:14", "solar_noon": "12:12", "sunset": "16:10"}, "19-02": {"data": true, "sunrise": "08:10", "solar_noon": "12:12", "sunset": "16:14"}, "20-02": {"data": true, "sunrise": "08:05", "solar_noon": "12:12", "sunset": "16:18"}, "21-02": {"data": true, "sunrise": "08:01", "solar_noon": "12:12", "sunset": "16:22"}, "22-02": {"data": true, "sunrise": "07:56", "solar_noon": "12:12", "sunset": "16:27"}, "23-02": {"data": true, "sunrise": "07:52", "solar_noon": "12:11", "sunset": "16:31"}, "24-02": {"data": true, "sunrise": "07:48", "solar_noon": "12:11", "sunset": "16:35"}, "25-02": {"data": true, "sunrise": "07:43", "solar_noon": "12:11", "sunset": "16:39"}, "26-02": {"data": true, "sunrise": "07:39", "solar_noon": "12:11", "sunset": "16:43"}, "27-02": {"data": true, "sunrise": "07:35", "solar_noon": "12:11", "sunset": "16:47"}, "28-02": {"data": true, "sunrise": "07:30", "solar_noon": "12:11", "sunset": "16:51"}, "01-03": {"data": true, "sunrise": "07:26", "solar_noon": "12:10", "sunset": "16:55"}, "02-03": {"data": true, "sunrise": "07:22", "solar_noon": "12:10", "sunset": "16:59"}, "03-03": {"data": true, "sunrise": "07:17", "solar_noon": "12:10", "sunset": "17:03"}, "04-03": {"data": true, "sunrise": "07:13", "solar_noon": "12:10", "sunset": "17:07"}, "05-03": {"data": true, "sunrise": "07:09", "solar_noon": "12:10", "sunset": "17:11"}, "06-03": {"data": true, "sunrise": "07:04", "solar_noon": "12:09", "sunset": "17:15"}, "07-03": {"data": true, "sunrise": "07:00", "solar_noon": "12:09", "sunset": "17:19"}, "08-03": {"data": true, "sunrise": "06:55", "solar_noon": "12:09", "sunset": "17:22"}, "09-03": {"data": true, "sunrise": "06:51", "solar_noon": "12:09", "sunset": "17:26"}, "10-03": {"data": true, "sunrise": "06:47", "solar_noon": "12:08", "sunset": "17:30"}, "11-03": {"data": true, "sunrise": "06:42", "solar_noon": "12:08", "sunset": "17:34"}, "12-03": {"data": true, "sunrise": "06:38", "solar_noon": "12:08", "sunset": "17:38"}, "13-03": {"data": true, "sunrise": "06:34", "solar_noon": "12:08", "sunset": "17:42"}, "14-03": {"data": true, "sunrise": "06:29", "solar_noon": "12:07", "sunset": "17:45"}, "15-03": {"data": true, "sunrise": "06:25", "solar_noon": "12:07", "sunset": "17:49"}, "16-03": {"data": true, "sunrise": "06:21", "solar_noon": "12:07", "sunset": "17:53"}, "17-03": {"data": true, "sunrise": "06:16", "solar_noon": "12:07", "sunset": "17:57"}, "18-03": {"data": true, "sunrise": "06:12", "solar_noon": "12:06", "sunset": "18:01"}, "19-03": {"data": true, "sunrise": "06:08", "solar_noon": "12:06", "sunset": "18:04"}, "20-03": {"data": true, "sunrise": "06:03", "solar_noon": "12:06", "sunset": "18:08"}, "21-03": {"data": true, "sunrise": "05:59", "solar_noon": "12:05", "sunset": "18:12"}, "22-03": {"data": true, "sunrise": "05:55", "solar_noon": "12:05", "sunset": "18:16"}, "23-03": {"data": true, "sunrise": "05:50", "solar_noon": "12:05", "sunset": "18:19"}, "24-03": {"data": true, "sunrise": "05:46", "solar_noon": "12:05", "sunset": "18:23"}, "25-03": {"data": true, "sunrise": "05:42", "solar_noon": "12:04", "sunset": "18:27"}, "26-03": {"data": true, "sunrise": "05:37", "solar_noon": "12:04", "sunset": "18:31"}, "27-03": {"data": true, "sunrise": "05:33", "solar_noon": "12:04", "sunset": "18:34"}, "28-03": {"data": true, "sunrise": "05:29", "solar_noon": "12:03", "sunset": "18:38"}, "29-03": {"data": true, "sunrise": "05:24", "solar_noon": "12:03", "sunset": "18:42"}, "30-03": {"data": true, "sunrise": "05:20", "solar_noon": "12:03", "sunset": "18:46"}, "31-03": {"data": true, "sunrise": "05:15", "solar_noon": "12:02", "sunset": "18:50"}, "01-04": {"data": true, "sunrise": "05:11", "solar_noon": "12:02", "sunset": "18:53"}, "02-04": {"data": true, "sunrise": "05:07", "solar_noon": "12:02", "sunset": "18:57"}, "03-04": {"data": true, "sunrise": "05:02", "solar_noon": "12:02", "sunset": "19:01"}, "04-04": {"data": true, "sunrise": "04:58", "solar_noon": "12:01", "sunset": "19:05"}, "05-04": {"data": true, "sunrise": "04:53", "solar_noon": "12:01", "sunset": "19:09"}, "06-04": {"data": true, "sunrise": "04:49", "solar_noon": "12:01", "sunset": "19:12"}, "07-04": {"data": true, "sunrise": "04:44", "solar_noon": "12:00", "sunset": "19:16"}, "08-04": {"data": true, "sunrise": "04:40", "solar_noon": "12:00", "sunset": "19:20"}, "09-04": {"data": true, "sunrise": "04:35", "solar_noon": "12:00", "sunset": "19:24"}, "10-04": {"data": true, "sunrise": "04:31", "solar_noon": "12:00", "sunset": "19:28"}, "11-04": {"data": true, "sunrise": "04:27", "solar_noon": "11:59", "sunset": "19:32"}, "12-04": {"data": true, "sunrise": "04:22", "solar_noon": "11:59", "sunset": "19:36"}, "13-04": {"data": true, "sunrise": "04:18", "solar_noon": "11:59", "sunset": "19:40"}, "14-04": {"data": true, "sunrise": "04:13", "solar_noon": "11:58", "sunset": "19:44"}, "15-04": {"data": true, "sunrise": "04:08", "solar_noon": "11:58", "sunset": "19:48"}, "16-04": {"data": true, "sunrise": "04:04", "solar_noon": "11:58", "sunset": "19:52"}, "17-04": {"data": true, "sunrise": "03:59", "solar_noon": "11:58", "sunset": "19:56"}, "18-04": {"data": true, "sunrise": "03:55", "solar_noon": "11:58", "sunset": "20:00"}, "19-04": {"data": true, "sunrise": "03:50", "solar_noon": "11:57", "sunset": "20:04"}, "20-04": {"data": true, "sunrise": "03:46", "solar_noon": "11:57", "sunset": "20:09"}, "21-04": {"data": true, "sunrise": "03:41", "solar_noon": "11:57", "sunset": "20:13"}, "22-04": {"data": true, "sunrise": "03:36", "solar_noon": "11:57", "sunset": "20:17"}, "23-04": {"data": true, "sunrise": "03:32", "solar_noon": "11:56", "sunset": "20:21"}, "24-04": {"data": true, "sunrise": "03:27", "solar_noon": "11:56", "sunset": "20:26"}, "25-04": {"data": true, "sunrise": "03:22", "solar_noon": "11:56", "sunset": "20:30"}, "26-04": {"data": true, "sunrise": "03:17", "solar_noon": "11:56", "sunset": "20:34"}, "27-04": {"data": true, "sunrise": "03:13", "solar_noon": "11:56", "sunset": "20:39"}, "28-04": {"data": true, "sunrise": "03:08", "solar_noon": "11:56", "sunset": "20:43"}, "29-04": {"data": true, "sunrise": "03:03", "solar_noon": "11:55", "sunset": "20:48"}, "30-04": {"data": true, "sunrise": "02:58", "solar_noon": "11:55", "sunset": "20:53"}, "01-05": {"data": true, "sunrise": "02:53", "solar_noon": "11:55", "sunset": "20:57"}, "02-05": {"data": true, "sunrise": "02:48", "solar_noon": "11:55", "sunset": "21:02"}, "03-05": {"data": true, "sunrise": "02:43", "solar_noon": "11:55", "sunset": "21:07"}, "04-05": {"data": true, "sunrise": "02:38", "solar_noon": "11:55", "sunset": "21:12"}, "05-05": {"data": true, "sunrise": "02:33", "solar_noon": "11:55", "sunset": "21:17"}, "06-05": {"data": true, "sunrise": "02:28", "solar_noon": "11:55", "sunset": "21:22"}, "07-05": {"data": true, "sunrise": "02:22", "solar_noon": "11:55", "sunset": "21:27"}, "08-05": {"data": true, "sunrise": "02:17", "solar_noon": "11:54", "sunset": "21:32"}, "09-05": {"data": true, "sunrise": "02:11", "solar_noon": "11:54", "sunset": "21:37"}, "10-05": {"data": true, "sunrise": "02:06", "solar_noon": "11:54", "sunset": "21:43"}, "11-05": {"data": true, "sunrise": "02:00", "solar_noon": "11:54", "sunset": "21:48"}, "12-05": {"data": true, "sunrise": "01:54", "solar_noon": "11:54", "sunset": "21:54"}, "13-05": {"data": true, "sunrise": "01:48", "solar_noon": "11:54", "sunset": "22:00"}, "14-05": {"data": true, "sunrise": "01:42", "solar_noon": "11:54", "sunset": "22:06"}, "15-05": {"data": true, "sunrise": "01:36", "solar_noon": "11:54", "sunset": "22:13"}, "16-05": {"data": true, "sunrise": "01:29", "solar_noon": "11:54", "sunset": "22:19"}, "17-05": {"data": true, "sunrise": "01:22", "solar_noon": "11:54", "sunset": "22:26"}, "18-05": {"data": true, "sunrise": "01:15", "solar_noon": "11:54", "sunset": "22:34"}, "19-05": {"data": true, "sunrise": "01:07", "solar_noon": "11:54", "sunset": "22:42"}, "20-05": {"data": true, "sunrise": "00:58", "solar_noon": "11:54", "sunset": "22:50"}, "21-05": {"data": true, "sunrise": "00:49", "solar_noon": "11:54", "sunset": "23:00"}, "22-05": {"data": true, "sunrise": "00:37", "solar_noon": "11:54", "sunset": "23:12"}, "23-05": {"data": true, "sunrise": "00:22", "solar_noon": "11:54", "sunset": "23:27"}, "24-05": {"data": false, "sun": "never_sets"}, "25-05": {"data": false, "sun": "never_sets"}, "26-05": {"data": false, "sun": "never_sets"}, "27-05": {"data": false, "sun": "never_sets"}, "28-05": {"data": false, "sun": "never_sets"}, "29-05": {"data": false, "sun": "never_sets"}, "30-05": {"data": false, "sun": "never_sets"}, "31-05": {"data": false, "sun": "never_sets"}, "01-06": {"data": false, "sun": "never_sets"}, "02-06": {"data": false, "sun": "never_sets"}, "03-06": {"data": false, "sun": "never_sets"}, "04-06": {"data": false, "sun": "never_sets"}, "05-06": {"data": false, "sun": "never_sets"}, "06-06": {"data": false, "sun": "never_sets"}, "07-06": {"data": false, "sun": "never_sets"}, "08-06": {"data": false, "sun": "never_sets"}, "09-06": {"data": false, "sun": "never_sets"}, "10-06": {"data": false, "sun": "never_sets"}, "11-06": {"data": false, "sun": "never_sets"}, "12-06": {"data": false, "sun": "never_sets"}, "13-06": {"data": false, "sun": "never_sets"}, "14-06": {"data": false, "sun": "never_sets"}, "15-06": {"data": false, "sun": "never_sets"}, "16-06": {"data": false, "sun": "never_sets"}, "17-06": {"data": false, "sun": "never_sets"}, "18-06": {"data": false, "sun": "never_sets"}, "19-06": {"data": false, "sun": "never_sets"}, "20-06": {"data": false, "sun": "never_sets"}, "21-06": {"data": false, "sun": "never_sets"}, "22-06": {"data": false, "sun": "never_sets"}, "23-06": {"data": false, "sun": "never_sets"}, "24-06": {"data": false, "sun": "never_sets"}, "25-06": {"data": false, "sun": "never_sets"}, "26-06": {"data": false, "sun": "never_sets"}, "27-06": {"data": false, "sun": "never_sets"}, "28-06": {"data": false, "sun": "never_sets"}, "29-06": {"data": false, "sun": "never_sets"}, "30-06": {"data": false, "sun": "never_sets"}, "01-07": {"data": false, "sun": "never_sets"}, "02-07": {"data": false, "sun": "never_sets"}, "03-07": {"data": false, "sun": "never_sets"}, "04-07": {"data": false, "sun": "never_sets"}, "05-07": {"data": false, "sun": "never_sets"}, "06-07": {"data": false, "sun": "never_sets"}, "07-07": {"data": false, "sun": "never_sets"}, "08-07": {"data": false, "sun": "never_sets"}, "09-07": {"data": false, "sun": "never_sets"}, "10-07": {"data": false, "sun": "never_sets"}, "11-07": {"data": false, "sun": "never_sets"}, "12-07": {"data": false, "sun": "never_sets"}, "13-07": {"data": false, "sun": "never_sets"}, "14-07": {"data": false, "sun": "never_sets"}, "15-07": {"data": false, "sun": "never_sets"}, "16-07": {"data": false, "sun": "never_sets"}, "17-07": {"data": false, "sun": "never_sets"}, "18-07": {"data": false, "sun": "never_sets"}, "19-07": {"data": false, "sun": "never_sets"}, "20-07": {"data": false, "sun": "never_sets"}, "21-07": {"data": false, "sun": "never_sets"}, "22-07": {"data": false, "sun": "never_sets"}, "23-07": {"data": true, "sunrise": "00:32", "solar_noon": "12:04", "sunset": "23:36"}, "24-07": {"data": true, "sunrise": "00:47", "solar_noon": "12:04", "sunset": "23:21"}, "25-07": {"data": true, "sunrise": "00:59", "solar_noon": "12:04", "sunset": "23:10"}, "26-07": {"data": true, "sunrise": "01:08", "solar_noon": "12:04", "sunset": "23:00"}, "27-07": {"data": true, "sunrise": "01:17", "solar_noon": "12:04", "sunset": "22:52"}, "28-07": {"data": true, "sunrise": "01:25", "solar_noon": "12:04", "sunset": "22:44"}, "29-07": {"data": true, "sunrise": "01:32", "solar_noon": "12:04", "sunset": "22:37"}, "30-07": {"data": true, "sunrise": "01:39", "solar_noon": "12:04", "sunset": "22:30"}, "31-07": {"data": true, "sunrise": "01:46", "solar_noon": "12:04", "sunset": "22:23"}, "01-08": {"data": true, "sunrise": "01:52", "solar_noon": "12:04", "sunset": "22:17"}, "02-08": {"data": true, "sunrise": "01:58", "solar_noon": "12:04", "sunset": "22:10"}, "03-08": {"data": true, "sunrise": "02:04", "solar_noon": "12:04", "sunset": "22:05"}, "04-08": {"data": true, "sunrise": "02:09", "solar_noon": "12:04", "sunset": "21:59"}, "05-08": {"data": true, "sunrise": "02:15", "solar_noon": "12:04", "sunset": "21:53"}, "06-08": {"data": true, "sunrise": "02:20", "solar_noon": "12:04", "sunset": "21:47"}, "07-08": {"data": true, "sunrise": "02:26", "solar_noon": "12:04", "sunset": "21:42"}, "08-08": {"data": true, "sunrise": "02:31", "solar_noon": "12:04", "sunset": "21:37"}, "09-08": {"data": true, "sunrise": "02:36", "solar_noon": "12:04", "sunset": "21:31"}, "10-08": {"data": true, "sunrise": "02:41", "solar_noon": "12:03", "sunset": "21:26"}, "11-08": {"data": true, "sunrise": "02:46", "solar_noon": "12:03", "sunset": "21:21"}, "12-08": {"data": true, "sunrise": "02:50", "solar_noon": "12:03", "sunset": "21:16"}, "13-08": {"data": true, "sunrise": "02:55", "solar_noon": "12:03", "sunset": "21:11"}, "14-08": {"data": true, "sunrise": "03:00", "solar_noon": "12:03", "sunset": "21:06"}, "15-08": {"data": true, "sunrise": "03:04", "solar_noon": "12:03", "sunset": "21:01"}, "16-08": {"data": true, "sunrise": "03:09", "solar_noon": "12:02", "sunset": "20:56"}, "17-08": {"data": true, "sunrise": "03:13", "solar_noon": "12:02", "sunset": "20:51"}, "18-08": {"data": true, "sunrise": "03:18", "solar_noon": "12:02", "sunset": "20:46"}, "19-08": {"data": true, "sunrise": "03:22", "solar_noon": "12:02", "sunset": "20:42"}, "20-08": {"data": true, "sunrise": "03:26", "solar_noon": "12:02", "sunset": "20:37"}, "21-08": {"data": true, "sunrise": "03:31", "solar_noon": "12:01", "sunset": "20:32"}, "22-08": {"data": true, "sunrise": "03:35", "solar_noon": "12:01", "sunset": "20:27"}, "23-08": {"data": true, "sunrise": "03:39", "solar_noon": "12:01", "sunset": "20:23"}, "24-08": {"data": true, "sunrise": "03:43", "solar_noon": "12:01", "sunset": "20:18"}, "25-08": {"data": true, "sunrise": "03:47", "solar_noon": "12:00", "sunset": "20:13"}, "26-08": {"data": true, "sunrise": "03:51", "solar_noon": "12:00", "sunset": "20:09"}, "27-08": {"data": true, "sunrise": "03:56", "solar_noon": "12:00", "sunset": "20:04"}, "28-08": {"data": true, "sunrise": "04:00", "solar_noon": "12:00", "sunset": "20:00"}, "29-08": {"data": true, "sunrise": "04:04", "solar_noon": "11:59", "sunset": "19:55"}, "30-08": {"data": true, "sunrise": "04:07", "solar_noon": "11:59", "sunset": "19:50"}, "31-08": {"data": true, "sunrise": "04:11", "solar_noon": "11:59", "sunset": "19:46"}, "01-09": {"data": true, "sunrise": "04:15", "solar_noon": "11:58", "sunset": "19:41"}, "02-09": {"data": true, "sunrise": "04:19", "solar_noon": "11:58", "sunset": "19:37"}, "03-09": {"data": true, "sunrise": "04:23", "solar_noon": "11:58", "sunset": "19:32"}, "04-09": {"data": true, "sunrise": "04:27", "solar_noon": "11:57", "sunset": "19:28"}, "05-09": {"data": true, "sunrise": "04:31", "solar_noon": "11:57", "sunset": "19:23"}, "06-09": {"data": true, "sunrise": "04:34", "solar_noon": "11:57", "sunset": "19:19"}, "07-09": {"data": true, "sunrise": "04:38", "solar_noon": "11:56", "sunset": "19:15"}, "08-09": {"data": true, "sunrise": "04:42", "solar_noon": "11:56", "sunset": "19:10"}, "09-09": {"data": true, "sunrise": "04:46", "solar_noon": "11:56", "sunset": "19:06"}, "10-09": {"data": true, "sunrise": "04:50", "solar_noon": "11:55", "sunset": "19:01"}, "11-09": {"data": true, "sunrise": "04:53", "solar_noon": "11:55", "sunset": "18:57"}, "12-09": {"data": true, "sunrise": "04:57", "solar_noon": "11:55", "sunset": "18:52"}, "13-09": {"data": true, "sunrise": "05:01", "solar_noon": "11:54", "sunset": "18:48"}, "14-09": {"data": true, "sunrise": "05:04", "solar_noon": "11:54", "sunset": "18:44"}, "15-09": {"data": true, "sunrise": "05:08", "solar_noon": "11:54", "sunset": "18:39"}, "16-09": {"data": true, "sunrise": "05:12", "solar_noon": "11:53", "sunset": "18:35"}, "17-09": {"data": true, "sunrise": "05:15", "solar_noon": "11:53", "sunset": "18:30"}, "18-09": {"data": true, "sunrise": "05:19", "solar_noon": "11:53", "sunset": "18:26"}, "19-09": {"data": true, "sunrise": "05:23", "solar_noon": "11:52", "sunset": "18:22"}, "20-09": {"data": true, "sunrise": "05:26", "solar_noon": "11:52", "sunset": "18:17"}, "21-09": {"data": true, "sunrise": "05:30", "solar_noon": "11:51", "sunset": "18:13"}, "22-09": {"data": true, "sunrise": "05:34", "solar_noon": "11:51", "sunset": "18:09"}, "23-09": {"data": true, "sunrise": "05:37", "solar_noon": "11:51", "sunset": "18:04"}, "24-09": {"data": true, "sunrise": "05:41", "solar_noon": "11:50", "sunset": "18:00"}, "25-09": {"data": true, "sunrise": "05:45", "solar_noon": "11:50", "sunset": "17:56"}, "26-09": {"data": true, "sunrise": "05:48", "solar_noon": "11:50", "sunset": "17:51"}, "27-09": {"data": true, "sunrise": "05:52", "solar_noon": "11:49", "sunset": "17:47"}, "28-09": {"data": true, "sunrise": "05:55", "solar_noon": "11:49", "sunset": "17:43"}, "29-09": {"data": true, "sunrise": "05:59", "solar_noon": "11:49", "sunset": "17:38"}, "30-09": {"data": true, "sunrise": "06:03", "solar_noon": "11:48", "sunset": "17:34"}, "01-10": {"data": true, "sunrise": "06:06", "solar_noon": "11:48", "sunset": "17:30"}, "02-10": {"data": true, "sunrise": "06:10", "solar_noon": "11:48", "sunset": "17:25"}, "03-10": {"data": true, "sunrise": "06:14", "solar_noon": "11:47", "sunset": "17:21"}, "04-10": {"data": true, "sunrise": "06:18", "solar_noon": "11:47", "sunset": "17:17"}, "05-10": {"data": true, "sunrise": "06:21", "solar_noon": "11:47", "sunset": "17:12"}, "06-10": {"data": true, "sunrise": "06:25", "solar_noon": "11:46", "sunset": "17:08"}, "07-10": {"data": true, "sunrise": "06:29", "solar_noon": "11:46", "sunset": "17:04"}, "08-10": {"data": true, "sunrise": "06:32", "solar_noon": "11:46", "sunset": "16:59"}, "09-10": {"data": true, "sunrise": "06:36", "solar_noon": "11:46", "sunset": "16:55"}, "10-10": {"data": true, "sunrise": "06:40", "solar_noon": "11:45", "sunset": "16:51"}, "11-10": {"data": true, "sunrise": "06:44", "solar_noon": "11:45", "sunset": "16:46"}, "12-10": {"data": true, "sunrise": "06:48", "solar_noon": "11:45", "sunset": "16:42"}, "13-10": {"data": true, "sunrise": "06:51", "solar_noon": "11:44", "sunset": "16:38"}, "14-10": {"data": true, "sunrise": "06:55", "solar_noon": "11:44", "sunset": "16:33"}, "15-10": {"data": true, "sunrise": "06:59", "solar_noon": "11:44", "sunset": "16:29"}, "16-10": {"data": true, "sunrise": "07:03", "solar_noon": "11:44", "sunset": "16:25"}, "17-10": {"data": true, "sunrise": "07:07", "solar_noon": "11:44", "sunset": "16:20"}, "18-10": {"data": true, "sunrise": "07:11", "solar_noon": "11:43", "sunset": "16:16"}, "19-10": {"data": true, "sunrise": "07:15", "solar_noon": "11:43", "sunset": "16:11"}, "20-10": {"data": true, "sunrise": "07:19", "solar_noon": "11:43", "sunset": "16:07"}, "21-10": {"data": true, "sunrise": "07:23", "solar_noon": "11:43", "sunset": "16:03"}, "22-10": {"data": true, "sunrise": "07:27", "solar_noon": "11:43", "sunset": "15:58"}, "23-10": {"data": true, "sunrise": "07:31", "solar_noon": "11:42", "sunset": "15:54"}, "24-10": {"data": true, "sunrise": "07:35", "solar_noon": "11:42", "sunset": "15:50"}, "25-10": {"data": true, "sunrise": "07:39", "solar_noon": "11:42", "sunset": "15:45"}, "26-10": {"data": true, "sunrise": "07:43", "solar_noon": "11:42", "sunset": "15:41"}, "27-10": {"data": true, "sunrise": "07:47", "solar_noon": "11:42", "sunset": "15:36"}, "28-10": {"data": true, "sunrise": "07:51", "solar_noon": "11:42", "sunset": "15:32"}, "29-10": {"data": true, "sunrise": "07:56", "solar_noon": "11:42", "sunset": "15:28"}, "30-10": {"data": true, "sunrise": "08:00", "solar_noon": "11:42", "sunset": "15:23"}, "31-10": {"data": true, "sunrise": "08:04", "solar_noon": "11:41", "sunset": "15:19"}, "01-11": {"data": true, "sunrise": "08:09", "solar_noon": "11:41", "sunset": "15:14"}, "02-11": {"data": true, "sunrise": "08:13", "solar_noon": "11:41", "sunset": "15:10"}, "03-11": {"data": true, "sunrise": "08:17", "solar_noon": "11:41", "sunset": "15:05"}, "04-11": {"data": true, "sunrise": "08:22", "solar_noon": "11:41", "sunset": "15:01"}, "05-11": {"data": true, "sunrise": "08:26", "solar_noon": "11:41", "sunset": "14:56"}, "06-11": {"data": true, "sunrise": "08:31", "solar_noon": "11:41", "sunset": "14:52"}, "07-11": {"data": true, "sunrise": "08:35", "solar_noon": "11:41", "sunset": "14:47"}, "08-11": {"data": true, "sunrise": "08:40", "solar_noon": "11:41", "sunset": "14:43"}, "09-11": {"data": true, "sunrise": "08:45", "solar_noon": "11:41", "sunset": "14:38"}, "10-11": {"data": true, "sunrise": "08:50", "solar_noon": "11:42", "sunset": "14:34"}, "11-11": {"data": true, "sunrise": "08:54", "solar_noon": "11:42", "sunset": "14:29"}, "12-11": {"data": true, "sunrise": "08:59", "solar_noon": "11:42", "sunset": "14:24"}, "13-11": {"data": true, "sunrise": "09:04", "solar_noon": "11:42", "sunset": "14:20"}, "14-11": {"data": true, "sunrise": "09:09", "solar_noon": "11:42", "sunset": "14:15"}, "15-11": {"data": true, "sunrise": "09:14", "solar_noon": "11:42", "sunset": "14:10"}, "16-11": {"data": true, "sunrise": "09:19", "solar_noon": "11:42", "sunset": "14:05"}, "17-11": {"data": true, "sunrise": "09:24", "solar_noon": "11:42", "sunset": "14:01"}, "18-11": {"data": true, "sunrise": "09:30", "solar_noon": "11:43", "sunset": "13:56"}, "19-11": {"data": true, "sunrise": "09:35", "solar_noon": "11:43", "sunset": "13:51"}, "20-11": {"data": true, "sunrise": "09:40", "solar_noon": "11:43", "sunset": "13:46"}, "21-11": {"data": true, "sunrise": "09:46", "solar_noon": "11:43", "sunset": "13:41"}, "22-11": {"data": true, "sunrise": "09:52", "solar_noon": "11:44", "sunset": "13:35"}, "23-11": {"data": true, "sunrise": "09:57", "solar_noon": "11:44", "sunset": "13:30"}, "24-11": {"data": true, "sunrise": "10:03", "solar_noon": "11:44", "sunset": "13:25"}, "25-11": {"data": true, "sunrise": "10:09", "solar_noon": "11:44", "sunset": "13:19"}, "26-11": {"data": true, "sunrise": "10:16", "solar_noon": "11:45", "sunset": "13:14"}, "27-11": {"data": true, "sunrise": "10:22", "solar_noon": "11:45", "sunset": "13:08"}, "28-11": {"data": true, "sunrise": "10:29", "solar_noon": "11:45", "sunset": "13:02"}, "29-11": {"data": true, "sunrise": "10:36", "solar_noon": "11:46", "sunset": "12:55"}, "30-11": {"data": true, "sunrise": "10:44", "solar_noon": "11:46", "sunset": "12:48"}, "01-12": {"data": true, "sunrise": "10:52", "solar_noon": "11:46", "sunset": "12:41"}, "02-12": {"data": true, "sunrise": "11:01", "solar_noon": "11:47", "sunset": "12:32"}, "03-12": {"data": true, "sunrise": "11:12", "solar_noon": "11:47", "sunset": "12:22"}, "04-12": {"data": true, "sunrise": "11:26", "solar_noon": "11:47", "sunset": "12:08"}, "05-12": {"data": false, "sun": "never_rises"}, "06-12": {"data": false, "sun": "never_rises"}, "07-12": {"data": false, "sun": "never_rises"}, "08-12": {"data": false, "sun": "never_rises"}, "09-12": {"data": false, "sun": "never_rises"}, "10-12": {"data": false, "sun": "never_rises"}, "11-12": {"data": false, "sun": "never_rises"}, "12-12": {"data": false, "sun": "never_rises"}, "13-12": {"data": false, "sun": "never_rises"}, "14-12": {"data": false, "sun": "never_rises"}, "15-12": {"data": false, "sun": "never_rises"}, "16-12": {"data": false, "sun": "never_rises"}, "17-12": {"data": false, "sun": "never_rises"}, "18-12": {"data": false, "sun": "never_rises"}, "19-12": {"data": false, "sun": "never_rises"}, "20-12": {"data": false, "sun": "never_rises"}, "21-12": {"data": false, "sun": "never_rises"}, "22-12": {"data": false, "sun": "never_rises"}, "23-12": {"data": false, "sun": "never_rises"}, "24-12": {"data": false, "sun": "never_rises"}, "25-12": {"data": false, "sun": "never_rises"}, "26-12": {"data": false, "sun": "never_rises"}, "27-12": {"data": false, "sun": "never_rises"}, "28-12": {"data": false, "sun": "never_rises"}, "29-12": {"data": false, "sun": "never_rises"}, "30-12": {"data": false, "sun": "never_rises"}, "31-12": {"data": false, "sun": "never_rises"}}
+{
+    "01-01": { "data": false, "sun": "never_sets" },
+    "02-01": { "data": false, "sun": "never_sets" },
+    "03-01": { "data": false, "sun": "never_sets" },
+    "04-01": { "data": false, "sun": "never_sets" },
+    "05-01": { "data": false, "sun": "never_sets" },
+    "06-01": { "data": false, "sun": "never_sets" },
+    "07-01": { "data": false, "sun": "never_sets" },
+    "08-01": { "data": false, "sun": "never_sets" },
+    "09-01": { "data": false, "sun": "never_sets" },
+    "10-01": { "data": false, "sun": "never_sets" },
+    "11-01": {
+        "data": true,
+        "sunrise": "11:38",
+        "solar_noon": "12:05",
+        "sunset": "12:33"
+    },
+    "12-01": {
+        "data": true,
+        "sunrise": "11:26",
+        "solar_noon": "12:06",
+        "sunset": "12:45"
+    },
+    "13-01": {
+        "data": true,
+        "sunrise": "11:17",
+        "solar_noon": "12:06",
+        "sunset": "12:55"
+    },
+    "14-01": {
+        "data": true,
+        "sunrise": "11:09",
+        "solar_noon": "12:06",
+        "sunset": "13:04"
+    },
+    "15-01": {
+        "data": true,
+        "sunrise": "11:01",
+        "solar_noon": "12:07",
+        "sunset": "13:12"
+    },
+    "16-01": {
+        "data": true,
+        "sunrise": "10:55",
+        "solar_noon": "12:07",
+        "sunset": "13:20"
+    },
+    "17-01": {
+        "data": true,
+        "sunrise": "10:48",
+        "solar_noon": "12:07",
+        "sunset": "13:27"
+    },
+    "18-01": {
+        "data": true,
+        "sunrise": "10:42",
+        "solar_noon": "12:08",
+        "sunset": "13:33"
+    },
+    "19-01": {
+        "data": true,
+        "sunrise": "10:36",
+        "solar_noon": "12:08",
+        "sunset": "13:40"
+    },
+    "20-01": {
+        "data": true,
+        "sunrise": "10:31",
+        "solar_noon": "12:08",
+        "sunset": "13:46"
+    },
+    "21-01": {
+        "data": true,
+        "sunrise": "10:25",
+        "solar_noon": "12:09",
+        "sunset": "13:52"
+    },
+    "22-01": {
+        "data": true,
+        "sunrise": "10:20",
+        "solar_noon": "12:09",
+        "sunset": "13:58"
+    },
+    "23-01": {
+        "data": true,
+        "sunrise": "10:15",
+        "solar_noon": "12:09",
+        "sunset": "14:04"
+    },
+    "24-01": {
+        "data": true,
+        "sunrise": "10:10",
+        "solar_noon": "12:10",
+        "sunset": "14:10"
+    },
+    "25-01": {
+        "data": true,
+        "sunrise": "10:05",
+        "solar_noon": "12:10",
+        "sunset": "14:15"
+    },
+    "26-01": {
+        "data": true,
+        "sunrise": "10:00",
+        "solar_noon": "12:10",
+        "sunset": "14:21"
+    },
+    "27-01": {
+        "data": true,
+        "sunrise": "09:55",
+        "solar_noon": "12:10",
+        "sunset": "14:26"
+    },
+    "28-01": {
+        "data": true,
+        "sunrise": "09:50",
+        "solar_noon": "12:10",
+        "sunset": "14:31"
+    },
+    "29-01": {
+        "data": true,
+        "sunrise": "09:45",
+        "solar_noon": "12:11",
+        "sunset": "14:36"
+    },
+    "30-01": {
+        "data": true,
+        "sunrise": "09:40",
+        "solar_noon": "12:11",
+        "sunset": "14:42"
+    },
+    "31-01": {
+        "data": true,
+        "sunrise": "09:35",
+        "solar_noon": "12:11",
+        "sunset": "14:47"
+    },
+    "01-02": {
+        "data": true,
+        "sunrise": "09:31",
+        "solar_noon": "12:11",
+        "sunset": "14:52"
+    },
+    "02-02": {
+        "data": true,
+        "sunrise": "09:26",
+        "solar_noon": "12:11",
+        "sunset": "14:57"
+    },
+    "03-02": {
+        "data": true,
+        "sunrise": "09:21",
+        "solar_noon": "12:11",
+        "sunset": "15:02"
+    },
+    "04-02": {
+        "data": true,
+        "sunrise": "09:17",
+        "solar_noon": "12:12",
+        "sunset": "15:06"
+    },
+    "05-02": {
+        "data": true,
+        "sunrise": "09:12",
+        "solar_noon": "12:12",
+        "sunset": "15:11"
+    },
+    "06-02": {
+        "data": true,
+        "sunrise": "09:08",
+        "solar_noon": "12:12",
+        "sunset": "15:16"
+    },
+    "07-02": {
+        "data": true,
+        "sunrise": "09:03",
+        "solar_noon": "12:12",
+        "sunset": "15:21"
+    },
+    "08-02": {
+        "data": true,
+        "sunrise": "08:59",
+        "solar_noon": "12:12",
+        "sunset": "15:25"
+    },
+    "09-02": {
+        "data": true,
+        "sunrise": "08:54",
+        "solar_noon": "12:12",
+        "sunset": "15:30"
+    },
+    "10-02": {
+        "data": true,
+        "sunrise": "08:50",
+        "solar_noon": "12:12",
+        "sunset": "15:35"
+    },
+    "11-02": {
+        "data": true,
+        "sunrise": "08:45",
+        "solar_noon": "12:12",
+        "sunset": "15:39"
+    },
+    "12-02": {
+        "data": true,
+        "sunrise": "08:41",
+        "solar_noon": "12:12",
+        "sunset": "15:44"
+    },
+    "13-02": {
+        "data": true,
+        "sunrise": "08:36",
+        "solar_noon": "12:12",
+        "sunset": "15:48"
+    },
+    "14-02": {
+        "data": true,
+        "sunrise": "08:32",
+        "solar_noon": "12:12",
+        "sunset": "15:52"
+    },
+    "15-02": {
+        "data": true,
+        "sunrise": "08:27",
+        "solar_noon": "12:12",
+        "sunset": "15:57"
+    },
+    "16-02": {
+        "data": true,
+        "sunrise": "08:23",
+        "solar_noon": "12:12",
+        "sunset": "16:01"
+    },
+    "17-02": {
+        "data": true,
+        "sunrise": "08:18",
+        "solar_noon": "12:12",
+        "sunset": "16:05"
+    },
+    "18-02": {
+        "data": true,
+        "sunrise": "08:14",
+        "solar_noon": "12:12",
+        "sunset": "16:10"
+    },
+    "19-02": {
+        "data": true,
+        "sunrise": "08:10",
+        "solar_noon": "12:12",
+        "sunset": "16:14"
+    },
+    "20-02": {
+        "data": true,
+        "sunrise": "08:05",
+        "solar_noon": "12:12",
+        "sunset": "16:18"
+    },
+    "21-02": {
+        "data": true,
+        "sunrise": "08:01",
+        "solar_noon": "12:12",
+        "sunset": "16:22"
+    },
+    "22-02": {
+        "data": true,
+        "sunrise": "07:56",
+        "solar_noon": "12:12",
+        "sunset": "16:27"
+    },
+    "23-02": {
+        "data": true,
+        "sunrise": "07:52",
+        "solar_noon": "12:11",
+        "sunset": "16:31"
+    },
+    "24-02": {
+        "data": true,
+        "sunrise": "07:48",
+        "solar_noon": "12:11",
+        "sunset": "16:35"
+    },
+    "25-02": {
+        "data": true,
+        "sunrise": "07:43",
+        "solar_noon": "12:11",
+        "sunset": "16:39"
+    },
+    "26-02": {
+        "data": true,
+        "sunrise": "07:39",
+        "solar_noon": "12:11",
+        "sunset": "16:43"
+    },
+    "27-02": {
+        "data": true,
+        "sunrise": "07:35",
+        "solar_noon": "12:11",
+        "sunset": "16:47"
+    },
+    "28-02": {
+        "data": true,
+        "sunrise": "07:30",
+        "solar_noon": "12:11",
+        "sunset": "16:51"
+    },
+    "01-03": {
+        "data": true,
+        "sunrise": "07:26",
+        "solar_noon": "12:10",
+        "sunset": "16:55"
+    },
+    "02-03": {
+        "data": true,
+        "sunrise": "07:22",
+        "solar_noon": "12:10",
+        "sunset": "16:59"
+    },
+    "03-03": {
+        "data": true,
+        "sunrise": "07:17",
+        "solar_noon": "12:10",
+        "sunset": "17:03"
+    },
+    "04-03": {
+        "data": true,
+        "sunrise": "07:13",
+        "solar_noon": "12:10",
+        "sunset": "17:07"
+    },
+    "05-03": {
+        "data": true,
+        "sunrise": "07:09",
+        "solar_noon": "12:10",
+        "sunset": "17:11"
+    },
+    "06-03": {
+        "data": true,
+        "sunrise": "07:04",
+        "solar_noon": "12:09",
+        "sunset": "17:15"
+    },
+    "07-03": {
+        "data": true,
+        "sunrise": "07:00",
+        "solar_noon": "12:09",
+        "sunset": "17:19"
+    },
+    "08-03": {
+        "data": true,
+        "sunrise": "06:55",
+        "solar_noon": "12:09",
+        "sunset": "17:22"
+    },
+    "09-03": {
+        "data": true,
+        "sunrise": "06:51",
+        "solar_noon": "12:09",
+        "sunset": "17:26"
+    },
+    "10-03": {
+        "data": true,
+        "sunrise": "06:47",
+        "solar_noon": "12:08",
+        "sunset": "17:30"
+    },
+    "11-03": {
+        "data": true,
+        "sunrise": "06:42",
+        "solar_noon": "12:08",
+        "sunset": "17:34"
+    },
+    "12-03": {
+        "data": true,
+        "sunrise": "06:38",
+        "solar_noon": "12:08",
+        "sunset": "17:38"
+    },
+    "13-03": {
+        "data": true,
+        "sunrise": "06:34",
+        "solar_noon": "12:08",
+        "sunset": "17:42"
+    },
+    "14-03": {
+        "data": true,
+        "sunrise": "06:29",
+        "solar_noon": "12:07",
+        "sunset": "17:45"
+    },
+    "15-03": {
+        "data": true,
+        "sunrise": "06:25",
+        "solar_noon": "12:07",
+        "sunset": "17:49"
+    },
+    "16-03": {
+        "data": true,
+        "sunrise": "06:21",
+        "solar_noon": "12:07",
+        "sunset": "17:53"
+    },
+    "17-03": {
+        "data": true,
+        "sunrise": "06:16",
+        "solar_noon": "12:07",
+        "sunset": "17:57"
+    },
+    "18-03": {
+        "data": true,
+        "sunrise": "06:12",
+        "solar_noon": "12:06",
+        "sunset": "18:01"
+    },
+    "19-03": {
+        "data": true,
+        "sunrise": "06:08",
+        "solar_noon": "12:06",
+        "sunset": "18:04"
+    },
+    "20-03": {
+        "data": true,
+        "sunrise": "06:03",
+        "solar_noon": "12:06",
+        "sunset": "18:08"
+    },
+    "21-03": {
+        "data": true,
+        "sunrise": "05:59",
+        "solar_noon": "12:05",
+        "sunset": "18:12"
+    },
+    "22-03": {
+        "data": true,
+        "sunrise": "05:55",
+        "solar_noon": "12:05",
+        "sunset": "18:16"
+    },
+    "23-03": {
+        "data": true,
+        "sunrise": "05:50",
+        "solar_noon": "12:05",
+        "sunset": "18:19"
+    },
+    "24-03": {
+        "data": true,
+        "sunrise": "05:46",
+        "solar_noon": "12:05",
+        "sunset": "18:23"
+    },
+    "25-03": {
+        "data": true,
+        "sunrise": "05:42",
+        "solar_noon": "12:04",
+        "sunset": "18:27"
+    },
+    "26-03": {
+        "data": true,
+        "sunrise": "05:37",
+        "solar_noon": "12:04",
+        "sunset": "18:31"
+    },
+    "27-03": {
+        "data": true,
+        "sunrise": "05:33",
+        "solar_noon": "12:04",
+        "sunset": "18:34"
+    },
+    "28-03": {
+        "data": true,
+        "sunrise": "05:29",
+        "solar_noon": "12:03",
+        "sunset": "18:38"
+    },
+    "29-03": {
+        "data": true,
+        "sunrise": "05:24",
+        "solar_noon": "12:03",
+        "sunset": "18:42"
+    },
+    "30-03": {
+        "data": true,
+        "sunrise": "05:20",
+        "solar_noon": "12:03",
+        "sunset": "18:46"
+    },
+    "31-03": {
+        "data": true,
+        "sunrise": "05:15",
+        "solar_noon": "12:02",
+        "sunset": "18:50"
+    },
+    "01-04": {
+        "data": true,
+        "sunrise": "05:11",
+        "solar_noon": "12:02",
+        "sunset": "18:53"
+    },
+    "02-04": {
+        "data": true,
+        "sunrise": "05:07",
+        "solar_noon": "12:02",
+        "sunset": "18:57"
+    },
+    "03-04": {
+        "data": true,
+        "sunrise": "05:02",
+        "solar_noon": "12:02",
+        "sunset": "19:01"
+    },
+    "04-04": {
+        "data": true,
+        "sunrise": "04:58",
+        "solar_noon": "12:01",
+        "sunset": "19:05"
+    },
+    "05-04": {
+        "data": true,
+        "sunrise": "04:53",
+        "solar_noon": "12:01",
+        "sunset": "19:09"
+    },
+    "06-04": {
+        "data": true,
+        "sunrise": "04:49",
+        "solar_noon": "12:01",
+        "sunset": "19:12"
+    },
+    "07-04": {
+        "data": true,
+        "sunrise": "04:44",
+        "solar_noon": "12:00",
+        "sunset": "19:16"
+    },
+    "08-04": {
+        "data": true,
+        "sunrise": "04:40",
+        "solar_noon": "12:00",
+        "sunset": "19:20"
+    },
+    "09-04": {
+        "data": true,
+        "sunrise": "04:35",
+        "solar_noon": "12:00",
+        "sunset": "19:24"
+    },
+    "10-04": {
+        "data": true,
+        "sunrise": "04:31",
+        "solar_noon": "12:00",
+        "sunset": "19:28"
+    },
+    "11-04": {
+        "data": true,
+        "sunrise": "04:27",
+        "solar_noon": "11:59",
+        "sunset": "19:32"
+    },
+    "12-04": {
+        "data": true,
+        "sunrise": "04:22",
+        "solar_noon": "11:59",
+        "sunset": "19:36"
+    },
+    "13-04": {
+        "data": true,
+        "sunrise": "04:18",
+        "solar_noon": "11:59",
+        "sunset": "19:40"
+    },
+    "14-04": {
+        "data": true,
+        "sunrise": "04:13",
+        "solar_noon": "11:58",
+        "sunset": "19:44"
+    },
+    "15-04": {
+        "data": true,
+        "sunrise": "04:08",
+        "solar_noon": "11:58",
+        "sunset": "19:48"
+    },
+    "16-04": {
+        "data": true,
+        "sunrise": "04:04",
+        "solar_noon": "11:58",
+        "sunset": "19:52"
+    },
+    "17-04": {
+        "data": true,
+        "sunrise": "03:59",
+        "solar_noon": "11:58",
+        "sunset": "19:56"
+    },
+    "18-04": {
+        "data": true,
+        "sunrise": "03:55",
+        "solar_noon": "11:58",
+        "sunset": "20:00"
+    },
+    "19-04": {
+        "data": true,
+        "sunrise": "03:50",
+        "solar_noon": "11:57",
+        "sunset": "20:04"
+    },
+    "20-04": {
+        "data": true,
+        "sunrise": "03:46",
+        "solar_noon": "11:57",
+        "sunset": "20:09"
+    },
+    "21-04": {
+        "data": true,
+        "sunrise": "03:41",
+        "solar_noon": "11:57",
+        "sunset": "20:13"
+    },
+    "22-04": {
+        "data": true,
+        "sunrise": "03:36",
+        "solar_noon": "11:57",
+        "sunset": "20:17"
+    },
+    "23-04": {
+        "data": true,
+        "sunrise": "03:32",
+        "solar_noon": "11:56",
+        "sunset": "20:21"
+    },
+    "24-04": {
+        "data": true,
+        "sunrise": "03:27",
+        "solar_noon": "11:56",
+        "sunset": "20:26"
+    },
+    "25-04": {
+        "data": true,
+        "sunrise": "03:22",
+        "solar_noon": "11:56",
+        "sunset": "20:30"
+    },
+    "26-04": {
+        "data": true,
+        "sunrise": "03:17",
+        "solar_noon": "11:56",
+        "sunset": "20:34"
+    },
+    "27-04": {
+        "data": true,
+        "sunrise": "03:13",
+        "solar_noon": "11:56",
+        "sunset": "20:39"
+    },
+    "28-04": {
+        "data": true,
+        "sunrise": "03:08",
+        "solar_noon": "11:56",
+        "sunset": "20:43"
+    },
+    "29-04": {
+        "data": true,
+        "sunrise": "03:03",
+        "solar_noon": "11:55",
+        "sunset": "20:48"
+    },
+    "30-04": {
+        "data": true,
+        "sunrise": "02:58",
+        "solar_noon": "11:55",
+        "sunset": "20:53"
+    },
+    "01-05": {
+        "data": true,
+        "sunrise": "02:53",
+        "solar_noon": "11:55",
+        "sunset": "20:57"
+    },
+    "02-05": {
+        "data": true,
+        "sunrise": "02:48",
+        "solar_noon": "11:55",
+        "sunset": "21:02"
+    },
+    "03-05": {
+        "data": true,
+        "sunrise": "02:43",
+        "solar_noon": "11:55",
+        "sunset": "21:07"
+    },
+    "04-05": {
+        "data": true,
+        "sunrise": "02:38",
+        "solar_noon": "11:55",
+        "sunset": "21:12"
+    },
+    "05-05": {
+        "data": true,
+        "sunrise": "02:33",
+        "solar_noon": "11:55",
+        "sunset": "21:17"
+    },
+    "06-05": {
+        "data": true,
+        "sunrise": "02:28",
+        "solar_noon": "11:55",
+        "sunset": "21:22"
+    },
+    "07-05": {
+        "data": true,
+        "sunrise": "02:22",
+        "solar_noon": "11:55",
+        "sunset": "21:27"
+    },
+    "08-05": {
+        "data": true,
+        "sunrise": "02:17",
+        "solar_noon": "11:54",
+        "sunset": "21:32"
+    },
+    "09-05": {
+        "data": true,
+        "sunrise": "02:11",
+        "solar_noon": "11:54",
+        "sunset": "21:37"
+    },
+    "10-05": {
+        "data": true,
+        "sunrise": "02:06",
+        "solar_noon": "11:54",
+        "sunset": "21:43"
+    },
+    "11-05": {
+        "data": true,
+        "sunrise": "02:00",
+        "solar_noon": "11:54",
+        "sunset": "21:48"
+    },
+    "12-05": {
+        "data": true,
+        "sunrise": "01:54",
+        "solar_noon": "11:54",
+        "sunset": "21:54"
+    },
+    "13-05": {
+        "data": true,
+        "sunrise": "01:48",
+        "solar_noon": "11:54",
+        "sunset": "22:00"
+    },
+    "14-05": {
+        "data": true,
+        "sunrise": "01:42",
+        "solar_noon": "11:54",
+        "sunset": "22:06"
+    },
+    "15-05": {
+        "data": true,
+        "sunrise": "01:36",
+        "solar_noon": "11:54",
+        "sunset": "22:13"
+    },
+    "16-05": {
+        "data": true,
+        "sunrise": "01:29",
+        "solar_noon": "11:54",
+        "sunset": "22:19"
+    },
+    "17-05": {
+        "data": true,
+        "sunrise": "01:22",
+        "solar_noon": "11:54",
+        "sunset": "22:26"
+    },
+    "18-05": {
+        "data": true,
+        "sunrise": "01:15",
+        "solar_noon": "11:54",
+        "sunset": "22:34"
+    },
+    "19-05": {
+        "data": true,
+        "sunrise": "01:07",
+        "solar_noon": "11:54",
+        "sunset": "22:42"
+    },
+    "20-05": {
+        "data": true,
+        "sunrise": "00:58",
+        "solar_noon": "11:54",
+        "sunset": "22:50"
+    },
+    "21-05": {
+        "data": true,
+        "sunrise": "00:49",
+        "solar_noon": "11:54",
+        "sunset": "23:00"
+    },
+    "22-05": {
+        "data": true,
+        "sunrise": "00:37",
+        "solar_noon": "11:54",
+        "sunset": "23:12"
+    },
+    "23-05": {
+        "data": true,
+        "sunrise": "00:22",
+        "solar_noon": "11:54",
+        "sunset": "23:27"
+    },
+    "24-05": { "data": false, "sun": "never_sets" },
+    "25-05": { "data": false, "sun": "never_sets" },
+    "26-05": { "data": false, "sun": "never_sets" },
+    "27-05": { "data": false, "sun": "never_sets" },
+    "28-05": { "data": false, "sun": "never_sets" },
+    "29-05": { "data": false, "sun": "never_sets" },
+    "30-05": { "data": false, "sun": "never_sets" },
+    "31-05": { "data": false, "sun": "never_sets" },
+    "01-06": { "data": false, "sun": "never_sets" },
+    "02-06": { "data": false, "sun": "never_sets" },
+    "03-06": { "data": false, "sun": "never_sets" },
+    "04-06": { "data": false, "sun": "never_sets" },
+    "05-06": { "data": false, "sun": "never_sets" },
+    "06-06": { "data": false, "sun": "never_sets" },
+    "07-06": { "data": false, "sun": "never_sets" },
+    "08-06": { "data": false, "sun": "never_sets" },
+    "09-06": { "data": false, "sun": "never_sets" },
+    "10-06": { "data": false, "sun": "never_sets" },
+    "11-06": { "data": false, "sun": "never_sets" },
+    "12-06": { "data": false, "sun": "never_sets" },
+    "13-06": { "data": false, "sun": "never_sets" },
+    "14-06": { "data": false, "sun": "never_sets" },
+    "15-06": { "data": false, "sun": "never_sets" },
+    "16-06": { "data": false, "sun": "never_sets" },
+    "17-06": { "data": false, "sun": "never_sets" },
+    "18-06": { "data": false, "sun": "never_sets" },
+    "19-06": { "data": false, "sun": "never_sets" },
+    "20-06": { "data": false, "sun": "never_sets" },
+    "21-06": { "data": false, "sun": "never_sets" },
+    "22-06": { "data": false, "sun": "never_sets" },
+    "23-06": { "data": false, "sun": "never_sets" },
+    "24-06": { "data": false, "sun": "never_sets" },
+    "25-06": { "data": false, "sun": "never_sets" },
+    "26-06": { "data": false, "sun": "never_sets" },
+    "27-06": { "data": false, "sun": "never_sets" },
+    "28-06": { "data": false, "sun": "never_sets" },
+    "29-06": { "data": false, "sun": "never_sets" },
+    "30-06": { "data": false, "sun": "never_sets" },
+    "01-07": { "data": false, "sun": "never_sets" },
+    "02-07": { "data": false, "sun": "never_sets" },
+    "03-07": { "data": false, "sun": "never_sets" },
+    "04-07": { "data": false, "sun": "never_sets" },
+    "05-07": { "data": false, "sun": "never_sets" },
+    "06-07": { "data": false, "sun": "never_sets" },
+    "07-07": { "data": false, "sun": "never_sets" },
+    "08-07": { "data": false, "sun": "never_sets" },
+    "09-07": { "data": false, "sun": "never_sets" },
+    "10-07": { "data": false, "sun": "never_sets" },
+    "11-07": { "data": false, "sun": "never_sets" },
+    "12-07": { "data": false, "sun": "never_sets" },
+    "13-07": { "data": false, "sun": "never_sets" },
+    "14-07": { "data": false, "sun": "never_sets" },
+    "15-07": { "data": false, "sun": "never_sets" },
+    "16-07": { "data": false, "sun": "never_sets" },
+    "17-07": { "data": false, "sun": "never_sets" },
+    "18-07": { "data": false, "sun": "never_sets" },
+    "19-07": { "data": false, "sun": "never_sets" },
+    "20-07": { "data": false, "sun": "never_sets" },
+    "21-07": { "data": false, "sun": "never_sets" },
+    "22-07": { "data": false, "sun": "never_sets" },
+    "23-07": {
+        "data": true,
+        "sunrise": "00:32",
+        "solar_noon": "12:04",
+        "sunset": "23:36"
+    },
+    "24-07": {
+        "data": true,
+        "sunrise": "00:47",
+        "solar_noon": "12:04",
+        "sunset": "23:21"
+    },
+    "25-07": {
+        "data": true,
+        "sunrise": "00:59",
+        "solar_noon": "12:04",
+        "sunset": "23:10"
+    },
+    "26-07": {
+        "data": true,
+        "sunrise": "01:08",
+        "solar_noon": "12:04",
+        "sunset": "23:00"
+    },
+    "27-07": {
+        "data": true,
+        "sunrise": "01:17",
+        "solar_noon": "12:04",
+        "sunset": "22:52"
+    },
+    "28-07": {
+        "data": true,
+        "sunrise": "01:25",
+        "solar_noon": "12:04",
+        "sunset": "22:44"
+    },
+    "29-07": {
+        "data": true,
+        "sunrise": "01:32",
+        "solar_noon": "12:04",
+        "sunset": "22:37"
+    },
+    "30-07": {
+        "data": true,
+        "sunrise": "01:39",
+        "solar_noon": "12:04",
+        "sunset": "22:30"
+    },
+    "31-07": {
+        "data": true,
+        "sunrise": "01:46",
+        "solar_noon": "12:04",
+        "sunset": "22:23"
+    },
+    "01-08": {
+        "data": true,
+        "sunrise": "01:52",
+        "solar_noon": "12:04",
+        "sunset": "22:17"
+    },
+    "02-08": {
+        "data": true,
+        "sunrise": "01:58",
+        "solar_noon": "12:04",
+        "sunset": "22:10"
+    },
+    "03-08": {
+        "data": true,
+        "sunrise": "02:04",
+        "solar_noon": "12:04",
+        "sunset": "22:05"
+    },
+    "04-08": {
+        "data": true,
+        "sunrise": "02:09",
+        "solar_noon": "12:04",
+        "sunset": "21:59"
+    },
+    "05-08": {
+        "data": true,
+        "sunrise": "02:15",
+        "solar_noon": "12:04",
+        "sunset": "21:53"
+    },
+    "06-08": {
+        "data": true,
+        "sunrise": "02:20",
+        "solar_noon": "12:04",
+        "sunset": "21:47"
+    },
+    "07-08": {
+        "data": true,
+        "sunrise": "02:26",
+        "solar_noon": "12:04",
+        "sunset": "21:42"
+    },
+    "08-08": {
+        "data": true,
+        "sunrise": "02:31",
+        "solar_noon": "12:04",
+        "sunset": "21:37"
+    },
+    "09-08": {
+        "data": true,
+        "sunrise": "02:36",
+        "solar_noon": "12:04",
+        "sunset": "21:31"
+    },
+    "10-08": {
+        "data": true,
+        "sunrise": "02:41",
+        "solar_noon": "12:03",
+        "sunset": "21:26"
+    },
+    "11-08": {
+        "data": true,
+        "sunrise": "02:46",
+        "solar_noon": "12:03",
+        "sunset": "21:21"
+    },
+    "12-08": {
+        "data": true,
+        "sunrise": "02:50",
+        "solar_noon": "12:03",
+        "sunset": "21:16"
+    },
+    "13-08": {
+        "data": true,
+        "sunrise": "02:55",
+        "solar_noon": "12:03",
+        "sunset": "21:11"
+    },
+    "14-08": {
+        "data": true,
+        "sunrise": "03:00",
+        "solar_noon": "12:03",
+        "sunset": "21:06"
+    },
+    "15-08": {
+        "data": true,
+        "sunrise": "03:04",
+        "solar_noon": "12:03",
+        "sunset": "21:01"
+    },
+    "16-08": {
+        "data": true,
+        "sunrise": "03:09",
+        "solar_noon": "12:02",
+        "sunset": "20:56"
+    },
+    "17-08": {
+        "data": true,
+        "sunrise": "03:13",
+        "solar_noon": "12:02",
+        "sunset": "20:51"
+    },
+    "18-08": {
+        "data": true,
+        "sunrise": "03:18",
+        "solar_noon": "12:02",
+        "sunset": "20:46"
+    },
+    "19-08": {
+        "data": true,
+        "sunrise": "03:22",
+        "solar_noon": "12:02",
+        "sunset": "20:42"
+    },
+    "20-08": {
+        "data": true,
+        "sunrise": "03:26",
+        "solar_noon": "12:02",
+        "sunset": "20:37"
+    },
+    "21-08": {
+        "data": true,
+        "sunrise": "03:31",
+        "solar_noon": "12:01",
+        "sunset": "20:32"
+    },
+    "22-08": {
+        "data": true,
+        "sunrise": "03:35",
+        "solar_noon": "12:01",
+        "sunset": "20:27"
+    },
+    "23-08": {
+        "data": true,
+        "sunrise": "03:39",
+        "solar_noon": "12:01",
+        "sunset": "20:23"
+    },
+    "24-08": {
+        "data": true,
+        "sunrise": "03:43",
+        "solar_noon": "12:01",
+        "sunset": "20:18"
+    },
+    "25-08": {
+        "data": true,
+        "sunrise": "03:47",
+        "solar_noon": "12:00",
+        "sunset": "20:13"
+    },
+    "26-08": {
+        "data": true,
+        "sunrise": "03:51",
+        "solar_noon": "12:00",
+        "sunset": "20:09"
+    },
+    "27-08": {
+        "data": true,
+        "sunrise": "03:56",
+        "solar_noon": "12:00",
+        "sunset": "20:04"
+    },
+    "28-08": {
+        "data": true,
+        "sunrise": "04:00",
+        "solar_noon": "12:00",
+        "sunset": "20:00"
+    },
+    "29-08": {
+        "data": true,
+        "sunrise": "04:04",
+        "solar_noon": "11:59",
+        "sunset": "19:55"
+    },
+    "30-08": {
+        "data": true,
+        "sunrise": "04:07",
+        "solar_noon": "11:59",
+        "sunset": "19:50"
+    },
+    "31-08": {
+        "data": true,
+        "sunrise": "04:11",
+        "solar_noon": "11:59",
+        "sunset": "19:46"
+    },
+    "01-09": {
+        "data": true,
+        "sunrise": "04:15",
+        "solar_noon": "11:58",
+        "sunset": "19:41"
+    },
+    "02-09": {
+        "data": true,
+        "sunrise": "04:19",
+        "solar_noon": "11:58",
+        "sunset": "19:37"
+    },
+    "03-09": {
+        "data": true,
+        "sunrise": "04:23",
+        "solar_noon": "11:58",
+        "sunset": "19:32"
+    },
+    "04-09": {
+        "data": true,
+        "sunrise": "04:27",
+        "solar_noon": "11:57",
+        "sunset": "19:28"
+    },
+    "05-09": {
+        "data": true,
+        "sunrise": "04:31",
+        "solar_noon": "11:57",
+        "sunset": "19:23"
+    },
+    "06-09": {
+        "data": true,
+        "sunrise": "04:34",
+        "solar_noon": "11:57",
+        "sunset": "19:19"
+    },
+    "07-09": {
+        "data": true,
+        "sunrise": "04:38",
+        "solar_noon": "11:56",
+        "sunset": "19:15"
+    },
+    "08-09": {
+        "data": true,
+        "sunrise": "04:42",
+        "solar_noon": "11:56",
+        "sunset": "19:10"
+    },
+    "09-09": {
+        "data": true,
+        "sunrise": "04:46",
+        "solar_noon": "11:56",
+        "sunset": "19:06"
+    },
+    "10-09": {
+        "data": true,
+        "sunrise": "04:50",
+        "solar_noon": "11:55",
+        "sunset": "19:01"
+    },
+    "11-09": {
+        "data": true,
+        "sunrise": "04:53",
+        "solar_noon": "11:55",
+        "sunset": "18:57"
+    },
+    "12-09": {
+        "data": true,
+        "sunrise": "04:57",
+        "solar_noon": "11:55",
+        "sunset": "18:52"
+    },
+    "13-09": {
+        "data": true,
+        "sunrise": "05:01",
+        "solar_noon": "11:54",
+        "sunset": "18:48"
+    },
+    "14-09": {
+        "data": true,
+        "sunrise": "05:04",
+        "solar_noon": "11:54",
+        "sunset": "18:44"
+    },
+    "15-09": {
+        "data": true,
+        "sunrise": "05:08",
+        "solar_noon": "11:54",
+        "sunset": "18:39"
+    },
+    "16-09": {
+        "data": true,
+        "sunrise": "05:12",
+        "solar_noon": "11:53",
+        "sunset": "18:35"
+    },
+    "17-09": {
+        "data": true,
+        "sunrise": "05:15",
+        "solar_noon": "11:53",
+        "sunset": "18:30"
+    },
+    "18-09": {
+        "data": true,
+        "sunrise": "05:19",
+        "solar_noon": "11:53",
+        "sunset": "18:26"
+    },
+    "19-09": {
+        "data": true,
+        "sunrise": "05:23",
+        "solar_noon": "11:52",
+        "sunset": "18:22"
+    },
+    "20-09": {
+        "data": true,
+        "sunrise": "05:26",
+        "solar_noon": "11:52",
+        "sunset": "18:17"
+    },
+    "21-09": {
+        "data": true,
+        "sunrise": "05:30",
+        "solar_noon": "11:51",
+        "sunset": "18:13"
+    },
+    "22-09": {
+        "data": true,
+        "sunrise": "05:34",
+        "solar_noon": "11:51",
+        "sunset": "18:09"
+    },
+    "23-09": {
+        "data": true,
+        "sunrise": "05:37",
+        "solar_noon": "11:51",
+        "sunset": "18:04"
+    },
+    "24-09": {
+        "data": true,
+        "sunrise": "05:41",
+        "solar_noon": "11:50",
+        "sunset": "18:00"
+    },
+    "25-09": {
+        "data": true,
+        "sunrise": "05:45",
+        "solar_noon": "11:50",
+        "sunset": "17:56"
+    },
+    "26-09": {
+        "data": true,
+        "sunrise": "05:48",
+        "solar_noon": "11:50",
+        "sunset": "17:51"
+    },
+    "27-09": {
+        "data": true,
+        "sunrise": "05:52",
+        "solar_noon": "11:49",
+        "sunset": "17:47"
+    },
+    "28-09": {
+        "data": true,
+        "sunrise": "05:55",
+        "solar_noon": "11:49",
+        "sunset": "17:43"
+    },
+    "29-09": {
+        "data": true,
+        "sunrise": "05:59",
+        "solar_noon": "11:49",
+        "sunset": "17:38"
+    },
+    "30-09": {
+        "data": true,
+        "sunrise": "06:03",
+        "solar_noon": "11:48",
+        "sunset": "17:34"
+    },
+    "01-10": {
+        "data": true,
+        "sunrise": "06:06",
+        "solar_noon": "11:48",
+        "sunset": "17:30"
+    },
+    "02-10": {
+        "data": true,
+        "sunrise": "06:10",
+        "solar_noon": "11:48",
+        "sunset": "17:25"
+    },
+    "03-10": {
+        "data": true,
+        "sunrise": "06:14",
+        "solar_noon": "11:47",
+        "sunset": "17:21"
+    },
+    "04-10": {
+        "data": true,
+        "sunrise": "06:18",
+        "solar_noon": "11:47",
+        "sunset": "17:17"
+    },
+    "05-10": {
+        "data": true,
+        "sunrise": "06:21",
+        "solar_noon": "11:47",
+        "sunset": "17:12"
+    },
+    "06-10": {
+        "data": true,
+        "sunrise": "06:25",
+        "solar_noon": "11:46",
+        "sunset": "17:08"
+    },
+    "07-10": {
+        "data": true,
+        "sunrise": "06:29",
+        "solar_noon": "11:46",
+        "sunset": "17:04"
+    },
+    "08-10": {
+        "data": true,
+        "sunrise": "06:32",
+        "solar_noon": "11:46",
+        "sunset": "16:59"
+    },
+    "09-10": {
+        "data": true,
+        "sunrise": "06:36",
+        "solar_noon": "11:46",
+        "sunset": "16:55"
+    },
+    "10-10": {
+        "data": true,
+        "sunrise": "06:40",
+        "solar_noon": "11:45",
+        "sunset": "16:51"
+    },
+    "11-10": {
+        "data": true,
+        "sunrise": "06:44",
+        "solar_noon": "11:45",
+        "sunset": "16:46"
+    },
+    "12-10": {
+        "data": true,
+        "sunrise": "06:48",
+        "solar_noon": "11:45",
+        "sunset": "16:42"
+    },
+    "13-10": {
+        "data": true,
+        "sunrise": "06:51",
+        "solar_noon": "11:44",
+        "sunset": "16:38"
+    },
+    "14-10": {
+        "data": true,
+        "sunrise": "06:55",
+        "solar_noon": "11:44",
+        "sunset": "16:33"
+    },
+    "15-10": {
+        "data": true,
+        "sunrise": "06:59",
+        "solar_noon": "11:44",
+        "sunset": "16:29"
+    },
+    "16-10": {
+        "data": true,
+        "sunrise": "07:03",
+        "solar_noon": "11:44",
+        "sunset": "16:25"
+    },
+    "17-10": {
+        "data": true,
+        "sunrise": "07:07",
+        "solar_noon": "11:44",
+        "sunset": "16:20"
+    },
+    "18-10": {
+        "data": true,
+        "sunrise": "07:11",
+        "solar_noon": "11:43",
+        "sunset": "16:16"
+    },
+    "19-10": {
+        "data": true,
+        "sunrise": "07:15",
+        "solar_noon": "11:43",
+        "sunset": "16:11"
+    },
+    "20-10": {
+        "data": true,
+        "sunrise": "07:19",
+        "solar_noon": "11:43",
+        "sunset": "16:07"
+    },
+    "21-10": {
+        "data": true,
+        "sunrise": "07:23",
+        "solar_noon": "11:43",
+        "sunset": "16:03"
+    },
+    "22-10": {
+        "data": true,
+        "sunrise": "07:27",
+        "solar_noon": "11:43",
+        "sunset": "15:58"
+    },
+    "23-10": {
+        "data": true,
+        "sunrise": "07:31",
+        "solar_noon": "11:42",
+        "sunset": "15:54"
+    },
+    "24-10": {
+        "data": true,
+        "sunrise": "07:35",
+        "solar_noon": "11:42",
+        "sunset": "15:50"
+    },
+    "25-10": {
+        "data": true,
+        "sunrise": "07:39",
+        "solar_noon": "11:42",
+        "sunset": "15:45"
+    },
+    "26-10": {
+        "data": true,
+        "sunrise": "07:43",
+        "solar_noon": "11:42",
+        "sunset": "15:41"
+    },
+    "27-10": {
+        "data": true,
+        "sunrise": "07:47",
+        "solar_noon": "11:42",
+        "sunset": "15:36"
+    },
+    "28-10": {
+        "data": true,
+        "sunrise": "07:51",
+        "solar_noon": "11:42",
+        "sunset": "15:32"
+    },
+    "29-10": {
+        "data": true,
+        "sunrise": "07:56",
+        "solar_noon": "11:42",
+        "sunset": "15:28"
+    },
+    "30-10": {
+        "data": true,
+        "sunrise": "08:00",
+        "solar_noon": "11:42",
+        "sunset": "15:23"
+    },
+    "31-10": {
+        "data": true,
+        "sunrise": "08:04",
+        "solar_noon": "11:41",
+        "sunset": "15:19"
+    },
+    "01-11": {
+        "data": true,
+        "sunrise": "08:09",
+        "solar_noon": "11:41",
+        "sunset": "15:14"
+    },
+    "02-11": {
+        "data": true,
+        "sunrise": "08:13",
+        "solar_noon": "11:41",
+        "sunset": "15:10"
+    },
+    "03-11": {
+        "data": true,
+        "sunrise": "08:17",
+        "solar_noon": "11:41",
+        "sunset": "15:05"
+    },
+    "04-11": {
+        "data": true,
+        "sunrise": "08:22",
+        "solar_noon": "11:41",
+        "sunset": "15:01"
+    },
+    "05-11": {
+        "data": true,
+        "sunrise": "08:26",
+        "solar_noon": "11:41",
+        "sunset": "14:56"
+    },
+    "06-11": {
+        "data": true,
+        "sunrise": "08:31",
+        "solar_noon": "11:41",
+        "sunset": "14:52"
+    },
+    "07-11": {
+        "data": true,
+        "sunrise": "08:35",
+        "solar_noon": "11:41",
+        "sunset": "14:47"
+    },
+    "08-11": {
+        "data": true,
+        "sunrise": "08:40",
+        "solar_noon": "11:41",
+        "sunset": "14:43"
+    },
+    "09-11": {
+        "data": true,
+        "sunrise": "08:45",
+        "solar_noon": "11:41",
+        "sunset": "14:38"
+    },
+    "10-11": {
+        "data": true,
+        "sunrise": "08:50",
+        "solar_noon": "11:42",
+        "sunset": "14:34"
+    },
+    "11-11": {
+        "data": true,
+        "sunrise": "08:54",
+        "solar_noon": "11:42",
+        "sunset": "14:29"
+    },
+    "12-11": {
+        "data": true,
+        "sunrise": "08:59",
+        "solar_noon": "11:42",
+        "sunset": "14:24"
+    },
+    "13-11": {
+        "data": true,
+        "sunrise": "09:04",
+        "solar_noon": "11:42",
+        "sunset": "14:20"
+    },
+    "14-11": {
+        "data": true,
+        "sunrise": "09:09",
+        "solar_noon": "11:42",
+        "sunset": "14:15"
+    },
+    "15-11": {
+        "data": true,
+        "sunrise": "09:14",
+        "solar_noon": "11:42",
+        "sunset": "14:10"
+    },
+    "16-11": {
+        "data": true,
+        "sunrise": "09:19",
+        "solar_noon": "11:42",
+        "sunset": "14:05"
+    },
+    "17-11": {
+        "data": true,
+        "sunrise": "09:24",
+        "solar_noon": "11:42",
+        "sunset": "14:01"
+    },
+    "18-11": {
+        "data": true,
+        "sunrise": "09:30",
+        "solar_noon": "11:43",
+        "sunset": "13:56"
+    },
+    "19-11": {
+        "data": true,
+        "sunrise": "09:35",
+        "solar_noon": "11:43",
+        "sunset": "13:51"
+    },
+    "20-11": {
+        "data": true,
+        "sunrise": "09:40",
+        "solar_noon": "11:43",
+        "sunset": "13:46"
+    },
+    "21-11": {
+        "data": true,
+        "sunrise": "09:46",
+        "solar_noon": "11:43",
+        "sunset": "13:41"
+    },
+    "22-11": {
+        "data": true,
+        "sunrise": "09:52",
+        "solar_noon": "11:44",
+        "sunset": "13:35"
+    },
+    "23-11": {
+        "data": true,
+        "sunrise": "09:57",
+        "solar_noon": "11:44",
+        "sunset": "13:30"
+    },
+    "24-11": {
+        "data": true,
+        "sunrise": "10:03",
+        "solar_noon": "11:44",
+        "sunset": "13:25"
+    },
+    "25-11": {
+        "data": true,
+        "sunrise": "10:09",
+        "solar_noon": "11:44",
+        "sunset": "13:19"
+    },
+    "26-11": {
+        "data": true,
+        "sunrise": "10:16",
+        "solar_noon": "11:45",
+        "sunset": "13:14"
+    },
+    "27-11": {
+        "data": true,
+        "sunrise": "10:22",
+        "solar_noon": "11:45",
+        "sunset": "13:08"
+    },
+    "28-11": {
+        "data": true,
+        "sunrise": "10:29",
+        "solar_noon": "11:45",
+        "sunset": "13:02"
+    },
+    "29-11": {
+        "data": true,
+        "sunrise": "10:36",
+        "solar_noon": "11:46",
+        "sunset": "12:55"
+    },
+    "30-11": {
+        "data": true,
+        "sunrise": "10:44",
+        "solar_noon": "11:46",
+        "sunset": "12:48"
+    },
+    "01-12": {
+        "data": true,
+        "sunrise": "10:52",
+        "solar_noon": "11:46",
+        "sunset": "12:41"
+    },
+    "02-12": {
+        "data": true,
+        "sunrise": "11:01",
+        "solar_noon": "11:47",
+        "sunset": "12:32"
+    },
+    "03-12": {
+        "data": true,
+        "sunrise": "11:12",
+        "solar_noon": "11:47",
+        "sunset": "12:22"
+    },
+    "04-12": {
+        "data": true,
+        "sunrise": "11:26",
+        "solar_noon": "11:47",
+        "sunset": "12:08"
+    },
+    "05-12": { "data": false, "sun": "never_sets" },
+    "06-12": { "data": false, "sun": "never_sets" },
+    "07-12": { "data": false, "sun": "never_sets" },
+    "08-12": { "data": false, "sun": "never_sets" },
+    "09-12": { "data": false, "sun": "never_sets" },
+    "10-12": { "data": false, "sun": "never_sets" },
+    "11-12": { "data": false, "sun": "never_sets" },
+    "12-12": { "data": false, "sun": "never_sets" },
+    "13-12": { "data": false, "sun": "never_sets" },
+    "14-12": { "data": false, "sun": "never_sets" },
+    "15-12": { "data": false, "sun": "never_sets" },
+    "16-12": { "data": false, "sun": "never_sets" },
+    "17-12": { "data": false, "sun": "never_sets" },
+    "18-12": { "data": false, "sun": "never_sets" },
+    "19-12": { "data": false, "sun": "never_sets" },
+    "20-12": { "data": false, "sun": "never_sets" },
+    "21-12": { "data": false, "sun": "never_sets" },
+    "22-12": { "data": false, "sun": "never_sets" },
+    "23-12": { "data": false, "sun": "never_sets" },
+    "24-12": { "data": false, "sun": "never_sets" },
+    "25-12": { "data": false, "sun": "never_sets" },
+    "26-12": { "data": false, "sun": "never_sets" },
+    "27-12": { "data": false, "sun": "never_sets" },
+    "28-12": { "data": false, "sun": "never_sets" },
+    "29-12": { "data": false, "sun": "never_sets" },
+    "30-12": { "data": false, "sun": "never_sets" },
+    "31-12": { "data": false, "sun": "never_sets" }
+}

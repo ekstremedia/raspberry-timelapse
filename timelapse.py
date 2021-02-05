@@ -23,7 +23,7 @@ filePath = ""
 total_images = 0
 annotation = ""
 homedir = sys.path[0]
-shutter_cmd = os.path.join(homedir, 'getCurrentExposure.py');
+shutter_cmd = os.path.join(homedir, 'Timer.py');
 
 def redText(text):
     return red+text+endcolor
