@@ -191,6 +191,8 @@ def set_camera_options(camera):
     shutter = sp.getoutput(shutter_cmd)
     checkCountDown = localStorage.getItem('countDown')
     checkCountUp = localStorage.getItem('countUp')
+    print(f"checkCountDown {checkCountDown}")
+    print(f"checkCountUp {checkCountUp}")
     if (checkCountDown == 'on' and checkCountUp == 'off'):
         if (shutter < 2000000):
             camera.iso = 100
