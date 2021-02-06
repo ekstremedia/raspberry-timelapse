@@ -62,13 +62,13 @@ if not os.path.exists(video_folder):
 overexposed_cmd = f"find {target+extension} -type f -size -100k | wc -l"
 overdelete = f"find {target+extension} -type f -size -100k -delete"
 restfiles_cmd = f"find {target+extension} -type f | wc -l"
-# overexposed_count = sp.getoutput(overexposed_cmd)
-# if int(overexposed_count)>0:
-#     log(f"Deleting {redText(overexposed_count)} overexposed images in {greenText(target)}...")
-#     delete = sp.getoutput(overdelete)
-#     log("Deleted.")
-# else:
-#     log("No overexposed images found")
+overexposed_count = sp.getoutput(overexposed_cmd)
+if int(overexposed_count)>0:
+    log(f"Deleting {redText(overexposed_count)} overexposed images in {greenText(target)}...")
+    delete = sp.getoutput(overdelete)
+    log("Deleted.")
+else:
+    log("No overexposed images found")
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
