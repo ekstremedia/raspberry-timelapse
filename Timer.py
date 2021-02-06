@@ -79,7 +79,7 @@ def getCurrentExposure():
             if (currentExposure == 'None'):
                 currentExposure = 1000
                 print("ERROR")
-            if (currentExposure<2000):
+            if (int(currentExposure)<2000):
                 localStorage.setItem('currentExposure', 2000)
                 returnedValue = True
                 print(2000)
