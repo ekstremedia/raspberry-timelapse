@@ -24,24 +24,8 @@ filePath = ""
 total_images = 0
 annotation = ""
 homedir = sys.path[0]
-shutter_cmd = os.path.join(homedir, 'Timer.py');
+shutter_cmd = os.path.join(homedir, 'Timer.py')
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
-
-def redText(text):
-    return red+text+endcolor
-
-
-def greenText(text):
-    return green+text+endcolor
-
-
-def errorMsg(text):
-    print(red+text+endcolor)
-
-
-def successMsg(text):
-    print(green+text+endcolor)
-
 
 def infoMsg(text):
     now = datetime.now()
@@ -207,6 +191,8 @@ def set_camera_options(camera):
         if (shutter < 4000):
             camera.iso = 60
     if (checkCountDown == 'off' and checkCountUp == 'on'):
+        if (shutter > 300):
+            camera.iso = 100
         if (shutter > 2000000):
             camera.iso = 200
         if (shutter > 3000000):
