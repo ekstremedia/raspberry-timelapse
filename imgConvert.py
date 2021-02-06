@@ -14,7 +14,7 @@ tz = pytz.timezone('Europe/Oslo')
 #mytz = datetime(2021,12,31)
 mytz = datetime.datetime.now()
 mytz = tz.localize(mytz)
-day = mytz.strftime ('%d .%b %Y %H:%M:%S')
+day = mytz.strftime ('%d. %b %Y %H:%M:%S')
 config = yaml.safe_load(open(os.path.join(sys.path[0], "config.yml")))
 try:
     annotation = config['annotation']
