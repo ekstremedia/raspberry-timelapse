@@ -90,7 +90,7 @@ if os.path.exists(filename):
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'exposure: " + last_shutter + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'Exposure: " + last_shutter + "\' " + fileout
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity North -pointsize 20 -annotate +5+5 \' " + topText + "\' " + fileout
     os.system(cmd)
