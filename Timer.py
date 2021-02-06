@@ -5,7 +5,7 @@ from datetime import datetime, time, timezone, timedelta
 import os
 import sys
 from localStoragePy import localStoragePy
-from logger import *
+# from logger import *
 
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')

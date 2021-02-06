@@ -14,6 +14,7 @@ from logger import *
 import locale
 import subprocess as sp
 from localStoragePy import localStoragePy
+from virtualTimer import getCurrentExposure
 
 # Define variables
 red = "\033[1;31;38m"
@@ -86,7 +87,8 @@ if loadedConf:
     #     shutter_speed = config['shutter_speed']
     # except KeyError:
     #     shutter_speed = 0
-    shutter_speed = sp.getoutput(shutter_cmd)
+    shutter_speed = getCurrentExposure()
+    # shutter_speed = sp.getoutput(shutter_cmd)
 
     try:
         copy_last = config['copy_last']

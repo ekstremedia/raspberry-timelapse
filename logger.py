@@ -42,11 +42,17 @@ def successMsg(text):
 def log(text):
     now = datetime.now()
     today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
-    timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
-    timePrint = str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    timePrint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
     logText = greenText("[") + timePrint + greenText("]") + " " + text
     logging.info(logText)
     print(logText)
+
+def silentlog(text):
+    now = datetime.now()
+    today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
+    timePrint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
+    logText = greenText("[") + timePrint + greenText("]") + " " + text
+    logging.info(logText)
 
 def loglastfile(filename):
     f = open(last_image_file, "w+")
