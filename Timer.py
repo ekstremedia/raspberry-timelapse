@@ -38,7 +38,7 @@ sunsetHour = int(sunset[0:2])
 sunsetMinute = int(sunset[3:5])
 sunsetToday = mytz.replace(hour=sunsetHour,minute=sunsetMinute, second=0, microsecond=0)
 startCountDown = sunriseToday - timedelta(hours=2)
-startCountUp = sunsetToday;
+startCountUp = sunsetToday
 #  + timedelta(hours=2)
 
 #print("")
@@ -60,10 +60,8 @@ exposureRatio = 50390
 
 def getCurrentExposure():
     returnedValue = False
-    if (mytz < startCountDown or mytz > startCountUp):
-        returnedValue = True
-        print(exposure_max)
-    elif (mytz > startCountDown and mytz < startCountUp):
+
+    if (mytz > startCountDown and mytz < startCountUp):
         checkCountDown = localStorage.getItem('countDown')
         # print(f"checkCountDown: {checkCountDown}")
         if (checkCountDown != 'on'):
@@ -74,6 +72,7 @@ def getCurrentExposure():
             currentExposure = max_exposure-exposureRatio
             localStorage.setItem('currentExposure', currentExposure)
             returnedValue = True
+            print("hx") 
             print(currentExposure)
         else: 
             currentExposure = localStorage.getItem('currentExposure')
@@ -83,12 +82,15 @@ def getCurrentExposure():
             if (int(currentExposure)<2000):
                 localStorage.setItem('currentExposure', 2000)
                 returnedValue = True
+                print("hy") 
                 print(2000)
             else:
                 localStorage.setItem('currentExposure', currentExposure)
                 returnedValue = True
+                print("hb") 
                 print(currentExposure)
     else:
+        # print("hf") 
         checkCountUp = localStorage.getItem('countUp')
         # print(f"checkCountUp: {checkCountUp}")
         if (checkCountUp != 'on'):
@@ -109,10 +111,12 @@ def getCurrentExposure():
                 print(6000000)
             else:
                 returnedValue = True
-                print(currentExposure)        
+                print(currentExposure)       
+                # print("h2") 
 
     if not returnedValue:
-        # print("No return value")
+        print("No return value")
+        # print("er")
         print(int(localStorage.getItem('currentExposure')))
 
 getCurrentExposure()
