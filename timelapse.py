@@ -258,6 +258,7 @@ def take(fileName):
         copyfile(fileName, status_filename)
     else:
         log("Aborted copying of file")
+    log("Pausing camera...")
 
 
 capture()
