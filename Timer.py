@@ -5,6 +5,7 @@ from datetime import datetime, time, timezone, timedelta
 import os
 import sys
 from localStoragePy import localStoragePy
+from logger import *
 
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')
@@ -37,7 +38,8 @@ sunsetHour = int(sunset[0:2])
 sunsetMinute = int(sunset[3:5])
 sunsetToday = mytz.replace(hour=sunsetHour,minute=sunsetMinute, second=0, microsecond=0)
 startCountDown = sunriseToday - timedelta(hours=2)
-startCountUp = sunsetToday + timedelta(hours=2)
+startCountUp = sunsetToday;
+#  + timedelta(hours=2)
 
 #print("")
 # print(f"startCountDown {startCountDown}")

@@ -6,7 +6,7 @@ localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 #localStorage.setItem('countDown', 'on')
 #localStorage.setItem('countUp', 'off')
 
-print(localStorage.getItem('countUp'))
-print(localStorage.getItem('countDown'))
-print(localStorage.getItem('currentExposure'))
+print(f"countUp: {localStorage.getItem('countUp')}")
+print(f"countDown: {localStorage.getItem('countDown')}")
+print(f"currentExp: {localStorage.getItem('currentExposure')}")
 
