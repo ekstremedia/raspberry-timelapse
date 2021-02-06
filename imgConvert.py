@@ -9,7 +9,9 @@ from logger import *
 import pytz
 import datetime
 import yaml
+from localStoragePy import localStoragePy
 
+localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')
 #mytz = datetime(2021,12,31)
 mytz = datetime.datetime.now()
@@ -77,6 +79,7 @@ if os.path.exists(filename):
     logHumidity = "Fuktighet: " + str(weatherList.get('humidity')) + " %" 
     logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
     logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
+    iso = localStorage.getItem('iso');
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
     os.system(cmd)
     log(cmd)
@@ -91,6 +94,8 @@ if os.path.exists(filename):
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+120 \'" + logRain + "\' " + fileout
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'Exposure: " + last_shutter + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'Iso: " + iso + "\' " + fileout
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity North -pointsize 20 -annotate +5+5 \' " + topText + "\' " + fileout
     os.system(cmd)

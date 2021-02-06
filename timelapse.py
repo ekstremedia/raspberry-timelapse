@@ -186,7 +186,8 @@ def set_camera_options(camera):
         iso = 800            
     if (shutter < 4000):
         iso = 60
-    camera.iso = iso        
+    camera.iso = iso
+    localStorage.setItem('iso', iso)
     log(f"Got shutterspeed: {shutter}")
     log(f"Set iso: {iso}")
     logLastShutterSpeed(shutter)
