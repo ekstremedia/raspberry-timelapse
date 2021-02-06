@@ -175,38 +175,20 @@ def set_camera_options(camera):
     # else:
     #     camera.shutter_speed = 0
     shutter = int(sp.getoutput(shutter_cmd))
-    checkCountDown = localStorage.getItem('countDown')
-    checkCountUp = localStorage.getItem('countUp')
-    print(f"checkCountDown {checkCountDown}")
-    print(f"checkCountUp {checkCountUp}")
-    if (checkCountDown == 'on' and checkCountUp == 'off'):
-        if (shutter < 2000000):
-            camera.iso = 100
-        if (shutter < 3000000):
-            camera.iso = 200
-        if (shutter < 4000000):
-            camera.iso = 400
-        if (shutter < 5000000):
-            camera.iso = 600
-        if (shutter > 5000000):
-            camera.iso = 800            
-        if (shutter < 4000):
-            camera.iso = 60
-    if (checkCountDown == 'off' and checkCountUp == 'on'):
-        if (shutter > 300):
-            camera.iso = 100
-        if (shutter > 2000000):
-            camera.iso = 200
-        if (shutter > 3000000):
-            camera.iso = 400
-        if (shutter > 4000000):
-            camera.iso = 600
-        if (shutter > 5000000):
-            camera.iso = 800
-        if (shutter < 3000):
-            camera.iso = 60
+    iso = 800
+    if (shutter > 4000):
+        iso = 100            
+    if (shutter > 1000000):
+        iso = 200            
+    if (shutter > 3000000):
+        iso = 400            
+    if (shutter > 5000000):
+        iso = 800            
+    if (shutter < 4000):
+        iso = 60
+    camera.iso = iso        
     log(f"Got shutterspeed: {shutter}")
-    log(f"Set iso: {camera.iso}")
+    log(f"Set iso: {iso}")
     logLastShutterSpeed(shutter)
     camera.shutter_speed = int(shutter)
     # camera.shutter_speed = 0
