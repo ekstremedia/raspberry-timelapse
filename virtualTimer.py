@@ -17,7 +17,7 @@ tz = pytz.timezone('Europe/Oslo')
 js = os.path.join(sys.path[0], "scripts/solartimes.json")
 # mytz = datetime.now()
 def getCurrentExposure():
-    max_exposure = 6000000
+    max_exposure = 10000000
     exposureRatio = 50390
     min_exposure = 2000
     default_exposure = min_exposure
