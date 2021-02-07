@@ -1,0 +1,10 @@
+ceback (most recent call last):
+  File "/home/pi/raspberry-timelapse/./timelapse.py", line 249, in <module>
+    capture()
+  File "/home/pi/raspberry-timelapse/./timelapse.py", line 156, in capture
+    take(fileName)
+  File "/home/pi/raspberry-timelapse/./timelapse.py", line 219, in take
+    set_camera_options(camera)
+  File "/home/pi/raspberry-timelapse/./timelapse.py", line 177, in set_camera_options
+    shutter = int(sp.getoutput(shutter_cmd))
+ValueError: invalid literal for int() with base 10: 'hx\n5949610'
