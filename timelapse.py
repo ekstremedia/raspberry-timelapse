@@ -25,7 +25,8 @@ filePath = ""
 total_images = 0
 annotation = ""
 homedir = sys.path[0]
-shutter_cmd = os.path.join(homedir, 'Timer.py')
+#shutter_cmd = os.path.join(homedir, 'Timer.py')
+# shutter_speed = getCurrentExposure()
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 
 def infoMsg(text):
@@ -87,7 +88,6 @@ if loadedConf:
     #     shutter_speed = config['shutter_speed']
     # except KeyError:
     #     shutter_speed = 0
-    shutter_speed = getCurrentExposure()
     # shutter_speed = sp.getoutput(shutter_cmd)
 
     try:
@@ -174,7 +174,10 @@ def set_camera_options(camera):
     #     camera.shutter_speed = config['shutter_speed']
     # else:
     #     camera.shutter_speed = 0
-    shutter = int(sp.getoutput(shutter_cmd))
+    # printint(sp.getoutput(shutter_cmd))
+        # shutter = int(sp.getoutput(shutter_cmd))
+    shutter = getCurrentExposure()
+
     iso = 800
     if (shutter > 4000):
         iso = 100            
