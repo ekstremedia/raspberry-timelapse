@@ -35,7 +35,7 @@ topText = f"{annotation} - {day}"
 homedir = sys.path[0]
 last_image_file = os.path.join(homedir, "logs/last_image.log");
 #last_shutterspeed =  os.path.join(homedir, "logs/last_shutter.log");
-shutter_cmd = os.path.join(homedir, 'Timer.py');
+last_shutter = getCurrentExposure()
 print(last_image_file)
 with open(last_image_file) as f:
     filename = f.readline()
@@ -43,7 +43,7 @@ print(filename)
 
 # with open(last_shutterspeed) as sh:
 #     last_shutter = sh.readline()
-last_shutter = subprocess.getoutput(shutter_cmd)
+# last_shutter = subprocess.getoutput(shutter_cmd)
 #print(last_shutter)
 fileout = filename
 if os.path.exists(filename):
