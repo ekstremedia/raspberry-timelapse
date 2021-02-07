@@ -26,7 +26,7 @@ total_images = 0
 annotation = ""
 homedir = sys.path[0]
 #shutter_cmd = os.path.join(homedir, 'Timer.py')
-# shutter_speed = getCurrentExposure()
+shutter_speed = getCurrentExposure()
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 
 def infoMsg(text):
