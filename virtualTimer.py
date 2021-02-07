@@ -6,6 +6,7 @@ import os
 import sys
 from localStoragePy import localStoragePy
 from logger import silentlog
+from virtualTimer import getCurrentExposure
 
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')

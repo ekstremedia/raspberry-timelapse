@@ -10,6 +10,7 @@ import pytz
 import datetime
 import yaml
 from localStoragePy import localStoragePy
+from virtualTimer import getCurrentExposure
 
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')
@@ -35,7 +36,7 @@ topText = f"{annotation} - {day}"
 homedir = sys.path[0]
 last_image_file = os.path.join(homedir, "logs/last_image.log");
 #last_shutterspeed =  os.path.join(homedir, "logs/last_shutter.log");
-last_shutter = getCurrentExposure()
+last_shutter = str(getCurrentExposure())
 print(last_image_file)
 with open(last_image_file) as f:
     filename = f.readline()
