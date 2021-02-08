@@ -45,9 +45,12 @@ pretty_date = f"{pretty_day} {day}. {pretty_month} {year}".capitalize()
 log(f"Date: {greenText(pretty_date)} ({previous_datestr})")
 
 # Set image and video variables
+
+video_subfix = 'deflicker-mode-pm_size10'
+
 images_folder = '/var/www/html/bilder'
 video_folder = os.path.join('/var/www/html/videoer', previous_year, previous_month)+"/"
-video_file = video_folder+filePrefix+"_"+previous_filename+"_vblend.mp4" # TODO: add cameraname to filename
+video_file = video_folder+filePrefix+"_"+previous_filename+video_subfix+".mp4" # TODO: add cameraname to filename
 target = os.path.join(images_folder, previous_datestr)+"/"
 extension = '*.jpg'
 
@@ -73,7 +76,7 @@ print(overexposed_count)
 restfiles = sp.getoutput(restfiles_cmd)
 
 # FFMPEG
-ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 18 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -y -vf 'deflicker' {video_file}"
+ffmpeg_cmd = f"ffmpeg -r 25 -pattern_type glob -i '{target+extension}' -crf 18 -c:v libx264 -vstats_file /home/pi/raspberry-timelapse/logs/ffmpeg.log -vf 'deflicker' -y {video_file}"
 log(ffmpeg_cmd)
 log(f"Running ffmpeg on {greenText(restfiles)} images...")
 ffmpg_call = sp.getoutput(ffmpeg_cmd)

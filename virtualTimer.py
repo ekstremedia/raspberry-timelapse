@@ -17,7 +17,7 @@ tz = pytz.timezone('Europe/Oslo')
 js = os.path.join(sys.path[0], "scripts/solartimes.json")
 # mytz = datetime.now()
 def getCurrentExposure():
-    max_exposure = 10000000
+    max_exposure = 5000000
     exposureRatio = 30390
     min_exposure = 2000
     default_exposure = min_exposure
@@ -62,7 +62,7 @@ def getCurrentExposure():
             sunriseMinute = 00
             sunsetHour = 23
             sunsetMinute = 00
-            max_exposure = 6000000
+            max_exposure = max_exposure
             min_exposure = 2000
 
     sunriseToday = mytz.replace(hour=sunriseHour,minute=sunriseMinute, second=0, microsecond=0)
@@ -98,12 +98,12 @@ def getCurrentExposure():
             # print(currentExposure)
     if (mytz > timeToStartDay and mytz < timeToEndDay):
         # print(currentExposure)
-        if (currentExposure > 2000):
+        if (currentExposure > min_exposure):
             currentExposure = currentExposure-exposureRatio
-            if (currentExposure < 2000):
-                currentExposure = 2000
+            if (currentExposure < min_exposure):
+                currentExposure = min_exposure
         else:
-            currentExposure = 2000
+            currentExposure = min_exposure
     elif (mytz > timeToStartDay and mytz > timeToEndDay):
         if (currentExposure < max_exposure):
             currentExposure = currentExposure+exposureRatio

@@ -80,7 +80,10 @@ if os.path.exists(filename):
     logHumidity = "Fuktighet: " + str(weatherList.get('humidity')) + " %" 
     logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
     logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
-    iso = localStorage.getItem('iso');
+    iso = localStorage.getItem('iso')
+    ass = localStorage.getItem('actualShutterSpeed')
+    ex = localStorage.getItem('exposure_speed')
+
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
     os.system(cmd)
     log(cmd)
@@ -96,7 +99,11 @@ if os.path.exists(filename):
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+140 \'Exposure: " + last_shutter + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+160 \'Iso: " + iso + "\' " + fileout
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+160 \'camera.exposure: " + ass + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+180 \'exposure_speed: " + ex + "\' " + fileout
+    os.system(cmd)
+    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+200 \'Iso: " + iso + "\' " + fileout
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity North -pointsize 20 -annotate +5+5 \' " + topText + "\' " + fileout
     os.system(cmd)

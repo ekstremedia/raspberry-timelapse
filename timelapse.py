@@ -153,6 +153,9 @@ if loadedConf:
                 os.makedirs(today)
                 infoMsg("Created folder: " + greenText(today))
             fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
+
+
+
             take(fileName)
 
 
@@ -188,7 +191,7 @@ def set_camera_options(camera):
     if (shutter > 5000000):
         iso = 800            
     if (shutter < 4000):
-        iso = 60
+        iso = 100
     camera.iso = iso
     localStorage.setItem('iso', iso)
     log(f"Got shutterspeed: {shutter}")
@@ -212,7 +215,7 @@ def set_camera_options(camera):
     #     camera.exposure_mode = config['exposure_mode']
 
     # infoMsg("Preparing camera...")
-    sleep(5)
+    sleep(7)
     # infoMsg("Camera ready, starting!")
     return camera
 
@@ -228,6 +231,15 @@ def take(fileName):
     # + ":" + str('%02d' % now.second)
     #camera.annotate_text = annotation + " - " + timeprint
     #camera.annotate_text_size = 20
+
+    ass = camera.shutter_speed
+    ex = camera.exposure_speed
+    log(f"Actual shutter speed: {ass}")
+    localStorage.setItem('actualShutterSpeed', ass)
+    localStorage.setItem('exposure_speed', ex)
+    # log(f"Actual exposure: {cax}")
+
+
     camera.capture(fileName)
     global total_images
     total_images = total_images+1
