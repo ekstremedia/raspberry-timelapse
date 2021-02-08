@@ -18,7 +18,7 @@ js = os.path.join(sys.path[0], "scripts/solartimes.json")
 # mytz = datetime.now()
 def getCurrentExposure():
     max_exposure = 10000000
-    exposureRatio = 50390
+    exposureRatio = 30390
     min_exposure = 2000
     default_exposure = min_exposure
     # mytz = datetime(2021,2,5,15,34)
@@ -73,7 +73,7 @@ def getCurrentExposure():
     timeToStartDay = sunriseToday - timedelta(hours=2)
     endOfDay = sunsetToday + timedelta(hours=2)
     # print(f"Time to start day: {timeToStartDay}")
-    timeToEndDay = sunsetToday
+    timeToEndDay = sunsetToday + timedelta(hours=1)
     currentExposure = 6000000
     # print(currentExposure)
     # print(getExposure)
