@@ -6,15 +6,11 @@ import os
 import sys
 from localStoragePy import localStoragePy
 from logger import silentlog
-#from virtualTimer import getCurrentExposure
 
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 tz = pytz.timezone('Europe/Oslo')
-# max_exposure = 6000000
-# exposureRatio = 50390
-# min_exposure = 2000
-# default_exposure = min_exposure
 js = os.path.join(sys.path[0], "scripts/solartimes.json")
+
 # mytz = datetime.now()
 def getCurrentExposure():
     max_exposure = 5000000
@@ -70,11 +66,13 @@ def getCurrentExposure():
 
     # print(f"Sunrise: {sunriseToday}")
     # print(f"Sunset: {sunsetToday}")
-    timeToStartDay = sunriseToday - timedelta(hours=2)
+    # {'data': True, 'sunrise': '08:54', 'solar_noon': '12:12', 'sunset': '15:30'}
+    # 8:50
+    timeToStartDay = sunriseToday - timedelta(hours=1)
     endOfDay = sunsetToday + timedelta(hours=2)
     # print(f"Time to start day: {timeToStartDay}")
-    timeToEndDay = sunsetToday + timedelta(hours=1)
-    currentExposure = 6000000
+    timeToEndDay = sunsetToday + timedelta(minutes=20)
+    currentExposure = 5000000
     # print(currentExposure)
     # print(getExposure)
     if (mytz < timeToStartDay or mytz > endOfDay):
