@@ -181,15 +181,15 @@ def set_camera_options(camera):
         # shutter = int(sp.getoutput(shutter_cmd))
     shutter = getCurrentExposure()
 
-    iso = 800
+    iso = 600
     if (shutter > 4000):
         iso = 100            
     if (shutter > 1000000):
         iso = 200            
     if (shutter > 3000000):
         iso = 400            
-    if (shutter > 5000000):
-        iso = 800            
+    if (shutter >= 5000000):
+        iso = 600            
     if (shutter < 4000):
         iso = 100
     camera.iso = iso
