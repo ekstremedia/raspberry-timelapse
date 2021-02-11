@@ -67,11 +67,13 @@ def getCurrentExposure():
     # print(f"Sunrise: {sunriseToday}")
     # print(f"Sunset: {sunsetToday}")
     # {'data': True, 'sunrise': '08:54', 'solar_noon': '12:12', 'sunset': '15:30'}
+    # {'data': True, 'sunrise': '08:45', 'solar_noon': '12:12', 'sunset': '15:39'}
     # 8:50
-    timeToStartDay = sunriseToday - timedelta(hours=1)
+    timeToStartDay = sunriseToday - timedelta(minutes=105)
+    # timeToStartDay = sunriseToday - timedelta(hours=1)
     endOfDay = sunsetToday + timedelta(hours=2)
     # print(f"Time to start day: {timeToStartDay}")
-    timeToEndDay = sunsetToday + timedelta(minutes=20)
+    timeToEndDay = sunsetToday + timedelta(minutes=50)
     currentExposure = 5000000
     # print(currentExposure)
     # print(getExposure)
