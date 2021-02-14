@@ -67,16 +67,17 @@ def getCurrentExposure():
     # print(f"Sunrise: {sunriseToday}")
     # print(f"Sunset: {sunsetToday}")
     # {'data': True, 'sunrise': '08:32', 'solar_noon': '12:12', 'sunset': '15:52'}
+    #                                                                       17:05
     # 8:50
-    # old 125
-    timeToStartDay = sunriseToday - timedelta(minutes=150)
+    # old 150
+    timeToStartDay = sunriseToday - timedelta(minutes=180)
     # timeToStartDay = sunriseToday - timedelta(hours=1)
 
     #old = 120
-    endOfDay = sunsetToday + timedelta(minutes=150)
+    endOfDay = sunsetToday + timedelta(minutes=135)
     # print(f"Time to start day: {timeToStartDay}")
     # old = 50
-    #timeToEndDay = sunsetToday + timedelta(minutes=20)
+    timeToEndDay = sunsetToday + timedelta(minutes=20)
     currentExposure = 5000000
     # print(currentExposure)
     # print(getExposure)
@@ -99,7 +100,7 @@ def getCurrentExposure():
             currentExposure = int(getExposure)
 
             # print(currentExposure)
-    if (mytz > timeToStartDay and mytz < endOfDay):
+    if (mytz > timeToStartDay and mytz < timeToEndDay):
         # print(currentExposure)
         if (currentExposure > min_exposure):
             currentExposure = currentExposure-exposureRatio
@@ -107,7 +108,7 @@ def getCurrentExposure():
                 currentExposure = min_exposure
         else:
             currentExposure = min_exposure
-    elif (mytz > timeToStartDay and mytz > endOfDay):
+    elif (mytz > timeToStartDay and mytz > timeToEndDay):
         if (currentExposure < max_exposure):
             currentExposure = currentExposure+exposureRatio
             if (currentExposure > max_exposure):
