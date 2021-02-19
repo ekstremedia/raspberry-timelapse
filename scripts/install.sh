@@ -6,3 +6,5 @@ python3.9 -m pip install pyyaml
 python3.9 -m pip install picamera
 python3.9 -m pip install localStoragePy
 python3.9 -m pip install pytz
+#sudo dpkg-reconfigure locales
+sudo locale-gen install locales
