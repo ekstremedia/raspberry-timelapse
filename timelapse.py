@@ -6,7 +6,6 @@ from picamera import PiCamera
 from fractions import Fraction
 from shutil import copyfile
 import os
-# import time
 import threading
 import sys
 import yaml
