@@ -42,6 +42,7 @@ def getTime(date):
     return str('%02d' % date.hour) + ":" + str('%02d' % date.minute)
 
 def log(text):
+    text = str(text)
     now = datetime.now()
     today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
     timePrint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)
@@ -50,6 +51,7 @@ def log(text):
     print(logText)
 
 def silentlog(text):
+    text = str(text)
     now = datetime.now()
     today = str('%02d' % now.day) + "." + str('%02d' % now.month) + "." + str(now.year) + " "
     timePrint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) + ":" + str('%02d' % now.second)

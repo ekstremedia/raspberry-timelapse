@@ -9,28 +9,31 @@ import threading
 import sys
 import yaml
 import json
-from logger import log, silentlog, redText, greenText, getTime, loglastfile
+from logger import log, silentlog, redText, greenText, getTime
 import locale
 import subprocess as sp
 from localStoragePy import localStoragePy
 from virtualTimer import getCurrentExposure
 import pytz
 
-
-
-### Define variables
-v = '0.2.2'
+# Define variables
 time_start = datetime.now()
 camera = PiCamera()
 this_executable = os.path.basename(__file__)
-homedir = sys.path[0]
+v = '0.2.1'
 total_images = 0
+homedir = sys.path[0]
 localStorage = localStoragePy('ekstremedia-timelapse-exposure', 'sqlite')
 js = os.path.join(homedir, "data/solartimes.json")
+tz = pytz.timezone('Europe/Oslo')
 python_version = sys.version
+exposureRatio = 30390
+min_exposure = 2000
 
 
 
+log(f'{redText("Raspberry")} {greenText("Pi")} v{v} timelapse is loading')
+log(f'Running on python {greenText(python_version[0:6])}')
 
 
 # Get config values
@@ -46,31 +49,15 @@ except OSError as e:
     quit()
 
 if loadedConf:
-    if config['resolution']:
-        camera.resolution = (
-            config['resolution']['width'],
-            config['resolution']['height']
-        )
-        
     try:
         camera_name = config['camera_name']
     except KeyError:
         camera_name = "RaspberryTimelapse"
 
     try:
-        max_exposure = config['max_exposure']
+        max_exposure = config['max_shutter_speed']
     except KeyError:
         max_exposure = 6000000
-
-    try:
-        min_exposure = config['min_exposure']
-    except KeyError:
-        min_exposure = 6000000
-
-    try:
-        exposure_ratio = config['exposure_ratio']
-    except KeyError:
-        exposure_ratio = 30000
 
     try:
         file_path = config['file_path']
@@ -102,45 +89,29 @@ if loadedConf:
         interval = config['interval']
     except KeyError:
         interval = 10
-    try:
-        status_filename = config['status_filename']
-    except KeyError:
-        status_filename = False
-    try:
-        copy_last = config['copy_last']
-    except KeyError:
-        copy_last = False
+
+log(f'Camera name: {greenText(camera_name)}')
+log(f'Images saved to: {greenText(file_path)}')
+log(f'File name prefix: {greenText(file_prefix)}')
+log(f'White balance: {greenText(white_balance)}')
+log(f'Interval: every {greenText(str(interval))} second')
+log(f'Maximum exposure: {greenText(str(max_exposure))} microseconds')
+# log(f'awb_gains: {greenText(awb_gains["red_gain"])}')
+
+# Set initial camera settings
+camera.awb_mode = white_balance
+camera.awb_gains = awb_gains
 
 
 
-
-
-
-
-
-
-def start():
-    log(f'{redText("Raspberry")} {greenText("Pi")} v{v} timelapse is loading')
-    log(f'Running on python {greenText(python_version[0:6])}')
-    log(f'Camera name: {greenText(camera_name)}')
-    log(f'Images saved to: {greenText(file_path)} with prefix {greenText(file_prefix)}.')
-    log(f'White balance: {greenText(white_balance)}, gains: {greenText(str(awb_gains[0]))},{greenText(str(awb_gains[1]))}.')
-    log(f'Interval: every {greenText(str(interval))} second')
-    log(f'Exposure max / min: {greenText(str(max_exposure))} / {greenText(str(min_exposure))} microseconds')
-    camera.awb_mode = white_balance
-    camera.awb_gains = awb_gains
-    camera.framerate = Fraction(1, 6)
-    while not sleep(interval):
-        capture()
-
-
-
-
-def capture():
-   
+def set_capture_variables():
     global max_exposure
     global min_exposure
-    time_now = datetime.now()
+    time_now = time_start
+    # time_now = datetime.now()
+
+    # time_now = tz.localize(time_now)
+    # print(f"time_now: {time_now}")
     day = time_now.strftime('%d')                               # 05
     month = time_now.strftime('%m')
     dateStr = day+"-"+month
@@ -179,14 +150,14 @@ def capture():
             min_exposure = 2000
     sunrise_today = time_now.replace(hour=sunriseHour,minute=sunriseMinute, second=0, microsecond=0)
     sunset_today = time_now.replace(hour=sunsetHour,minute=sunsetMinute, second=0, microsecond=0)
-
     timeToStartDay = sunrise_today - timedelta(minutes=180)
     endOfDay = sunset_today + timedelta(minutes=135)
     timeToEndDay = sunset_today + timedelta(minutes=20)
 
-    log(f"Sunrise, sunset:           {greenText(getTime(sunrise_today))} / {greenText(getTime(sunset_today))}.")
-    log(f"Time to start / end day:   {greenText(getTime(timeToStartDay))} / {greenText(getTime(timeToEndDay))}")
-    log(f"End of day:                {greenText(getTime(endOfDay))}")
+    log(f"Sunrise, sunset: {getTime(sunrise_today)} - {getTime(sunset_today)}")
+    log(f"Time to start day: {getTime(timeToStartDay)}")
+    log(f"Time to end day: {getTime(timeToEndDay)}")
+    log(f"End of day: {getTime(endOfDay)}")
     
     if (time_now > sunrise_today and time_now < sunset_today):
         isDay = True
@@ -214,70 +185,107 @@ def capture():
         if (time_now > timeToStartDay and time_now < timeToEndDay):
             # print(currentExposure)
             if (getExposure > min_exposure):
-                getExposure = getExposure-exposure_ratio
+                getExposure = getExposure-exposureRatio
                 if (getExposure < min_exposure):
                     getExposure = min_exposure
             else:
                 getExposure = min_exposure
-                camera.shutter_speed = 0
         elif (time_now > timeToEndDay or time_now < timeToStartDay):
             log("Getting into darkness..")
             if (getExposure < max_exposure):
-                getExposure = getExposure+exposure_ratio
+                getExposure = getExposure+exposureRatio
                 if (getExposure > max_exposure):
                     getExposure = max_exposure
-        
-        log(f"Setting exposure: {greenText(str(getExposure))}")
+        log(f"New exposure: {getExposure}")
         localStorage.setItem('currentExposure', getExposure)
         camera.shutter_speed = getExposure
-        # camera.shutter_speed = getExposure
-        
         if (getExposure>5000000):
             camera.iso = 800
-        else:
-            camera.iso = 60
-        
+
+def take(fileName):
+    # set_camera_options(camera)
+    # Capture a picture.
+    # log()
+    log("Capturing...")
+    # now = datetime.now()
+    now = time_start
+    date_day = str('%02d' % now.day)
+    date_month = str('%02d' % now.month)
+    date_year = str(now.year)
+    date_hour = str('%02d' % now.hour)
+    date_minute = str('%02d' % now.minute) 
+    date_second = str('%02d' % now.second)
     
-        log(f"Camera settings: ISO: {greenText(str(camera.iso))}, shutter speed: {greenText(str(camera.shutter_speed))}")
+    image_name = f"{file_prefix}-{date_day}_{date_month}_{date_year}-{date_hour}_{date_minute}_{date_second}.jpg"
 
-        ## Take photo
-        # sleep(10)
-        # today = str('%02d' % now.day) + "." + str('%02d' % now.month) + " " + str(now.year) + "  "
-        # timeprint = today + str('%02d' % now.hour) + ":" + str('%02d' % now.minute) 
+    global total_images
+    total_images += 1
+
+    shutter_speed = getCurrentExposure()
+    log(str(image_name))
+    log(str(shutter_speed))
+    set_capture_variables()
 
 
-        today = os.path.join(file_path, str(time_now.year), str(
-            '%02d' % time_now.month), str('%02d' % time_now.day))
-        time = str('%02d' % time_now.hour)+"_"+str('%02d' % time_now.minute)+"_"+str('%02d' % time_now.second)
-        date = str('%02d' % time_now.day)+"_"+str('%02d' % time_now.month)+"_"+str('%02d' % time_now.year)
+
+
+def capture():
+    set_capture_variables()
+    if not os.path.exists(file_path):
+        os.makedirs(file_path)
+        log("Created folder: " + greenText(file_path))
+
+    log("Set timelapse-folder to: "+greenText(file_path))
+    log("")
+    log("Starting timelapse in "+greenText(str(interval)) + " ... :) ")
+    log("Shutter: " + greenText(str(shutter_speed)) + " microseconds, ISO: " + greenText(str(iso)) + ", taking photo every " + greenText(
+        str(interval)) + " seconds")
+    now = datetime.now()
+    today = os.path.join(file_path, str(now.year), str(
+        '%02d' % now.month), str('%02d' % now.day))
+    time = str('%02d' % now.hour) + "_" + str('%02d' %
+                                                now.minute) + "_" + str('%02d' % now.second)
+    timePrint = str('%02d' % now.hour) + ":" + str('%02d' %
+                                                    now.minute) + ":" + str('%02d' % now.second)
+    if not os.path.exists(today):
+        os.makedirs(today)
+        log("Created folder: " + greenText(today))
+    fileName = os.path.join(today + "/" + filePrefix + "_" + time + ".jpg")
+#    take(fileName)
+
+    while not sleep(interval):
+        # Date and time settings
+        now = datetime.now()
+        today = os.path.join(file_path, str(now.year), str(
+            '%02d' % now.month), str('%02d' % now.day))
+        time = str('%02d' % now.hour)+"_"+str('%02d' %
+                                                now.minute)+"_"+str('%02d' % now.second)
         if not os.path.exists(today):
             os.makedirs(today)
             log("Created folder: " + greenText(today))
-        fileName = os.path.join(today+"/"+file_prefix+"-"+date+"_"+time+".jpg")
-        sleep(10)
-        log("Capturing image...")
-        camera.capture(fileName)
+        fileName = os.path.join(today+"/"+filePrefix+"_"+time+".jpg")
+        take(fileName)
 
-        global copy_last
-        global total_images
-        global status_filename
-        total_images = total_images+1
-        log(f"Captured: {greenText(fileName)} #{greenText(str(total_images))}")
-        loglastfile(fileName)
 
-        cmd = os.path.join(homedir, 'imgConvert.py')
 
-        if os.path.exists(fileName):
-            log(f"imgconvert_cmd: {cmd}")
-            cmd_output = sp.getoutput(cmd)
-        else:
-            log("Could not find file before imgconvert_cmd, aborted")
 
-        if (copy_last and os.path.exists(fileName)):
-            copyfile(fileName, status_filename)
-        else:
-            log("Aborted copying of file")
-        log("Pausing camera...")
-        # camera.close()
 
-start()
+
+
+
+
+
+
+
+
+# take('test')
+
+# time_start = datetime(2021,2,5,7,4)
+# for i in range(2000):
+#     time_start = time_start + timedelta(minutes=1)
+#     log(f"TimeStart: {greenText(getTime(time_start))}")
+       
+#     hr = time_start.strftime('%H:%M')
+#     # ps = f"Time: {hr}, ex: {ex}"
+#     set_capture_variables()
+    
