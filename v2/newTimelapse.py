@@ -196,11 +196,49 @@ def capture():
     log(f"Is day: {isDay}")
 
     if isDay:
+        global copy_last
+        global total_images
+        global status_filename
+
         log("Setting daytime variables")
         log(greenText('DAYTIME'))
         camera.iso = 60
         camera.shutter_speed = 0
         log(f"Shutter speed: {camera.shutter_speed}, iso: {camera.iso}")
+        today = os.path.join(file_path, str(time_now.year), str(
+            '%02d' % time_now.month), str('%02d' % time_now.day))
+        time = str('%02d' % time_now.hour)+"_"+str('%02d' % time_now.minute)+"_"+str('%02d' % time_now.second)
+        date = str('%02d' % time_now.day)+"_"+str('%02d' % time_now.month)+"_"+str('%02d' % time_now.year)
+        if not os.path.exists(today):
+            os.makedirs(today)
+            log("Created folder: " + greenText(today))
+        fileName = os.path.join(today+"/"+file_prefix+"-"+date+"_"+time+".jpg")
+        sleep(10)
+        localStorage.setItem('currentExposure', camera.shutter_speed)
+        log("Capturing image...")
+        camera.capture(fileName)
+
+        total_images = total_images+1
+        log(f"Captured: {greenText(fileName)} #{greenText(str(total_images))}")
+        loglastfile(fileName)
+
+        cmd = os.path.join(homedir, 'imgConvert.py')
+
+        if os.path.exists(fileName):
+            log(f"imgconvert_cmd: {cmd}")
+            cmd_output = sp.getoutput(cmd)
+        else:
+            log("Could not find file before imgconvert_cmd, aborted")
+
+        if (copy_last and os.path.exists(fileName)):
+            copyfile(fileName, status_filename)
+        else:
+            log("Aborted copying of file")
+        log("Pausing camera...")
+
+
+
+
     if not isDay:
         log("Setting nighttime variables")
         getExposure = int(localStorage.getItem('currentExposure'))
@@ -228,7 +266,6 @@ def capture():
                     getExposure = max_exposure
         
         log(f"Setting exposure: {greenText(str(getExposure))}")
-        localStorage.setItem('currentExposure', getExposure)
         camera.shutter_speed = getExposure
         # camera.shutter_speed = getExposure
         
@@ -255,12 +292,13 @@ def capture():
             log("Created folder: " + greenText(today))
         fileName = os.path.join(today+"/"+file_prefix+"-"+date+"_"+time+".jpg")
         sleep(10)
+        localStorage.setItem('currentExposure', camera.shutter_speed)
         log("Capturing image...")
         camera.capture(fileName)
 
-        global copy_last
-        global total_images
-        global status_filename
+        # global copy_last
+        # global total_images
+        # global status_filename
         total_images = total_images+1
         log(f"Captured: {greenText(fileName)} #{greenText(str(total_images))}")
         loglastfile(fileName)

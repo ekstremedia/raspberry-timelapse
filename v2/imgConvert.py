@@ -82,7 +82,7 @@ if os.path.exists(filename):
     logRain = "Nedbør: " + str(weatherList.get('rain')) + " mm" 
     logTempTrend = "Temp-trend: " + str(weatherList.get('temp_trend'))
     iso = localStorage.getItem('iso')
-    ass = localStorage.getItem('actualShutterSpeed')
+    ass = localStorage.getItem('currentExposure')
     ex = localStorage.getItem('exposure_speed')
 
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+20 \'" + logTemp + "\' " + fileout
