@@ -8,3 +8,4 @@ python3.9 -m pip install localStoragePy
 python3.9 -m pip install pytz
 #sudo dpkg-reconfigure locales
 sudo locale-gen install locales
+sudo apt-get install python-httplib2
