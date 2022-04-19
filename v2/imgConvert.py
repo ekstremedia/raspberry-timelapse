@@ -1,4 +1,4 @@
-#!/usr/bin/env /usr/local/bin/python3.9
+#!/usr/bin/env /usr/local/bin/python3.10
 
 import os
 import sys
@@ -102,8 +102,8 @@ if os.path.exists(filename):
     os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+160 \'camera.exposure: " + ass + "\' " + fileout
     os.system(cmd)
-    cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+180 \'exposure_speed: " + ex + "\' " + fileout
-    os.system(cmd)
+    #cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+180 \'exposure_speed: " + ex + "\' " + fileout
+    #os.system(cmd)
     # cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity NorthWest -pointsize 16 -annotate +10+200 \'Iso: " + iso + "\' " + fileout
     # os.system(cmd)
     cmd = "convert "+ filename+ " -undercolor 'rgba(0,0,0,0.4)' -fill white -gravity North -pointsize 20 -annotate +5+5 \' " + topText + "\' " + fileout
