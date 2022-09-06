@@ -181,7 +181,8 @@ def capture():
     sunset_today = time_now.replace(hour=sunsetHour,minute=sunsetMinute, second=0, microsecond=0)
 
     timeToStartDay = sunrise_today - timedelta(minutes=180)
-    endOfDay = sunset_today + timedelta(minutes=135)
+    # 04 sept endofday minutes = 135, skifter til + 120
+    endOfDay = sunset_today + timedelta(minutes=255)
     timeToEndDay = sunset_today + timedelta(minutes=20)
 
     log(f"Sunrise, sunset:           {greenText(getTime(sunrise_today))} / {greenText(getTime(sunset_today))}.")
@@ -193,7 +194,7 @@ def capture():
     else:
         isDay = False
 
-    isDay = True
+#    isDay = True
     log(f"Is day: {isDay}")
 
     if isDay:
