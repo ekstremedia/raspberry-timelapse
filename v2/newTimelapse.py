@@ -193,7 +193,7 @@ def capture():
     else:
         isDay = False
 
-    isDay = True
+    #isDay = True
     log(f"Is day: {isDay}")
 
     if isDay:
