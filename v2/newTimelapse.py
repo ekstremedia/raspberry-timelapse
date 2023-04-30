@@ -194,7 +194,7 @@ def capture():
     else:
         isDay = False
 
-#    isDay = True
+    isDay = True
     log(f"Is day: {isDay}")
 
     if isDay:
@@ -307,11 +307,11 @@ def capture():
 
         cmd = os.path.join(homedir, 'imgConvert.py')
 
-        if os.path.exists(fileName):
-            log(f"imgconvert_cmd: {cmd}")
-            cmd_output = sp.getoutput(cmd)
-        else:
-            log("Could not find file before imgconvert_cmd, aborted")
+   #     if os.path.exists(fileName):
+#            log(f"imgconvert_cmd: {cmd}")
+#            cmd_output = sp.getoutput(cmd)
+  #      else:
+ #           log("Could not find file before imgconvert_cmd, aborted")
 
         if (copy_last and os.path.exists(fileName)):
             copyfile(fileName, status_filename)
